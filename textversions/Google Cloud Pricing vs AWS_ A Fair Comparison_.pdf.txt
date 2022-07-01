@@ -1,0 +1,434 @@
+5/11/22, 12:34 PM
+
+Google Cloud Pricing vs AWS: A Fair Comparison?
+
+netapp.com API Services Status Cloud Story
+Cloud Central
+
+SIGN UP
+
+LOGIN
+
+Products
+
+Solutions
+
+Clouds
+
+Partners
+
+Resources
+
+Blog
+
+Google Cloud Pricing
+
+Google Cloud Pricing vs AWS: A Fair Comparison?
+
+March 20, 2021 
+Topics: Cloud Volumes ONTAP, Data Migration, Google Cloud, Elementary
+Google Cloud Platform (GCP) is the smallest of the big three cloud players but is quickly gaining popularity. When planning a Google Cloud migration, or considering a multi-cloud strategy, it is important to understand each cloud's service and pricing model, and how to compare pricing correctly. Because Google Cloud pricing is structured differently from Amazon in many cases, a direct comparison can be misleading.
+
+In this cloud pricing comparison, we'll explain GCP vs. AWS pricing, where it makes sense to directly compare them and where it doesn't, and show pricing for common services side by side.
+In this article, you will learn: AWS vs. Google Cloud: Market Position Google Cloud vs AWS Pricing: Compute Instances On-Demand Google Cloud VMs vs. Amazon EC2 Instances
+
+https://cloud.netapp.com/blog/google-cloud-pricing-vs-aws-a-fair-comparison-gcp-aws-cvo-blg
+
+1/11
+
+5/11/22, 12:34 PM
+
+Google Cloud Pricing vs AWS: A Fair Comparison?
+
+Reserved Google Cloud VMs vs. Reserved Amazon EC2 Instances
+
+AWS Upfront Payment Options
+
+Google Cloud vs AWS Pricing: Storage Pricing Object Storage Pricing Block Storage Pricing
+
+Additional Resources for Comparing Prices Google Cloud and AWS Cost Optimization with Cloud Volumes ONTAP
+
+AWS vs. Google Cloud: Market Position
+Gartner's 2020 Magic Quadrant for Cloud Infrastructure places Amazon Web Services as the clear leader, both in execution and completeness of vision. Google Cloud, also in the leaders quadrant, is in third place behind Microsoft Azure (see our article on Azure vs Google Cloud).
+
+https://cloud.netapp.com/blog/google-cloud-pricing-vs-aws-a-fair-comparison-gcp-aws-cvo-blg
+
+2/11
+
+5/11/22, 12:34 PM
+
+Google Cloud Pricing vs AWS: A Fair Comparison?
+
+Source: Gartner
+The following table summarizes Gartner's views about the relative strengths of each cloud provider, and their market share.
+
+Provider Gartner
+
+Market Share
+
+AWS
+
+- Has the largest share of - AWS has 31% of the
+
+both infrastructure as a worldwide cloud market
+
+service (Iaas) and platform - AWS revenues were
+
+as a service (PaaS)
+
+$45.3 billion in 2020, up
+
+segments
+
+30% YoY
+
+https://cloud.netapp.com/blog/google-cloud-pricing-vs-aws-a-fair-comparison-gcp-aws-cvo-blg
+
+3/11
+
+5/11/22, 12:34 PM
+Google Cloud
+
+Google Cloud Pricing vs AWS: A Fair Comparison?
+- Strong performer in hybrid cloud and edge solutions - Strong financial health of AWS as standalone business
+
+- Provides the most
+
+- Google has 7% of the
+
+advanced hybrid cloud global cloud market
+
+platform, Google Anthos - Google Cloud Platform
+
+- Leads in developer
+
+annual revenue was $13
+
+mindshare
+
+
+billion in 2020, up 30%
+
+- Strong support for
+
+YoY
+
+containers and Kubernetes
+ - Growing faster than
+
+- Low adoption among other providers in
+
+large enterprises
+
+
+database as a service
+
+(DBaaS) and infrastructure
+
+as a service (IaaS)
+
+Google Cloud vs AWS Pricing: Compute Instances
+Let's have a look at the AWS vs. Google Cloud pricing for machine instances and object storage. Please check for the latest prices on the Google Cloud and AWS official pricing pages.
+Also, for reference, check out our article about Azure vs Google Cloud.
+On-Demand Google Cloud VMs vs. Amazon EC2 Instances
+Below we provide a few examples of pricing for common instance sizes. AWS has a price advantage for general purpose and memory optimized instances,
+
+https://cloud.netapp.com/blog/google-cloud-pricing-vs-aws-a-fair-comparison-gcp-aws-cvo-blg
+
+4/11
+
+5/11/22, 12:34 PM
+
+Google Cloud Pricing vs AWS: A Fair Comparison?
+
+while Google Cloud is cheaper for compute optimized, but take into account
+
+that Google instances provide almost half the quantity of RAM.
+
+Instance Parameters
+
+Google Cloud Per-Hour Price
+
+On-Demand / Linux / General Purpose / 2 CPUs (Memory: AWS 8 GB / Google Cloud 7.5 GB)
+
+$0.107
+
+On-Demand / Linux / Compute Optimized / 2 CPUs (Memory: AWS 3.75 GB / Google Cloud 1.8 GB)
+
+$0.813
+
+On-Demand / Linux / Memory Optimized / 2 CPUs (Memory: AWS 15.25 GB / Google Cloud 13 GB)
+
+$0.134
+
+AWS 
+ Per-Hour
+Price
+$0.100
+$0.100
+$0.133
+
+Reserved Google Cloud VMs vs. Reserved Amazon EC2 Instances
+
+Of AWS's four reserved instance options, only one is also offered by Google Cloud: per-month payments.
+When directly comparing this option, Google Cloud offers very similar discounted pricing across most instance types. Again, the price should be offset by the fact that AWS instances offer more memory.
+Another point to consider is that Google Cloud allows you to convert instance types during the commitment period, whereas AWS only offers this in a special
+
+https://cloud.netapp.com/blog/google-cloud-pricing-vs-aws-a-fair-comparison-gcp-aws-cvo-blg
+
+5/11
+
+5/11/22, 12:34 PM
+
+Google Cloud Pricing vs AWS: A Fair Comparison?
+
+"Convertible Instance" tier which offers a substantially reduced discount.
+
+See the table below to compare common instant sizes across the two clouds, for a 1-year reserved instance term.
+
+Instance Parameters
+
+Google Cloud Per-Hour Price
+
+AWS PerHour Price
+
+Reserved 1 Year / Linux / General Purpose / 4 CPUs (Memory: AWS 16 GB / Google Cloud 15 GB)
+
+$0.128
+
+$0.123
+
+Reserved 1 Year / Linux / Compute Optimized / 4 CPUs (Memory: AWS 8 GB / Google Cloud 3.6 GB)
+
+$0.095
+
+$0.107
+
+Reserved 1 Year / Linux / Memory Optimized / 4 CPUs (Memory: AWS 32 GB / Google Cloud 26 GB)
+
+$0.159
+
+$0.159
+
+AWS Upfront Payment Options
+AWS offers bigger discounts for upfront payments, which can make it more attractive than Google Cloud if you are prepared to pay some of all of the instance cost upfront.
+
+See the table below to understand the additional discounts you can get on AWS for prepayment. The discounts are for General Purpose instances.
+
+1 Year Reserved 3 Year Reserved
+
+Monthly Payment
+
+38%
+
+57%
+
+https://cloud.netapp.com/blog/google-cloud-pricing-vs-aws-a-fair-comparison-gcp-aws-cvo-blg
+
+6/11
+
+5/11/22, 12:34 PM
+
+Partial Upfront Payment Full Upfront Payment
+
+Google Cloud Pricing vs AWS: A Fair Comparison?
+
+41%
+
+60%
+
+42%
+
+62%
+
+Google Cloud vs. AWS Pricing: Storage
+Let's See how Google Cloud and AWS compare on two major cloud storage categories--elastic object storage, and block storage attached to compute instances.
+
+Object Storage Pricing
+There are two important differences between Google Cloud Storage and Amazon S3:
+Google Cloud charges for network egress and per operation performed on objects in storage, so you need to model your data access. Google Cloud offers instant access to all infrequent storage tiers, while Amazon's archive storage option has configurable access times that range from minutes to hours.
+See our article on AWS storage tiers to gain a better understanding of Amazon's cold storage options.
+Here is a flat comparison of storage prices per GB across the Amazon S3 and Google Cloud Storage:
+
+Storage Parameters Google Cloud Price AWS Price Per GB Per GB
+
+Frequent Access / First 50 TB
+
+$0.026
+
+$0.0230
+
+$0.026
+
+$0.0220
+
+https://cloud.netapp.com/blog/google-cloud-pricing-vs-aws-a-fair-comparison-gcp-aws-cvo-blg
+
+7/11
+
+5/11/22, 12:34 PM
+Frequent Access / 51-500 TB Infrequent Access Archive Storage
+
+Google Cloud Pricing vs AWS: A Fair Comparison?
+
+$0.010 $0.070
+
+$0.0125 $0.0040
+
+This table summarizes the additional costs charged by Google Cloud for network egress and data usage:
+
+Storage Types
+Standard Storage
+NearLine Storage
+ColdLine Storage
+
+Network Egress Outside GCP (except Asia)
+
+Cost Per
+
+Cost Per
+
+10,000 Class 10,000 Class B
+
+A Data
+
+Data
+
+Operations Operations
+
+$0.08-0.12 (depending on data
+volume)
+
+$0.05
+
+$0.004
+
+$0.08-0.12 (depending on data
+volume)
+
+$0.10
+
+$0.01
+
+$0.08-0.12 (depending on data
+volume)
+
+$0.10
+
+$0.01
+
+See Google's definition for Class A operations (heavy operations like INSERT) and Class B operations (light operation like GET).
+
+Block Storage Pricing
+Google Cloud and AWS both offer block storage--Google Cloud calls it persistent disks, and in AWS it is the Elastic Block Store (EBS) service.
+
+There are two key differences to understand in Google Cloud vs. AWS block storage pricing:
+
+https://cloud.netapp.com/blog/google-cloud-pricing-vs-aws-a-fair-comparison-gcp-aws-cvo-blg
+
+8/11
+
+5/11/22, 12:34 PM
+
+Google Cloud Pricing vs AWS: A Fair Comparison?
+
+Google provides high availability for persistent disks within an entire region
+
+(across availability zones) or across multiple regions, whereas AWS only
+
+provides redundancy inside the same availability zone.
+
+AWS charges extra for "provisioned IOPS", a type of credit bank that allows EBS instances to burst above the regular throughput rates. Google does not have an IOPS limit and does not charge for extra IOPS.
+
+Block Storage Volume Type
+
+Google Cloud Price Per GB
+
+Local standard volume
+
+$0.040
+
+SSD volume
+
+$0.170 (unlimited IOPS)
+
+Regional standard volume Regional SSD volume Snapshot storage Multi-regional snapshot storage
+
+$0.080
+$0.340 $0.026 $0.026 in each multiregion
+
+AWS Price Per GB
+$0.045 $0.1
+(additional cost for provisioned IOPS)
+N/A
+N/A $0.05 N/A
+
+Additional Resources for Comparing Prices
+Check out the calculators offered by AWS and Google to get deeper insights into your expected cloud costs for specific configurations.
+
+Resource
+
+Google Cloud
+
+AWS
+
+Pricing Calculator Official Pricing Calculator Official Pricing Calculator
+
+Total Cost of Ownership Calculator
+
+No official TCO calculator Official TCO Calculator available
+
+https://cloud.netapp.com/blog/google-cloud-pricing-vs-aws-a-fair-comparison-gcp-aws-cvo-blg
+
+9/11
+
+5/11/22, 12:34 PM
+Storage Costs Calculator
+
+Google Cloud Pricing vs AWS: A Fair Comparison?
+NetApp GC Storage TCO NetApp AWS Storage
+
+Calculator
+
+TCO Calculator--
+
+compare S3, EBS, EFS
+
+Google Cloud and AWS Cost Optimization with Cloud Volumes ONTAP
+NetApp Cloud Volumes ONTAP, the leading enterprise-grade storage management solution, delivers secure, proven storage management services on AWS, Azure and Google Cloud. Cloud Volumes ONTAP supports up to a capacity of 368TB, and supports various use cases such as file services, databases, DevOps or any other enterprise workload.
+In particular, Cloud Volumes ONTAP provides storage efficiencies, including thin provisioning, data compression, and deduplication, reducing the storage footprint and costs by up to 70%, on both Google Cloud and AWS.
+
+Yifat Perry Product Marketing Lead
+-
+© 2022 NetApp, Inc. 
+ Help Center 
+ Contact Us 
+ Careers 
+ Webinars 
+ Blog 
+ Notice 
+ Legal 
+ Services Status
+
+
+
+
+
+
+
+
+
+
+https://cloud.netapp.com/blog/google-cloud-pricing-vs-aws-a-fair-comparison-gcp-aws-cvo-blg
+
+10/11
+
+5/11/22, 12:34 PM
+
+Google Cloud Pricing vs AWS: A Fair Comparison?
+
+https://cloud.netapp.com/blog/google-cloud-pricing-vs-aws-a-fair-comparison-gcp-aws-cvo-blg
+
+11/11
+
+

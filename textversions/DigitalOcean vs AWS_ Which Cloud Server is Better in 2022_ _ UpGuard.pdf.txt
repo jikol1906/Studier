@@ -1,0 +1,282 @@
+5/11/22, 12:33 PM
+
+DigitalOcean vs AWS: Which Cloud Server is Better in 2022? | UpGuard
+Product Video See how UpGuard can improve your vendor risk management
+
+Blog DevOps DigitalOcean vs AWS: Which Cloud Server is Better in 2022?
+DigitalOceanisvBseAtWteDSrev:OipnWs 2h0ic2h2?Cloud Server
+Greg Pollock updated Mar 06, 2022
+
+DigitalOcean vs. AWS is a David vs. Goliath story with a twist. The plucky upstart, DigitalOcean, faces an established behemoth. Like David, DigitalOcean has a strategy that plays to its strengths while avoiding a direct confrontation with Amazon. But this isn't a fight to the death. Amazon and AWS address the needs of different audiences, and knowing what each does well will help you choose between them.
+DigitalOcean Overview
+DigitalOcean (spelled as one word; "Digital Ocean" was a 90'sera manufacturer of wireless communications products) is a leading upstart cloud hosting provider. Launched in 2011, DigitalOcean focuses only on developers' needs, unlike Amazon's AWS with its everything-to-all-people approach. The company has data centers located in Amsterdam, Singapore, London, San Francisco, and New York. Early on, it received significant media coverage following pop megastar Beyonce's decision to host her album on their servers in 2013. Over the years, DigitalOcean saw explosive growth and attracted large sums of venture-capital funding.
+
+https://www.upguard.com/blog/digitalocean-vs-aws#toc-1
+
+1/13
+
+5/11/22, 12:33 PM
+
+DigitalOcean vs AWS: Which Cloud Server is Better in 2022? | UpGuard
+DigitalOcean zeroes in on three main selling points to differentiate itself: pricing, high performance virtual machines, and simplicity. Their business model concentrates on giving developers a way to quickly start up affordable Linux instances called droplets. The most popular Linux distros are supported (Ubuntu, CentOS, Debian and Fedora), and with just one more click you can launch several applications ­ Ruby on Rails, a LAMP stack, Docker, Ghost, Wordpress, etc.
+DigitalOcean's pricing is reputedly THE best among all cloud providers. Their prices are very affordable, even to very small developer setups. And what's more, they don't hit you with hidden charges for add-ons like more traffic and fixed IP addresses. Pricing starts at $0.007/hour or $5/month and they provide an easy slider to convert between hourly and monthly pricing.
+DigitalOcean also prides itself on offering only high-performance machines. All disk drives are SSD, network speed is 1Gbps, and droplet startup time is just 55 seconds (compared to 1-3 minutes for other large cloud providers). Independent performance tests place DigitalOcean nodes at or near the top of performance tests, far above Amazon machines.
+
+Lastly, DigitalOcean offers a simple, user friendly, uncomplicated setup. It is targeted at developers and only offers machines running some version of the Linux operating system (for now) and related services ­ a virtual machine and DNS management. Over time it has expanded the class of products to include amenities like load-balancing, analytics, configuration management, hosted databases and so on. DigitalOcean still functions true to its DNA as a bare-bones IaaS provider for Linux developers, and they aren't ashamed to say so. From an early review of their services: "The services they provide are quite basic - you get VPS's in the cloud and DNS management, that's all. No fancy load balancing, hosted databases, Hadoop clusters, etc. Compared to AWS, for example this could be seen as a disadvantage, but don't judge just yet."
+Amazon Web Services (AWS) Overview
+
+https://www.upguard.com/blog/digitalocean-vs-aws#toc-1
+
+2/13
+
+5/11/22, 12:33 PM
+
+DigitalOcean vs AWS: Which Cloud Server is Better in 2022? | UpGuard
+In stark contrast to DigitalOcean is Amazon; the "Colossus of Cloud Computing." Amazon is a monster truck in a lot full of Minis. Amazon's AWS is the market leader by far; in fact it is estimated that Amazon has as much computing capacity as the next 11 competitors on the list combined.
+Amazon's AWS is really an umbrella offering consisting of a bewildering array of various branded IaaS and PaaS solutions. The largest and best-known of these is the EC2 IaaS solution.
+
+Others are:
+
+PaaS configuration (Elastic Beanstalk) Storage (S3 & Glacier products). Databases (RDS, RedShift, SimpleDB, DynamoDB). Networking & Content Delivery (Route 53, CloudFront). Deployment & Configuration Management (OpsWorks, CloudFormation). Content Delivery (CloudFront). Load balancing. Application development platforms.
+
+Amazon owns the largest data centers in the world. Separate data centers have been built in China to service that market exclusively. These are completely isolated from the others to placate Chinese concerns about US government spying, which have of course been heightened (legitimized!) following the Edward Snowden and Wikileaks revelations. In 2013 Amazon also won a coveted contract to create GovCloud which is a private cloud for the U.S. government. In response to Amazon's dominance in the cloud platform space, we've created a 2-part post on implementing GuardRail with Amazon AWS EC2, so be sure to check it out as well.
+
+Products  SolutOAiomfncsaozuornsein,PDtreicigrimnitgaslOofcbeRareensaodduotrhceesosfnfoetaetvuCereunsb.toeIfmgtiehnrestroecisoLmaonpgieanrteeawoitfhFree score Free trial
+
+competition, it is against EC2, but even here DigitalOcean's
+
+capacity is about 1% that of EC2. Amazon's is much more
+
+Contents
+
+concerned about the other large players ­ Google's AppEngine Author
+
+DigitalOcean
+
+and Microsoft's Azure.
+
+Overview
+
+Even with DigitalOcean's now-legendary low prices Amazon will
+
+Data Centers and
+
+not be outdone. The giant has been involved in a vicious price Greg Pollock
+
+https://www.upguard.com/blog/digitalocean-vs-aws#toc-1
+
+3/13
+
+5/11/22, 12:33 PM
+Product Inventory Cost, Performance Comparisons Scalability and Ease Of Use Enterprise Support Making your Pick Summary Protect Your BBuresaincehsessfirno2m0D22ata
+
+DigitalOcean vs AWS: Which Cloud Server is Better in 2022? | UpGuard
+war, not really with DigitalOcean, but against the likes of Google and Microsoft. This has resulted in 44 price reductions in the last Reviewed by 2 years alone, to the delight of cloud-services customers.
+
+DInavteanCtoernyters and Product
+As one would expect for the world leader in cloud services, AWS operates the largest and most extensive network of cloud data centers worldwide. The cloud provider has continued to introduce new regions to support the needs of its global customer base. Now, AWS has the following regions and locations:
+Asia Pacific: Mumbai, Seoul, Singapore, Sydney, Tokyo Canada: Central China: Beijing Europe: Frankfurt, Ireland, London South America: São Paulo US East: N. Virginia, Ohio US West: N. California, Oregon DigitalOcean, while having a smaller footprint of data centers, has a network of data centers spanning the globe too. These are the regions it has on offer: AMS2, AMS3: Amsterdam, the Netherlands BLR1: Bangalore, India FRA1: Frankfurt, Germany LON1: London, United Kingdom TOR1: Toronto, Canada NYC1, NYC2, NYC3: New York City, United States SFO1, SFO2: San Francisco, United States SGP1: Singapore An important distinction here is that AWS now offers servers in the China region, AWS China (Beijing) and AWS China (Ningxia),which, due to Chinese regulations, are offered by AWS's Chinese partners. If you are operating products to serve the Chinese market, this may make a crucial difference in which service you go with. In terms of service offerings and products, AWS is the 800 pound gorilla of the cloud computing space. It has a product suite as extensive as any in the space, rivalled only by Microsoft Azure, but then, DigitalOcean has been quietly expanding its own suite of products. However, with DigitalOcean's strategy being focused more on developers and smaller businesses, they don't actually need to offer the full suite that AWS offers. For AWS, these are some of the biggest and most heavily used products, out of all the numerous ones on offer: Amazon EC2: provides cloud computing in the Amazon Web Services cloud
+
+Kaushik Sen
+Join 27,000+ cybersecurity newsletter subscribers
+Email address*
+Subscribe
+
+https://www.upguard.com/blog/digitalocean-vs-aws#toc-1
+
+4/13
+
+5/11/22, 12:33 PM
+
+DigitalOcean vs AWS: Which Cloud Server is Better in 2022? | UpGuard
+Amazon S3: offers object storage and retrieval services AWS Lambda: offers pay per use compute time to run serverless apps Amazon Glacier: low cost storage suitable for archival purposes Amazon SNS: the Simple Notification Service provides pub/sub notifications to mobile users Amazon Elastic Block Store: provides persistent block storage for EC2 servers Amazon Kinesis: a managed service for real time processing of streaming big data in the cloud Amazon VPC: the Virtual Private Cloud service provides customers with a secure virtual private cloud for their cloud computing needs Amazon SQS: the Simple Queue Service provides distributed message queues for microservices and distributed systems
+Its product offerings might be less extensive, but DigitalOcean has the essentials covered for small and medium sized businesses. Still, just about everything DigitalOcean offers can be found on AWS. Here are some of DigitalOcean's biggest products:
+Droplets: fast and flexible cloud compute capacity DigitalOcean Kubernetes: service offering simple, user friendly, managed Kubernetes Managed Databases: managed MySQL, PostgreSQL, and Redis, with setups, backups, and updating done for you by DigitalOcean Spaces Block Storage: S3-compatible block storage with a CDN for speed Volumes Block Storage: SSD block storage for Droplets Networking: Load Balancers, Floating IPs, Cloud Firewalls and DNS
+While DigitalOcean's product range has expanded beyond what it offered a few years ago, the difference in revenue with AWS juxtaposes the two perfectly. DigitalOcean has scaled beyond $250 million in annual revenue, whereas AWS now does $9 billion a quarter, which translates to annual revenue of around $36 billion. That's several magnitudes of difference.
+
+Cost, Performance Comparisons
+In line with its value proposition of making cloud computing simpler for small businesses, DigitalOcean keeps its pricing simple as well. While it quotes an hourly rate for its Droplets, there's a simple, predictable monthly price, which makes planning and budgeting much simpler. AWS goes strictly with a pay-as-you-go approach for its more than 160 products and services. Notably, you can make your AWS costs more predictable and save money by using reserved capacity rather than pay as you go, while Amazon Lightsail has made available a simpler, more predictably priced way to leverage AWS for small apps. Reserved capacity involves an upfront payment for your
+
+https://www.upguard.com/blog/digitalocean-vs-aws#toc-1
+
+5/13
+
+5/11/22, 12:33 PM
+
+DigitalOcean vs AWS: Which Cloud Server is Better in 2022? | UpGuard
+virtual server, with the potential to save as much as 75% compared to what you would pay with provisioning your EC2 instance on a pay-as-you-go plan. DigitalOcean's pricing for Droplets and other services lets you see ahead of time how much you will end up paying. For example, a 1GB RAM Droplet with 25 GB SSD disk capacity will cost $5/month. This comes out to $0.007/hr, which is a significantly lower price than the comparable AWS EC2 t2.micro cloud server which has a pay as you go cost of $0.0116/hr. This general trend applies to a lot of the two competitors' product offerings, with DigitalOcean generally costing less for equivalent or comparable cloud computing capacity. While both AWS and DigitalOcean have transparent pricing, AWS prices have tended to be opaque and seemingly mysterious in the past. This has made price to be a common FAQ for people considering AWS services. The difference with DigitalOcean is that the latter is upfront and clear about how much you end up paying on a monthly basis, the better to suit small businesses' budgeting and planning needs. It also doesn't hurt that DigitalOcean has a pricing edge over AWS for most of their overlapping products. For AWS, the complexity of the ecosystem means that the target buyers, large enterprises with complex requirements, might prefer to stay in the AWS ecosystem to manage all their cloud computing and web hosting needs rather than go strictly on price. Large enterprise customers of AWS have included Apple and PayPal, among others, though DigitalOcean has some big names using it too. In a notable performance benchmark study, DigitalOcean came out with superior performance per dollar spent. The study compared VM performance at comparable levels of spend across major cloud providers. DigitalOcean had higher CPU performance per dollar, almost 40% higher than AWS and more than 50% higher than Google Cloud.
+
+Scalability and Ease Of Use
+
+In terms of application scalability, there is little to choose between DigitalOcean and AWS. Both can scale an application to billions of requests, no problem. The much bigger difference is in the size of the ecosystem and complementary services, reflecting the differing needs of the two platforms' customers. Scaling your application on AWS is relatively straightforward, with numerous complementary technologies that allow your web application to handle massive amounts of traffic and serve a global audience. As your traffic grows, for example, you will need a CDN to handle images and video content delivery. AWS has the Amazon CloudFront service for this purpose. When you need read replicas for your database, AWS RDS is there with 5 read replicas, with Amazon Aurora offering 15 of them. Amazon Aurora Serverless comes with autoscaling support. As requests and database writes increase, you might need to implement a message queue to take care of asynchronous messages. Amazon Simple Queue Service
+
+https://www.upguard.com/blog/digitalocean-vs-aws#toc-1
+
+6/13
+
+5/11/22, 12:33 PM
+
+DigitalOcean vs AWS: Which Cloud Server is Better in 2022? | UpGuard
+provides a scalable message queue that grows with your application. To cover your caching needs, you can use Amazon Elastic Cache. Your options for scaling on AWS technology are nearly endless, all the way to using Amazon EC2 Auto Scaling to dynamically add more compute capacity to meet escalating demand for your applications. While working in an ecosystem with less bells and whistles, apps hosted on DigitalOcean can scale just as well as any AWS solution, and likely do it with greater simplicity too. While DigitalOcean aims for simplicity, it remains tremendously flexible, leaving room for your expert devops teams and developers to architect a setup that's optimal for your applications. DigitalOcean's API and CLI tools help you dynamically add Droplets to handle traffic to your application. A typical approach might have front end nodes backed with a smaller number of data storage nodes. The DigitalOcean "Resize" feature lets you add capacity and compute power to your Droplets, however, to really scale your application elegantly, you will want to add nodes, something you can do via the DigitalOcean API. You can have rules in place to ensure that in peak load times, nodes are automatically created and added to the worker pool for your application. DigitalOcean Load Balancers are available for $10/month, which balance traffic between your Droplets, ensuring that your services stay online even when experiencing a high load. Droplet backups are also available, with a predictable cost of an additional 20% of the cost of the Droplet.
+Enterprise Support
+For enterprises, and even smaller businesses, getting support can be crucial for ensuring the success of your cloud deployment, and fixing issues to ensure quick recovery. DigitalOcean has developed a stellar reputation in this regard. It officially offers three tiers of support:
+Developer Support: DigitalOcean offers free 24/7 technical support. You can contact the company's support staff at any time to get help. Business Support: As long as you have $500 of monthly spend, you qualify for Business Support, which gives you access to Customer Success Managers and additional support from DigitalOcean. Premier Support: For businesses that need a high-touch support setup with guaranteed 30-minute response time and solutions engineering to optimize your deployments, this level of support comes for a monthly fee. AWS clients also get Basic Support for free, with the option to upgrade to a paid support plan. Paid support plans come in the following three tiers: Developer: This comes with a minimum response time of 12 hours, and costs $29 or 3% of monthly AWS charges Business: This plan comes with a 1 hour response time for system down events, and costs $100 or 10% of AWS monthly charges.
+
+https://www.upguard.com/blog/digitalocean-vs-aws#toc-1
+
+7/13
+
+5/11/22, 12:33 PM
+
+DigitalOcean vs AWS: Which Cloud Server is Better in 2022? | UpGuard
+Enterprise: The top end of AWS's support plans offers 15 minute response times for business-critical system down events. This tier of support costs $15,000 or approximately 10% of monthly AWS cost.
+Besides paid support, both AWS and DigitalOcean make users' lives easier with managed services and, in the case of DigitalOcean, a Marketplace for 1-ClickApps. AWS, however, has a much bigger suite of managed services, offered under the AWS Managed Services product line.
+
+Making your Pick
+Making your actual pick between DigitalOcean and AWS should be straightforward if you understand who these two competitors have optimized their platforms for. If you are a large enterprise that needs the full bells and whistles all on one ecosystem, DigitalOcean can still work for you, but you won't be their ideal target user and will, therefore, encounter much more friction. The same thing applies if you are a small startup looking for a simple solution and you choose to play in the AWS ecosystem, which is just not optimized for you because it's meant to address every single line in a large enterprise's cloud computing needs, with the unavoidable complexity that entails.
+Among AWS's biggest advantages are its role as the undisputed leader in the cloud computing market and global presence in at least 36 availability zones and over 50 edge locations. The reliability of AWS is text-book class, with its position as market leader enabling it to provide customers with the latest innovations ahead of the general market. Its weaknesses, however, include general complexity as well as costs that can be not only hard to unpack for platform users, but hard to plan for as well.
+DigitalOcean, on the other hand, is a more nimble and lean platform, with strong emphasis on simplicity for the end user. It has focused on its target market of developers and small businesses well, with simple UI and a low complexity approach that makes it possible for small, understaffed, devops teams to manage their infrastructure as well as any large enterprise. DigitalOcean's focus on smaller businesses means that it has not build the exhaustive product inventory that would meet all the needs of a very large enterprise. As such, there's an entire class of large cloud customers who, if they want a single ecosystem for their cloud, DigitalOcean will consistently lose out to the likes of AWS and Microsoft Azure.
+
+Summary
+
+DigitalOcean is not really an Amazon competitor. Its target market is small developers and small businesses who need to quickly start up a small high-performance instance. Still, Amazon is getting shown up by the scrappy contender when it comes to VM performance on the two platforms. DigitalOcean also gives the user a clean, easy-to-use interface with fewer features and one-click deployments. Amazon, on the other hand, offers a IaaS/ PaaS cloud supermarket where you can pick nearly any
+
+https://www.upguard.com/blog/digitalocean-vs-aws#toc-1
+
+8/13
+
+5/11/22, 12:33 PM
+
+DigitalOcean vs AWS: Which Cloud Server is Better in 2022? | UpGuard
+cloud service you could possibly want, and some that you didn't even know existed, such as mobile analytics and cloud workflows. For more comparisons of leading cloud service providers, check out our cloud service provider roundup or brave the tarpits of securing AWS automatically.
+PBrroetaecchteYsoiunr2B0u2s2iness from Data
+At UpGuard, we can protect your business from data breaches, identify all of your data leaks, and help you continuously monitor the security posture of all your vendors. UpGuard also supports compliance across a myriad of security frameworks, including the new requirements set by Biden's Cybersecurity Executive Order. CLICK HERE to get your FREE security rating now!
+
+Learn more
+Dewbohowitoenkplsoaaapdnedrosur free
+Insights on cybersecurity and vendor risk management.
+View resources
+
+eBooks, Reports & Whitepapers
+
+Tags: DevOps
+
+See UpGuard In Action
+
+Book a free, personalized onboarding call with one of our cybersecurity experts.
+
+https://www.upguard.com/blog/digitalocean-vs-aws#toc-1
+
+9/13
+
+5/11/22, 12:33 PM
+
+DigitalOcean vs AWS: Which Cloud Server is Better in 2022? | UpGuard
+Contact sales Free demo
+
+Related posts
+Learn more about the latest issues in cybersecurity.
+
+Sumo Logic vs Splunk: Which Is Better For Big Data Log Analysis?
+SWBAuinghmaiDclyohasLtiIasso?gLBioecgtvtesrSFpolrunk:
+Sumo Logic is built for the cloud; even though Splunk...
+Abi Tyas Tunggal May 11, 2022
+
+Our Experience with Golang
+OGoulraEnxgperience with
+We re-wrote our whole application in Go. Generall...
+UpGuard Team August 25, 2021
+
+11 Weird And Wonderful Uses For Docker [Infographic]
+1WD1ooWcnkdeeierrdr[fIuAnlfnUodgsreaspFhoicr]
+Docker is all the rage today --for more reasons than y...
+Abi Tyas Tunggal August 23, 2021
+
+Docker vs VMWare: How Do They Stack Up?
+
+Is CapitalOne's DevOps Dashboard Hygieia the
+Best?
+
+DHoocwkDerovTshVeMy WStaarcek:
+https://www.upguard.com/blog/digitalocean-vs-aws#toc-1
+
+IDseCvaOppitsaDlOanseh'bsoard
+
+Ansible vs Puppet
+Ansible vs Puppet
+Thus tools like Puppet and 10/13
+
+5/11/22, 12:33 PM
+Up?
+Docker is generally faster and less resource-intensiv...
+
+Hygieia the Best? Thus tools like Puppet and DigitalOcean vs AWS: Which Cloud Server is Better in 2022? | UpGuard
+Ansible are fast becoming... Capital One needed a unified dashboard for all it...
+
+Abi Tyas Tunggal January 11, 2022
+
+Abi Tyas Tunggal August 25, 2021 View all blog posts
+
+Kaushik Sen August 25, 2021
+
+Sign up to our newsletter
+Getetvheenltasteasntdcuupradtaetdescyinbeyrosuerciunrbitoyxneevwersy, bwreeeakc.hes,
+Email address* Subscribe
+
+https://www.upguard.com/blog/digitalocean-vs-aws#toc-1
+
+11/13
+
+5/11/22, 12:33 PM
+
+DigitalOcean vs AWS: Which Cloud Server is Better in 2022? | UpGuard
+
+Free instant security score
+Horogwansiezcautiroeni?s your
+
+Request a free cybersecurity report to discover key risks on your website, email, network, and brand.
+
+Instant insights you can act on immediately Hundreds of risk factors including email security, SSL, DNS health, open ports and common vulnerabilities
+
+Free score
+
+As of 11 May 2022
+
+UpGuard is a complete third-party risk and attack surface management platform. Our security ratings engine monitors millions of companies every day.
+
+UpGuard
+
+IT Vendor Risk Management Tools
+
+4.4
+
+121 Ratings
+
+Submit a review
+
+Products UpGuard Vendor Risk UpGuard BreachSight UpGuard CyberResearch Security Ratings Product Tour Pricing Release notes Integrations
+
+Compare BitSight SecurityScorecard CyberGRX RiskRecon All comparisons
+
+Solutions Financial Services Technology Healthcare
+Tools Security Reports Instant Security Score
+
+Company About us Careers We're hiring! Contact Press Support Security
+
+Insights Events Register! Breaches Resources Blog Glossary News
+
+https://www.upguard.com/blog/digitalocean-vs-aws#toc-1
+
+12/13
+
+5/11/22, 12:33 PM
+
+DigitalOcean vs AWS: Which Cloud Server is Better in 2022? | UpGuard
+
+©2022 UpGuard, Inc. Research Guidelines Platform Terms & Conditions Website Terms & Conditions Privacy Cookies
+
+https://www.upguard.com/blog/digitalocean-vs-aws#toc-1
+
+13/13
+
+

@@ -1,0 +1,400 @@
+See discussions, stats, and author profiles for this publication at: https://www.researchgate.net/publication/340173446
+
+Highlight the Features of AWS, GCP and Microsoft Azure that Have an Impact when Choosing a Cloud Service Provider
+
+Article · January 2020
+DOI: 10.35940/ijrte.D8573.018520
+CITATIONS
+6
+4 authors:
+Muhammad Ayoub Kamal University of Kuala Lumpur 14 PUBLICATIONS 21 CITATIONS
+SEE PROFILE
+Muhammad Alam University of Kuala Lumpur 67 PUBLICATIONS 268 CITATIONS
+SEE PROFILE
+
+READS
+4,792
+Hafiz Wahab Raza University of Kuala Lumpur 4 PUBLICATIONS 9 CITATIONS
+SEE PROFILE
+M. S. Mazliham University of Kuala Lumpur 110 PUBLICATIONS 434 CITATIONS
+SEE PROFILE
+
+Some of the authors of this publication are also working on these related projects: Load Balancing in Software Defined Networking View project Blockchain Applications View project
+
+All content following this page was uploaded by Muhammad Ayoub Kamal on 26 March 2020. The user has requested enhancement of the downloaded file.
+
+International Journal of Recent Technology and Engineering (IJRTE) ISSN: 2277-3878, Volume-8 Issue-5, January 2020
+
+Highlight the Features of AWS, GCP and Microsoft Azure that Have an Impact when
+Choosing a Cloud Service Provider
+
+Muhammad Ayoub Kamal, Hafiz Wahab Raza, Muhammad Mansoor Alam, Mazliham Mohd Su'ud
+
+ Abstract: Picking up public cloud service providers is now
+becoming a harder task in an enterprise organization. This paper will help in reducing more hesitation to choose a public cloud service provider. This paper is highlighting computation, storage, and infrastructure is important to service features that have an impact when choosing cloud service providers. Compare these three (AWS, Microsoft Azure, GCP) CSPs concerning service, price, advantages, and highlight significant service features. Studies discuss the primary reason to choose a CSP that normally enhance features, familiarity with the brand, suitable for organization and security parameters considered when choosing CSP. Amazon Web Services proved its leadership by maintaining about 33% share in the market throughout for several quarters irrespective of the market size increased by a factor of 3. Microsoft has shown prominent performance in SaaS. Since 2008, after introducing PaaS in the form of Google App Engine, Google is continuously enhancing its cloud computing services of Google Cloud Platform.
+Keywords: AWS, Microsoft, Azure, Google, Cloud, SaaS.
+I. INTRODUCTION
+The internet is revolutionizing the mode in which run our
+businesses and deliver them to the general public. Mostly, software and hardware both are completely available within a client's PC. In this manner, the client's information and projects are stored within his or her PC [1]. The responsibility of securing data as well as keeping application and system software up to the standards lies upon the shoulders of the concerned department and the user inside the organization [2]. The term `the cloud' is used to refer to the Internet. `Computing' is a process in which computer technology is utilized to perform a task in to achieve a goal, including the Design and development of software and hardware. When the term `the cloud' is appended with Computing It gives multi-dimensional meaning to computing. In contrast to placing away all the information and programming, one is from a computer or server, and it is placed `in the cloud' [3]. It can be composed of applications,
+Revised Manuscript Received on January 23, 2020. * Correspondence Author
+Muhammad Ayoub Kamal, Malaysian Institute of Information Technology, Universiti of Kuala Lumpur, Kuala Lumpur, Malaysia. E-mail: muhammad.ayoub@s.unikl.edu.my
+Hafiz Wahab Raza, Malaysian Institute of Information Technology, Universiti of Kuala Lumpur, Kuala Lumpur, Malaysia. E-mail: raza.hafiz@s.unikl.edu.my
+Muhammad Mansoor Alam, Universiti of Kuala Lumpur, Kuala Lumpur, Malaysia. E-mail: mansoor@unikl.edu.my
+Mazliham Mohd Su'ud*, Universiti of Kuala Lumpur, Kuala Lumpur, Malaysia. E-mail: mazliham@unikl.edu.my
+
+databases, email, record administrations, processing power, memory, processing time, and other services. According to some analysts and vendors, cloud computing is like a conventional outsourcing process where computer resources are being consumed beyond the organization's firewall, and the process is being referred to as computing `in the cloud' [4]. In cloud computing, an organization with a speciality in cloud computing provides the client with a limited amount of IT resources (concerning server space, access to programming, or both) via the cloud. In this way, the customer gets his or her IT requirements fulfilled by leasing them from an organization providing cloud computing services by spending only those hardware/software resources that are most important for the client. It enables smaller organizations to have access to resources that can only be bought as a whole by large organizations due to their high buying, running, and maintenance costs. Eventually, it helps businesses, from small to large scale, to flourish through the concept of varying IT capabilities of the organization on the spot using the Internet [5]. Thus, the profit margin can be maintained and improved with ease without making heavy investments in building up from scratch a strong IT infrastructure, training new staff, and licensing new software [6]. Cloud computing has three models (IaaS, PaaS, and SaaS) with variations in access and security levels. Each model mainly used for computation, storage, and infrastructure services, so it is very difficult for a consumer to choose a cloud computing model. There is not a single model that fits best for every company and information handling requirements, thus if any organization chooses to model how they know which model use which service feature [7]. It is required by the client to make a proper decision while choosing the model. Cloud computing overview is shown in fig. 1 [8]. Studies highlight important service features of each service that will help the organization in choosing the cloud computing model and service. The paper is structured as follows: Section II deals with the background of (AWS, Microsoft Azure, and GCP). Section III deals with the previous study. Section IV deals with the comparison of Cloud Service Providers. Section V deals with the reason for choosing CSPs. Section VI deals in highlighting the service features of CSPs. VII deals with discussing features that have an impact when choosing CSPs. Section VIII gives the conclusion. Section IX contains references.
+
+Retrieval Number: D8573118419/2020©BEIESP DOI:10.35940/ijrte.D8573.018520
+
+4124
+
+Published By: Blue Eyes Intelligence Engineering & Sciences Publication
+
+Highlight the Features of AWS, GCP and Microsoft Azure that Have an Impact when Choosing a Cloud Service Provider
+
+Fig. 1. Overview of Cloud Computing [8]
+II. BACKGROUND OF CSPs
+A. Amazon Web Services (AWS)
+An individual, organization (public, private, and government) can acquire AWS in the form of on-demand computing resources based on the pay-as-you-go style of billing. Cloud-based web administrations offer several different, focused frameworks and suitable building blocks and apparatuses for processing needs [9]. From Amazon, Amazon Elastic Compute Cloud provides such facilities it allows clients to get continuous access to a virtual bunch of PCs with the help of the Internet. In this mode, client gets features as if he or she has quality PC hardware owned by himself/herself together with equipment ( CPU and GPU for processing needs, RAM for memory requirements, hard-circle, SSD for information storing); a choice of working frameworks; establishing; and pre-stacked application program design, for instance, CRM, databases, servers to host websites, etc. [10]. AWS servers throughout the world are kept up by the Amazon backup system [11]. The cost of acquiring their services varies with the combination of different options like utilization of the tools, OS, program design, organizing features chosen via the sponsor, required the level of approachability, security, and tools set of administrative tasks. A client can pay for a dedicated virtual AWS PC, a dedicated physical PC, or a combination of each type. Amazon's vital aspect of membership agreement provides security to the client's framework. AWS is spread over various geological locales in the world [12].AWS achieved above ninety administrations in 2017, spanning over different fields like information database management, stockpiling, application administrations, equipment utilized in engineering, apparatus related to the Internet of Things (IoT), examination [13]. The mainline of products include AS3 and EC2. End clients do not get most of the administration directly, but through APIs
+
+so that engineers can utilize them in their applications to achieve the task. Now, AWS has spanned up to HTTP, and it is making use of REST structural style and SOAP convention [14]. Amazon markets AWS to endorsers as a method for getting expansive scale figuring limits more rapidly and economically than structure a genuine physical server farm [15]. All administrations are charged depending upon utilization, yet each administration estimates use in differing ways. AWS possesses an overall dominance cloud, while Microsoft and Google are after AWS [16].
+B. Google Cloud Platform
+As the name suggests, GCP provided by Google, and it is a set of cloud computing administrations. It works on the same platform, which is being utilized Google itself to run its end-client services like YouTube, Google Search [17]. Through the platform, the client can perform various cloud administrative tasks easily, such as information stockpiling, figuring of information, examining data, and machine learning. A charging card or ledger detail required for the registration process [18]. GCP gives the foundation a management stage and serverless registering conditions. [19]. Google introduced App Engine in April 2008, which served as a stage to create and facilitate web applications in Google-oversaw server farms. It dealt mainly with distributed computing administration. Due to its rising popularity, it was found to be used commonly in November 2011, and as a result, Google got involved in introducing various cloud administrations in this stage [20]. Google Cloud Platform is a unit of Google that combines the GCP open cloud framework, just employing G Suite, industry adaptations of Android and Chrome OS, plus application programming interfaces (APIs) aimed at Artificial intelligence (AI) and undertaking mapping administrations [21].
+C. Microsoft Azure Cloud
+Microsoft Azure Cloud is for the administration of a cloud computing prepared by Microsoft for making arrangements, analysis, deploying, and managing applications by Microsoft-managed data centre [22]. It offers SaaS, PaaS, and IaaS and supports a wide range of program design languages, machines, and structures, together with Microsoft explicit and outcast program design and frameworks. In October 2008, Microsoft Azure was started as a project by the name "Project Red Dog" [23]. Microsoft Azure has spent money on cloud computing, for instance, hundreds of millions of dollars, for providing several scalable cloud solutions to assist consumers and allowing them to fulfil their requirements and hopes [24]. Microsoft Azure allows application owners to use their product on a network along with a virtually unlimited resource pool through almost no upfront investment as well as by limited operating expenditures [25]. Cloud computing is network-established computing, link up dissimilar machines in various categories of a network like private, public, and hybrid infrastructure [26]. The search trend of AWS, GCP and Microsoft Azure shown in fig. 2 [27].
+
+Retrieval Number: D8573118419/2020©BEIESP DOI:10.35940/ijrte.D8573.018520
+
+4125
+
+Published By: Blue Eyes Intelligence Engineering & Sciences Publication
+
+International Journal of Recent Technology and Engineering (IJRTE) ISSN: 2277-3878, Volume-8 Issue-5, January 2020
+
+Fig. 2. Search Trend on Google [27]
+III. PREVIOUS STUDIES
+Researchers have produced several papers on the significance of cloud services. The importance of IoT in cloud computing is increasing tremendously. Cloud services like Google Compute Engine, Azure IoT Edge, Amazon Web Services, as well as their integration with IoT and the field of data science, have been highlighted in studies [28]. Due to the increasing demand for deploying a web application with reduced cost and optimum scalability of cloud computing, a comparison of monolithic with microservice architectures have also been thoroughly studied. Serverless computing is a much better service; that is the reason organizations move towards the cloud to enhance their services because the cloud is cheaper as compared to an organization's self-infrastructure. [29]. Function as a Service (FaaS), also referred to as Cloud Functions, used for running distributed applications, has been analyzed by researchers by evaluation major cloud function providers, including Microsoft, Google. cloud supports heterogeneous functions and heterogeneous components. Cloud computing has many functions, which are a support to all small, medium, and large organizations. Because of heterogeneous nature, every vendor component can participate in cloud computing infrastructure [30]. Researchers have also published the paper on rising privacy, trust, and security issues while using resources through cloud computing. Security is man's concern because cloud services are available to the organization through the internet, and several security threats are present on the internet in different ways. If an organization wants to use different CSPs services is also a challenge for this organization because of security, privacy, and trust issues between two clouds. Furthermore, it is a drawback of cloud computing CSPs give support to organizations from security, privacy, and trust perspective, but still, CSPs need to improve [31]. Several cloud computing providers have been compared with each other using several factors by researches like IaaS, PaaS, and SaaS cloud computing environments in order to search for the most suitable cloud service concerning customer's varying requirements. Every CSP has a different approach for his
+
+user; that is, the reason when an organization goes for select CSP is a little confusing because he has to first understand about facilities provided by CSPs than decide. IaaS, PaaS, and SaaS all are service models of cloud computing, but every CSP has different features for these service models [32]. It is also shown by the study that enterprise serverless cloud computing platforms are gaining in popularity; there are several use cases and researches on these platforms, requiring further research to reduce the existing challenges as well as extend their application in various areas. Serverless cloud computing is good for organizations because organizations have to pay as they use resources, not fixed amounts. CSPs try to improve services with every going day, and both consumers and CSPs are benefits of this. Serverless computing now becomes popular because it is cheaper [33]. Research also indicates that cloud computing in the form of Cloud function (FaaS) is gaining global fame in running distributed applications, and researchers have presented a benchmarking framework for its performance evaluation. Cloud computing support heterogeneous functions and work with multiple vendors at the same time. Cloud computing support consumers from many service models and design service concerning organizations or consumers [34]. Researchers have also indicated the emerging requirement of more research and development related to cloud event services present in cloud computing using real-world applications. Research is going on event services on cloud computing perspective of applications that how cloud computing support much better to multiple applications of organizations, and in this regard, many researchers are researching the analysis of cloud computing for applications [35]. A study has been carried out in demonstrating the fact that, by using patterns found in common cloud computing, mobile cloud computing can be optimized to use fewer resources. Cloud computing use resources to give services to the consumer but how cloud computing uses fewer resources and give more services to consumers, that is why multiple ways to use for optimization in cloud computing. Several researchers have highlighted the benefits of R&D in the cloud computing domain through their workshop conference papers like software engineering challenges in cloud-based applications, benefits of applying cloud computing in oceanographic data distribution on a global scale, software engineering towards developing applications for the broking of cloud storage services [36]. A study done by researches indicates that there has been a rapid increase of CSPs in the market due to the popularity of cloud computing, and comparison of these services based on various parameters has also been presented. Comparisons of many CSPs have presented concerning services that service is better of which CSP. Every CSP has some advantages as well as some disadvantages with all aspects like price, computation, infrastructure, storage [37]. An author has highlighted the fact that cloud computing advantages are not always related to monetary benefits but can be in other forms as well, like, easily increased scalability, security, redundancy. sometimes organizations choose CSP from economic suitability;
+
+Retrieval Number: D8573118419/2020©BEIESP DOI:10.35940/ijrte.D8573.018520
+
+4126
+
+Published By: Blue Eyes Intelligence Engineering & Sciences Publication
+
+Highlight the Features of AWS, GCP and Microsoft Azure that Have an Impact when Choosing a Cloud Service Provider
+
+that is why analysis of cloud computing from an economic perspective is also in benefit because redundancy and security are a major part of CSPs economy [38]. Cost Analysis has been done using Google, Microsoft, Amazon web services by applying them in a case study of monitoring delay in a public transportation system. Pricing is impacted by choosing CSP. Pricing or cost is import factor, and all CSP try to reduce services price as they can because consumer normally choose cheaper cloud services as compare to expensive but in this reliability is another factor which affects price factor. If the price is low, but the reliability of service is not good, then no organization chooses cheaper, but if reliability is good and the price of cloud service is normal than it is good for organizations [39].
+IV. COMPARISON OF CLOUD SERVICE PROVIDERS
+A. Service
+Cloud computing is a go-faster technology that permits the use of IT skills up to the user's need or according to the corporate requirements, everywhere [40]. Amazon is a major provider of open cloud benefits and is the pioneer in the Distributed computing market [41]. Amazon AWS offers practically everything with regards to Distributed computing. AWS is dominant in numerous places of interest, like design and monitoring [42]. AWS is, for the most part, preferred in the business for its broad and massive contributions, venture helpful administrations, worldwide achieve, open and adaptable features. AWS, Azure similarly offers a full variety of administrations and answers for people and associations regarding groundwork, process capacity, storing, organizing, and so forth. Microsoft Azure's quality is its registering power [43]. Microsoft enables to send and manage virtual machines as a scale that can figure at whatever limit need inside minutes. It is a novel element over Amazon and Google. Microsoft Azure additionally enables to incorporate effectively with Microsoft instruments, offers open-source backing, and half-breed cloud benefits too [44]. Google's specialized skill is significant, and its industry-driving devices in profound learning and computerized reasoning, Regard, and information investigation are critical preferences. Google Cloud offers a collection of cloud administrations for engineers. Google Cloud gives open source support, moving ability, discounts, and adaptable contracts [45]. Google Cloud is uniquely intended for cloud-based organizations and has the talent of DevOps to support groups [46]. As Google originates from an analytical groundwork, GCP gives more highlights and adaptability towards investigation and scientific devices.
+B. Pricing
+Amazon costs are exceptionally focused on all other cloud gives. Amazon offers every hour instalment reason for the highlights use [47]. Amazon also gives a free arrangement constrained capacity and registering ability, which could be valuable for people and new companies before they buy. The Estimating model is on interest, sport, and held. Can pay month to month for the administration's use on an hourly premise. It can likewise ascertain evaluation with their estimating adding machine [48]. Microsoft is evaluating differs and is dependent on the sorts of items utilized by the
+
+development team. Microsoft offers Paid ahead of time, or regularly scheduled instalment alternatives at a cost determined on every moment of utilization. As should be obvious, Microsoft is very versatile, and the valuing is on-request on momentary responsibilities [49]. Google Cloud has the best valuing among the three specialist organizations. GCP has a compensation as-you-go valuing charged on per-minute or per-second of use [50].
+C. Advantages
+An unavoidable favourable position of Amazon is the experience. Amazon has been in this Cloud advertises for about 14 years, and it has the world's ideal and experienced developers and architects. AWS is owing to a large number of developments in these devices. Amazon Web services offer tough competition to its competitors. Nevertheless, the cost of the infrastructure of AWS can be confusing. [48]. This experience makes Amazon the most undertaking generous cloud specialist co-op, which enables anybody to take a shot at AWS effortlessly [51]. Microsoft Azure is the quickest cloud arrangement accessible at this point. It is reasonable for big business advancement as it has high figuring capacity, and the other Microsoft highlights it incorporated into one framework and procedure, offering more power. Another good competitor of AWS is Microsoft Azure. Microsoft Azure has an endeavour foundation (supporting Windows). It endeavours to get interoperability with them. [52]. GCP offers one of the best cloud security in the business [53]. It offers another dimension of cloud security than the remainder of its rivals and has more than 500 security engineers taking a shot at it. For top security activities, for example, banking, finance, defence applications, GCP will be the best decision [54].
+V. REASON TO CHOOSE CLOUD SERVICE PROVIDER
+After too much review on the cloud service provider, this paper endeavours to sum up primary reasons for each of the services that focused before choosing a service provider.
+A. Enhanced Features
+When choosing any service provider, one has to know about the enhanced features of each service provider because as it has been discussed earlier that out of the three CSPs till now, according to the best of knowledge that has gathered through thorough literature review, AWS has good features as compared to Microsoft Azure and GCP.
+B. Familiarity with Brand
+Microsoft Azure and GCP take advantage of this because both are familiar as compared to AWS.
+C. Security
+As know, security is the main concern nowadays, that is why all CSPs try to enhance their security regularly, but GCP security is much better than AWS and Microsoft Azure.
+D. Suitable for Organization
+It is sure that when one chooses any cloud service, one has to keep in mind the CSP,
+
+Retrieval Number: D8573118419/2020©BEIESP DOI:10.35940/ijrte.D8573.018520
+
+4127
+
+Published By: Blue Eyes Intelligence Engineering & Sciences Publication
+
+International Journal of Recent Technology and Engineering (IJRTE) ISSN: 2277-3878, Volume-8 Issue-5, January 2020
+
+Which is better and gives suitable service from one's organization's perspective. Normally, many organizations use hybrid cloud services, but if comparison among AWS, Microsoft Azure, and GCP made, all are not much suitable for every type of organization because every organization has its requirements, but AWS somehow possesses more suitable services as compared to Microsoft Azure and GCP.
+VI. SERVICE FEATURES FOR CSPS
+A. Storage Features
+Cloud computing is a location, and the resources of computing are used from this location. It is a pool of resources available for the clients on-demand. This section throws light over important service features that have an impact when choosing a CSP. First, the author will discuss storage features through this research paper.
+Object storage: It takes a part of information then entitles it as an object. Information is preserved in distinct storehouses as opposed to files in folders and is rushed through related metadata and an exclusive identifier to process a storing group.
+File storage: It stores information about a particular portion of data in a folder to create relationships with other information. It is similarly known as categorized storage, duplicating the technique that by paper files are put in storage. While wanting access to information, the workstation system wants to distinguish the pathway to discover it.
+Block storage: It takes a folder separately into particular blocks of information as well as formerly stores these blocks, for instance, unconnected portions of information/data. For each portion of information takes a dissimilar address. Therefore they do not want to remain put in storage in a file arrangement [55].
+Disaster recovery: It is very useful feature of cloud because nowadays mostly all small and medium-sized organizations' data is on cloud and if by mistake or because of malicious traffic, data gets corrupted or lost then, through the disaster recovery, organizations can restore the data easily, a facility that permits the backup as well as rescue of remote technologies on a cloud-centred stage. A cloud centred disaster recovery answer permits the consumer to measure the whole cloud DRP solution as of more or less-to-various. [56].
+Backup: It is also a significant feature of cloud from CSPs a facility is available that every consumer can back up his data, and multiple options are available like hourly backup, daily backup, weekly backup. Backup, also well-known as online backup or remote backup, is an approach intended for transfer a copy of a virtual database to a subordinate, off-site place for safeguarding in a situation of apparatus disaster or failure. A secondary server, as well as, storage methods are frequently accommodated through a third-party facility provider, which provides the consumer a payment based scheduled storage capacity, data communication bandwidth, the number of consumers, the number of servers or amount of time data access.
+Archiving: It is an approach of cloud when some data which is not using this time, so organizations use archiving technique make a separate storage device and archive this
+
+data in this device. The procedure of moving information that is certainly no longer aggressively use to a distinct storage device for long-standing. Archived information is put in storage on a minor-cost level of storage, helping as an approach to decrease the most important storage consumption plus associated expenses. A significant characteristic of a company's data archiving approach is to record that one data and recognize what data is an applicant for archiving [57]. Below is a table of important storage features concerning CSPs.
+Table- I: Storage features
+
+Features
+
+Cloud Service Providers
+
+AWS (Amazon)
+
+Azure (Microsoft)
+
+GCP (Google)
+
+Object Storage
+Block Storage
+
+Amazon S3
+Amazon Elastic Block Store
+
+Blob Storage
+Azure Managed Disk (Built-in Service)
+
+Google Cloud Storage
+Persistent Disk
+
+File Storage
+Disaster Recover y
+Backup
+
+Amazon Elastic File System Pilot light to Hot standby environment
+
+S3 is used
+
+often
+
+for
+
+backup
+
+Azure Files
+Enterprise Scale or SMB DR Backup service
+
+Cloud Filestore
+Not good DR or backup service
+
+Archive Storage
+Bulk Data Transfer
+
+S3 or S3 Glacier
+AWS Import/Export and Snowball
+
+Azure Archive Storage Azure Import/Export and Data Box Disk Service
+
+Archival Cloud Storage
+STS (Storage Transfer Service)
+
+B. Computation Features
+Virtual server: It is also a significant feature of the cloud nowadays. Generally, organizations use virtual servers (VS) because of some benefits. Today's technology era not completed without cloud services. Cloud is a need of every organization with a different perspective like SaaS, PaaS, and IaaS. The VS distributes hardware and software resources by the new OS, as opposed to dedicated servers. One of the benefits of the VS is they less expensive and deliver quicker resource control, and VSs are common in Web hosting. Preferably, a VS imitates committed server functionalities. Somewhat than execute numerous committed servers, many VSs executed on a single server [58].
+
+Retrieval Number: D8573118419/2020©BEIESP DOI:10.35940/ijrte.D8573.018520
+
+4128
+
+Published By: Blue Eyes Intelligence Engineering & Sciences Publication
+
+Highlight the Features of AWS, GCP and Microsoft Azure that Have an Impact when Choosing a Cloud Service Provider
+
+Platform as a Service: It is a good feature of cloud in which if anyone wants to develop any application, do not worry about infrastructure or platform. Arrange for cloud apparatuses to definite software even though being used mostly for functions. PaaS delivers a structure to designers that they are capable of construct upon and used to produce modified applications. Whole servers, storage, and networking be able to be administered through an organization or a third-party provider, whereas the developers can preserve the administration of the application. A platform with Tools to test provides by PaaS, in the same environment develop and host applications. No need to bother regarding primary infrastructure facilitates companies to concentrate on growth: security, operating systems, server software, and backups managed by providers[59].
+Scaling: It is also a significant feature. Because without scaling how an organization knows about resources that an organization needed which time and how much resources required. The ability of an IT resource towards manage expanding or else reducing challenges capably is called scaling. It is one of best admired as well as helpful aspects of cloud, as corporations know how to measure higher or lay down to come across needs based upon season, plans, development, and further. Enable resources to expand as business or company expands, by implementing cloud scalability, and vice versa [60].
+Virtual Private Servers: It is a very commonly used feature because VPS is not expensive, and also CSPs give 24/7 support to customers. Organizations that are not able to manage private cloud because of expensive infrastructure use CSP services and CSP manages many VPS on a single physical server. Sometimes hosting, also recognized as "Private Cloud," is dependent on servers which are made by virtualization mechanism. VPS has multiple individual dedicated slots on the same virtual machine with one architecture. Dedicated resources can be assigned to each slot. However, generally, the technology mechanism is based on a time-shared or resource-shared trend. Usually, VPS is less costly than cloud servers. File or data access not occurs between VPS consumers on the shared server. If required, single VPS can be restarted without disturbing other VPSs on a shared server [61]. Table 2 gives important service features of computation concerning CSPs.
+Table. II: Computation features
+
+Cloud Service Providers
+
+Features AWS (Amazon)
+
+Azure (Microsoft)
+
+GCP (Google)
+
+Virtual Servers
+PaaS
+Scaling
+Virtual Private Server
+
+EC2
+Elastic Beanstalk Auto Scaling
+LightSail
+
+Virtual Machines
+
+Compute Engine
+
+Microsoft Azure Cloud Services
+Autoscale and Virtual Machine Sets
+
+Google App Engine Via Managed Instance Pools
+
+Virtual Machine Image
+
+Not Available
+
+C. Infrastructure Features
+After storage and computation, features now will present important management or infrastructure features as follows.
+Server Management Services: It is an infrastructure feature of cloud computing. Usually, cloud administration mentions to on-demand facilities suggested throughout the IaaS model. The simple distribution pattern of the cloud is IaaS that allows access to configurable resources of shared pools. Computer, servers, networks, storage, applications & services all are included in configurable resources. Sharing and storing data is a cloud function. Through network or internet, all the information, resources, and networks are shared and stored on physical servers. CSPs maintain and control these physical servers, through the assistance of Cloud Management Services (CMS), industry owners might have a deep concentration on their organization aims. CMS is the precise solution for performing good quality service on cloud infrastructure [62].
+Cloud deployment: It is a feature which is used for cloud deployment as per organizations need or organizations hierarchy. Cloud deployment talks about the deployment of IaaS, PaaS, SaaS, or answers that may perhaps retrieve on-demand through consumers. The cloud implementation pattern talks about the category of cloud computing architecture; a cloud result will apply. Cloud deployment comprises whole compulsory configuration and installation phases that need to be applied before consumer provisioning can take place. When cloud deployment has finished for an IaaS, SaaS, or PaaS solution, consumer provisioning can take place based on consumer approvals, wherever access offered for cloud resources relay on the user's taxonomy as moreover a reliable or unreliable object. Reliable objects might obtain access approval to managed cloud, hybrid cloud, or private cloud resources [63].
+Logging: A feature used by all organizations because of their critical need, All logs from which know about computation history may see from the logging feature. Logging is information technology or network architectural model in place of centrally ingesting and gathering any record, log files coming from any particular location or source, such as applications, servers, devices. Records are normalized or clarified for reorganizing and sending to other needy systems to be handled as native records, which are able to be handled formerly, presented, and finally prepared according to a prenominated holding program based on any of criteria.
+Monitoring: Also, an important feature from monitoring; data and records monitored and through this feature information collected from every node. It is a structure that enables the placement of monitoring functionalities for several other facilities and applications inside the cloud. Online state monitoring is a very common application, which constantly tracks reliable conditions of networks, applications, systems, events, or any part that might organize able inside the cloud [64].
+Server Automation: It is a requisite basic feature of cloud computing. Server automation assists the consumer to operate or manage a system or network with good decisions.
+
+Retrieval Number: D8573118419/2020©BEIESP DOI:10.35940/ijrte.D8573.018520
+
+4129
+
+Published By: Blue Eyes Intelligence Engineering & Sciences Publication
+
+International Journal of Recent Technology and Engineering (IJRTE) ISSN: 2277-3878, Volume-8 Issue-5, January 2020
+
+It is an incorporated solution that systematizes or automates specifications, patching, as well as the configuration of operating systems, application components, and storage resources through public, virtual, and physical cloud systems. It also simplifies workflows towards productively accomplishing the complication of constantly varying virtualized environments [65].
+Table. III: Infrastructure features
+
+Cloud Service Providers
+
+Features
+Server Managemen t Services
+
+AWS (Amazon)
+Systems Manager
+
+Azure
+
+GCP
+
+(Microsoft) (Google)
+
+Operational N/A Insights
+
+Cloud Deployment
+Logging and Monitoring
+Server Automation
+
+Cloud Formation
+CloudWatch and CloudTrail
+OpsWorks, Lambda and Service Catalog
+
+Resource Manager
+Azure Monitor with Log Analytics and Application Insights
+Automation and VM Extension
+
+Resource Manager and Cloud Deploym ent Manager
+StackDri ver
+N/A
+
+VII. FEATURES HAVE AN IMPACT WHEN CHOOSING CSP
+Based on the concentrated analysis carried throughout this research, a broad list of important constraints that have serious impacts on choosing CSPs has created. For example, if one wants to select cloud service IaaS for one's organization, one needs to know that among AWS, Azure, or GCP, which service provider has the best solution for IaaS from one's organization's or industry's perspective? One also has to bear in mind about the service provider's features that are more suitable for his / her requirements, available according to Storage, Computation, and Infrastructure services. All three cloud service providers use different service features. After reviewing many papers, some service features which are used by cloud service providers have been outlined properly in this work. This study work divides all service features into three tables, i.e., 1) Storage Features 2) Computations Features 3) Management Features. In table 1, all commonly used storage features which are used by service providers are listed so that one can easily find out the answer to questions such as which service feature is used by which service provider? In table 2, computation features, and table 3, management features are listed.
+
+VIII. RESULT AND DISCUSSION
+Every consumer has his / her priorities, and every CSP has its services. With different features, it is very difficult for the consumer to know the features that Azure is offering from storage perspective similar problems are present regarding finding the features provided by AWS from the computation perspective and also for Google's available features from an infrastructure perspective. Based on the review of many research papers, all features which are in tables 1, 2, and 3 are collected and divided into groups of all features concerning computation, storage, and infrastructure. It has been a big challenge to discuss every feature of the table individually and suggest the CSP, which offers good service features. That is why, based on many papers reviewed, some findings have been given as per the best of knowledge and understanding.
+A. AWS
+If talking about AWS then it has more and good features as compared to Azure and Google, AWS is more dominant in IaaS service than Azure and Google but as compared to Google and Azure, AWS is somewhat more expensive, and security of AWS is also not much better.
+B. Microsoft Azure
+It also has good features, especially in all services. Microsoft Azure is a bit cheaper as compared to AWS. Microsoft is dominant in SaaS, and also in PaaS, service features are good as compared to AWS. Microsoft is a familiar name for people, and AWS is not much familiar as compared to Microsoft and Google.
+C. Google cloud platform
+It is a good competitor of AWS and Microsoft azure because of good security and low price. Google is dominant in PaaS as compared to AWS and Microsoft Azure. Also, in SaaS, Google is going up. As discussed earlier, AWS, Microsoft Azure, and GCP all are giving good services in all domains. In the cloud, all services use the same domain mostly, for example, SaaS, PaaS, and IaaS. All three services use storage, computation, and infrastructure, so that is the reason for making tables of features from the domain's perspective and not from the service perspective. Highlighted are the CSP service features that businesses or organizations bring into consideration. These choices are shown in tables 1, 2, and 3.
+IX. CONCLUSION
+In this paper, features offered by CSP companies are discussed as well as AWS, GCP, and Microsoft Azure are compared. The purpose of CSPs comparison and highlighting service features of Microsoft Azure, Google Cloud Platform, and Amazon Web Services are to answer the questions, which are important for organizations when choosing CSP. Just significant service features have pointed out, namely storage service features, computation service features, and infrastructure service features. All three service features have an impact on the decision to choose CSP.
+
+Retrieval Number: D8573118419/2020©BEIESP DOI:10.35940/ijrte.D8573.018520
+
+4130
+
+Published By: Blue Eyes Intelligence Engineering & Sciences Publication
+
+Highlight the Features of AWS, GCP and Microsoft Azure that Have an Impact when Choosing a Cloud Service Provider
+
+This paper also discusses reasons to choose CSP and the
+main parameters which any organization has to look before
+choosing CSP because all four parameters are important. In
+this review among three AWS, Microsoft Azure and GCP
+CSPs, it can conclude that AWS is leading the world of the
+cloud with so many of its best service features and market
+share but, from security's and pricing's point of view, GCP
+and Microsoft Azure are little better from AWS.
+REFERENCES
+1. Chiang, M. and Zhang, T., 2016. Fog and IoT: An overview of research opportunities. IEEE Internet of Things Journal, 3(6), pp.854-864.
+2. Chen, M., Ma, Y., Song, J., Lai, C.F. and Hu, B., 2016. Smart clothing: Connecting human with clouds and big data for sustainable health monitoring. Mobile Networks and Applications, 21(5), pp.825-845.
+3. Kumar, V., Laghari, A.A., Karim, S., Shakir, M. and Brohi, A.A., 2019. Comparison of Fog Computing & Cloud Computing. International Journal of Mathematical Sciences and Computing (IJMSC), 5(1), pp.31-41.
+4. Jayaraman, P.P., Perera, C., Georgakopoulos, D., Dustdar, S., Thakker, D. and Ranjan, R., 2017. Analytics-as-a-service in a multi-cloud environment through semantically-enabled hierarchical data processing. Software: Practice and Experience, 47(8), pp.1139-1156.
+5. Laghari, A.A., He, H., Karim, S., Shah, H.A. and Karn, N.K., 2017. Quality of experience assessment of video quality in social clouds. Wireless Communications and Mobile Computing, 2017.
+6. Power, B. and Weinman, J., 2018. Revenue Growth is the Primary Benefit of the Cloud. IEEE Cloud Computing, 5(4), pp.89-94.
+7. Benlian, A., Kettinger, W.J., Sunyaev, A., Winkler, T.J. and GUEST EDITORS, 2018. The transformative value of cloud computing: a decoupling, platformization, and recombination theoretical framework. Journal of management information systems, 35(3), pp.719-739.
+8. Akherfi, K., Gerndt, M. and Harroud, H., 2018. Mobile cloud computing for computation offloading: Issues and challenges. Applied computing and informatics, 14(1), pp.1-16.
+9. Mitra, A., O'Regan, N. and Sarpong, D., 2018. Cloud resource adaptation: A resource-based perspective on value creation for corporate growth. Technological Forecasting and Social Change, 130, pp.28-38.
+10. Díaz, M., Martín, C. and Rubio, B., 2016. State-of-the-art, challenges, and open issues in the integration of the Internet of things and cloud computing. Journal of Network and Computer Applications, 67, pp.99-117.
+11. Vrable, M., Savage, S. and Voelker, G.M., 2012, February. BlueSky: A cloud-backed file system for the enterprise. In Proceedings of the 10th USENIX conference on File and Storage Technologies (pp. 19-19). USENIX Association.
+12. Coppolino, L., D'Antonio, S., Mazzeo, G. and Romano, L., 2017. Cloud security: Emerging threats and current solutions. Computers & Electrical Engineering, 59, pp.126-140.
+13. Marinescu, D.C., 2017. Cloud computing: theory and practice. Morgan Kaufmann.
+14. Sultan, N., 2015. The implications of cloud computing for global enterprise management. Global enterprise management (pp. 39-56). Palgrave Macmillan, New York.
+15. Galloway, S., 2017. The four: the hidden DNA of Amazon, Apple, Facebook and Google. Random House.
+16. Gajbhiye, A. and Shrivastava, K.M.P., 2014, September. Cloud computing: Need, enabling technology, architecture, advantages and challenges. In 2014 5th International Conference-Confluence The Next Generation Information Technology Summit (Confluence) (pp. 1-7). IEEE.
+17. Aruna Irani, A.R., Manjula, D. and Sugumaran, V., 2019. Task scheduling techniques in cloud computing: A literature survey. Future Generation Computer Systems, 91, pp.407-415.
+18. Verma, A., Pedrosa, L., Korupolu, M., Oppenheimer, D., Tune, E. and Wilkes, J., 2015, April. Large-scale cluster management at Google with Borg. In Proceedings of the Tenth European Conference on Computer Systems (p. 18). ACM.
+19. Varghese, B. and Buyya, R., 2018. Next-generation cloud computing: New trends and research directions. Future Generation Computer Systems, 79, pp.849-861.
+
+20. Marston, S., Li, Z., Bandyopadhyay, S., Zhang, J. and Ghalsasi, A., 2011. Cloud computing--The business perspective. Decision support systems, 51(1), pp.176-189.
+21. Laghari, A.A., He, H., Shafiq, M. and Khan, A., 2017, May. Impact of storage of mobile on quality of experience (QoE) at the user level accessing the cloud. In 2017 IEEE 9th international conference on communication software and networks (ICCSN) pp. 1402-1409.
+22. Aljamal, R., El-Mousa, A. and Jubair, F., 2018, April. A comparative review of high-performance computing major cloud service providers. In 2018 9th International Conference on Information and Communication Systems (ICICS) (pp. 181-186). IEEE.
+23. Ranjan, R., Benatallah, B., Dustdar, S. and Papazoglou, M.P., 2015. Cloud resource orchestration programming: overview, issues, and directions. IEEE Internet Computing, 19(5), pp.46-56.
+24. Belgaum, M.R., Soomro, S., Alansari, Z. and Alam, M., 2018. Cloud service ranking using checkpoint-based load balancing in real-time scheduling of cloud computing. In Progress in Advanced Computing and Intelligent Engineering (pp. 667-676). Springer, Singapore.
+25. Belgaum, M.R., Soomro, S., Alansari, Z., Musa, S., Alam, M. and Su'ud, M.M., 2017. Challenges: Bridge between cloud and IoT. In 2017 4th IEEE International Conference on Engineering Technologies and Applied Sciences (ICES) (pp. 1-5). IEEE.
+26. Nayar, K.B. and Kumar, V., 2018. Cost-benefit analysis of cloud computing in education. International Journal of Business Information Systems, 27(2), pp.205-221. https://trends.google.com/trends/
+27. Mohamed, K.S., 2019. IoT Cloud Computing, Storage, and Data Analytics. In The Era of Internet of Things (pp. 71-91). Springer, Cham.
+28. Pérez, A., Moltó, G., Caballer, M. and Calatrava, A., 2018. Serverless computing for container-based architectures. Future Generation Computer Systems, 83, pp.50-59.
+29. Figiel, K., Gajek, A., Zima, A., Obrok, B. and Malawski, M., 2018. Performance evaluation of heterogeneous cloud functions. Concurrency and Computation: Practice and Experience, 30(23), p.e4792.
+30. Graupner, H., Torkura, K., Berger, P., Meinel, C. and Schnjakin, M., 2015, October. Secure access control for multi-cloud resources. In 2015 IEEE 40th Local Computer Networks Conference Workshops (LCN Workshops) (pp. 722-729). IEEE.
+31. Joshi, N. and Shah, S., 2019. A comprehensive survey of services provided by prevalent cloud computing environments. In Smart Intelligent Computing and Applications (pp. 413-424). Springer, Singapore.
+32. Lynn, T., Rosati, P., Lejeune, A. and Emeakaroha, V., 2017, December. A preliminary review of enterprise serverless cloud computing (function-as-a-service) platforms. In 2017 IEEE International Conference on Cloud Computing Technology and Science (CloudCom) (pp. 162-169). IEEE.
+33. Laghari, A.A., He, H., Halepoto, I.A., Memon, M.S. and Parveen, S., 2017. Analysis of quality of experience frameworks for cloud computing. IJCSNS, 17(12), p.228.
+34. McGrath, G., Short, J., Ennis, S., Judson, B. and Brenner, P., 2016, June. Cloud event programming paradigms: Applications and analysis. In 2016 IEEE 9th International Conference on Cloud Computing (CLOUD) (pp. 400-406). IEEE.
+35. Laghari, A.A, RA Laghari, AA Wagan, AI Umrani;2019. Effect of Packet Loss and Reorder on Quality of Audio Streaming, SIS, EAI DOI: 10.4108/eai.13-7-2018.160390
+36. Vakili, A. and Navimipour, N.J., 2017. A comprehensive and systematic review of the service composition mechanisms in cloud environments. Journal of Network and Computer Applications, 81, pp.24-36.
+37. Islam, N. and Islam, Z., 2018. An economic perspective on major cloud computing providers. arXiv preprint arXiv:1810.05088.
+38. Pérez-Arteaga, Pedro, Cristian Castellanos, Harold Castro, Dario Correal, Luis Guzmán, and Yves Denneulin. "Cost Comparison of Lambda Architecture Implementations for Transportation Analytics using Public Cloud Software as a Service." Special Session on Software Engineering for Service and Cloud Computing (2018): 855-862.
+39. Dave, D., Meruliya, N., Gajjar, T.D., Ghoda, G.T., Parekh, D.H. and Sridharan, R., 2018. Cloud Security Issues and Challenges. In Big Data Analytics (pp. 499-514). Springer, Singapore.
+
+Retrieval Number: D8573118419/2020©BEIESP DOI:10.35940/ijrte.D8573.018520
+
+4131
+
+Published By: Blue Eyes Intelligence Engineering & Sciences Publication
+
+International Journal of Recent Technology and Engineering (IJRTE) ISSN: 2277-3878, Volume-8 Issue-5, January 2020
+
+40. Kotas, C., Naughton, T. and Imam, N., 2018, January. A comparison of Amazon Web Services and Microsoft Azure cloud platforms for high-performance computing. In 2018 IEEE International Conference on Consumer Electronics (ICCE) (pp. 1-4). IEEE.
+41. Mukiri, R.R. and Prasad, D.B., 2019. Developing Secure Storage of Cloud with IoT Gateway. Available at SSRN 3446640.
+42. Sharma, S., Chang, V., Tim, U., Wong, J. and Gadia, S., 2016. Cloud-based emerging services systems. International Journal of Information Management, pp.1-12.
+43. Riti, P., 2018. Introduction to DevOps. In Pro DevOps with Google Cloud Platform (pp. 1-18). Apress, Berkeley, CA.
+44. Lee, I., 2019. Pricing schemes and profit-maximizing pricing for cloud services. Journal of Revenue and Pricing Management, 18(2), pp.112-122.
+45. Jain, A. and Mahajan, N., 2017. Introduction to Cloud Computing. In The Cloud DBA-Oracle (pp. 3-10). Apress, Berkeley, CA.
+46. Kash, I.A. and Key, P.B., 2016. Pricing the cloud. IEEE Internet Computing, 20(1), pp.36-43.
+47. Dewangan, M., Deshmukh, R.K. and Mishra, A., 2018. Comparative Study Between Existing Cloud Service Providers. International Journal of Advanced Research in Computer Science, 9(2), p.537.
+48. Safonov, V.O., 2016. Trustworthy cloud computing. John Wiley & Sons.
+49. Meena, M. and Bharadi, V.A., 2018, August. A Novel Architecture of Hybrid Wavelet Techniques Used by CBIR System for Microsoft Azure Public Cloud SaaS Model. In 2018 Fourth International Conference on Computing Communication Control and Automation (ICCUBEA) (pp. 1-6). IEEE.
+50. Thakurratan, R.S., 2018. Google Cloud Platform Administration: Design highly available, scalable, and secure cloud solutions on GCP. Packt Publishing Ltd.
+51. Franklin, Jr, C. and Chee, B., 2019. Securing the Cloud: Security Strategies for the Ubiquitous Data Center. Auerbach Publications.
+52. Gutierrez, F.O., Garcia, V.C., Cardoso, J.F.S., Jamir, T., Neto, J.R., Assad, R. and Barreto, M., 2017, September. storage-A Storage Architecture to Provide Block-Level Storage Through Object-Based Storage. In European Conference on Service-Oriented and Cloud Computing (pp. 213-228). Springer, Cham.
+53. Mary, A.A. and Chitra, K., 2017, February. Study on Disaster Recovery in Cloud Environment. In 2017 World Congress on Computing and Communication Technologies (WCCCT) (pp. 165-167). IEEE.
+54. Patil, S.R., Shiraguppi, R.M., Sivakumar, G., Terry, M.A. and Trevathan, M.B., International Business Machines Corp, 2015. Selective monitoring of archive and backup storage. U.S. Patent 9,063,966.
+55. Mohapatra, S., Mohanty, S., Pattanayak, S. and Hota, A., 2017. Comparison of various platforms in cloud computing. International Journal of Computer Applications, 162(7).
+56. Abro, A., Deng, Z., Memon, K.A., Laghari, A.A. and Mohammadani, K.H., 2019. A Dynamic Application-Partitioning Algorithm with Improved Offloading Mechanism for Fog Cloud Networks. Future Internet, 11(7), p.141.
+57. Laghari, A.A., He, H., Laghari, R.A., Khan, A., Yadav, R., Passy, R.A., Ovenden-Hope, T., Kolb, P., Sijmons, S., McArdle, M.R. and Taher, H., 2019. Cache Performance Optimization of QoC Framework. EAI Endorsed Trans. Scalable Information Systems, 6(20), p.e7.
+58. Telenyk, S., Rolik, O., Bukasov, M. and Halushko, D., 2015. Models and methods of resource management for VPS hosting. Czasopismo Techniczne.
+59. Laghari, A.A., He, H., Shafiq, M. and Khan, A., 2019. Application of quality of experience in networked services: Review, trend & perspectives. Systemic Practice and Action Research, 32(5), pp.501-519.
+60. Mangtani, K., Jalagam, S., Nagaraja, V. and Winterfeldt, D., VMware Inc, 2015. System to generate a deployment plan for a cloud infrastructure according to logical, multi-tier application blueprint. U.S. Patent 9,052,961.
+61. Rittinghouse, J.W. and Ransome, J.F., 2017. Cloud computing: implementation, management, and security. CRC press.
+62. Maes, S.H., Newman, M.S., Kuchler, K. and Goepel, T., Hewlett-Packard Enterprise Development LP, 2017. Managing a cloud service. U.S. Patent 9,825,823.
+63. Saavedra, P.H., Teloip Inc, 2016. System, apparatus and method for providing improved performance of aggregated/bonded network connections with cloud provisioning. U.S. Patent 9,426,029.
+64. Botta, A., De Donato, W., Persico, V. and Pescapé, A., 2016. Integration of cloud computing and the internet of things: a survey. Future generation computer systems, 56, pp.684-700.
+
+AUTHORS PROFILE
+Muhammad Ayoub Kamal, currently doing PhD in (Information Technology), from the Malaysian Institute of Information Technology Universiti of Kuala Lumpur, Kuala Lumpur, Malaysia. He received his Master of Engineering degree in Information Technology from Mehran University of engineering and technology in 2015, and a Bachelor of Engineering degree in Computer system Engineering from Mehran University of Engineering and Technology in 2012. He has six years of experience in fieldwork and academic institutions, four years of experience as IT Manager in EKTA construction company, one year of experience as IT Instructor in APTECH computer education, and he has one year of experience as Lecturer Computer Science in ILMA University.
+Hafiz Wahab Raza, currently doing PhD in Information Technology from Malaysian Institute of Information Technology, Universiti Kuala Lumpur, Kuala Lumpur, Malaysia. He received his master's degree in Computer Science in 2015 from Institute of Business and Technology, Karachi, Sindh, Pakistan. He completed his bachelor's degree in 2008 from the Islamia University of Bahawalpur, Bahawalpur, Punjab, Pakistan. He has three years' experience as web developer and five years of experience as computer teacher at The City School International for O level students. He has also three years of experience as Lecturer at ILMA University and he also served as Visiting Lecturer at Dadabhoy Institute of Higher Education and PIMSAT (Preston Institute of Management Science and Technology).
+Muhammad Mansoor Alam, holds a PhD. Degree in computer engineering, a PhD. Degree in electrical and electronic engineering, the M.E degree in system engineering, and M.sc degree in computer science. He is a Professor of Computer Science. He is working as an Associate Dean in CCSIS and HoD Mathematics, Statistics and Computer Science Departments of IoBM. He is also working as an adjunct professor in UniKL. He is an active researcher in the field of Computer Science. He has authored more than 160 research articles published in ISI indexed journals, as book chapters, and in peer-reviewed conferences. He is also an author of the book "Study guide of Network Security" copyrighted by Open University Malaysia and Open University Hong Kong.
+Mazliham Mohd Su'ud, received a PhD in Computational Intelligence & Decision, from University De La Rochelle, France 2007, he received his Post Master Degree in Electronics, from University De Montpellier II France and master's degree in electrical and electronics engineering from the University of Montpellier II, in 1993, and since 2013, he has been a President / Chief Executive Officer of Universiti of Kuala Lumpur, Malaysia. He is an active researcher in the field of machine learning algorithms. He has authored more than 70 research articles published in ISI indexed journals, as book chapters, in peer-reviewed conferences, and Scopus journals.
+
+Retrieval Number: D8573118419/2020©BEIESP DOI:10.35940/ijrte.D8573.018520
+View publication stats
+
+4132
+
+Published By: Blue Eyes Intelligence Engineering & Sciences Publication
+
+

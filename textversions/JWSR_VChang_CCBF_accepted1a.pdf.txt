@@ -1,0 +1,698 @@
+International Journal of Web Services Research, Vol.8, No.3, 2011.
+Case Studies and Organisational Sustainability Modelling presented by Cloud Computing Business Framework
+Victor Chang1, 2, David De Roure3, Gary Wills1, Robert John Walters1 1. School of Electronics and Computer Science, University of Southampton, Southampton,
+UK. 2. Business School, University of Greenwich, London, UK.
+3. Oxford e-Research Centre, University of Oxford, UK. vic1e09@ecs.soton.ac.uk
+ABSTRACT:
+Cloud Computing Business Framework (CCBF) is proposed to help organisations achieve good Cloud design, deployment, migration and services. While organisations adopt Cloud Computing for Web Services, technical and business challenges emerge and one of these includes the measurement of Cloud business performance. Organisational Sustainability Modelling (OSM) is a new way to measure Cloud business performance quantitatively and accurately. It combines statistical computation and 3D Visualisation to present the Return on Investment arising from the adoption of Cloud Computing by organisations. 3D visualisation simplifies the review process and is an innovative way for Return of Investment (ROI) valuation. Two detailed case studies with SAP and Vodafone have been presented, where OSM has analysed the business performance and explained how CCBF offers insights, which are relatively helpful for WS and Grid businesses. Comparisons and discussions between CCBF and other approaches related to WS are presented, where lessons learned are useful for Web Services, Cloud and Grid communities.
+KEY WORDS: Cloud Computing; Cloud Computing Business Framework (CCBF); Organisational Sustainability Modelling (OSM); 3D Visualisation; Business Challenges for Clouds; Return of Investment (ROI); Cloud Business Model Comparison and Analysis; and Grid Business.
+1. Introduction
+Cloud Computing provides added value for organisations; saving costs in operations, resources and staff - as well as new business opportunities for service-oriented models (Vouk, 2008; Briscoe and Marinos, 2009; Hayne, 2009; Schubert, Jeffery and Neidecker-Lutz 2010; Chang et al., 2010 a; Chang, Wills, De Roure, 2010 b). In addition, it is likely that cloud computing focusing on operational savings and green technology will be the focus of attention. To avoid repeats of Internet bubbles and to maintain business operations, achieving long-term sustainability is an important success factor for organisations (Chang, Mills and Newhouse, 2007). Before deploying any type of cloud computing development, it is essential to design and implement good-quality Business Models and a Business Framework (Hosono et al., 2009; Weinhardt et al., 2009). Hosono et al. (2009) demonstrate Service System Modelling (SSM) and explain how SSM helps Business Models to be developed with Cloud Frameworks. Anstett et al. (2009) explain how Business Process Execution Language (BPEL) assists in developing a Cloud Framework to create a SOA-driven Business Model. Weinhardt et al. (2009) explain how their definitions and importance of Cloud Business Models (CBM), and show how CBM can influence research directions for the academic communities. Buyya et al. (2008, 2009) and Patterson and Armbrust et al. (2009) define CBM and explain their rationales in terms of (i) pay-as-you go systems; (ii) cost saving calculations; and (iii) SOA and SLA theories.
+1
+
+International Journal of Web Services Research, Vol.8, No.3, 2011.
+However, the feedback from industrialists (Chang et al., 2010 d; 2011 a) is that the CBMs proposed by Buyya et al. (2008, 2009) and Patterson, Armbrust et al. (2009) are getting too complicated to understand, and as a result, these models are unable to be used and applied effectively in the realtime cloud computing businesses. In addition, there are few Cloud Business Frameworks that can accommodate different types of technical solutions in relations to their businesses (Klems, Nimis and Tsai, 2009). Despite IaaS, PaaS and SaaS are generally classified as three business models, there is no definite guideline for how to succeed and sustain in the cloud businesses. Therefore, businesses models proposed in this research are categorised, easy to follow and structured into Cloud Computing Business Frameworks (CCBF), where Organisational Sustainability is a major area in the CCBF.
+Organisational Sustainability Modelling (OSM) is designed to measure cloud business performance, so that that it gives the following two advantages: (i) allows performance reviews at any time; and (ii) provides strategic directions and added-values for adopting right types of cloud business for organisational sustainability. The structure for this paper is as follows. Section 1 described Web Services overview and its technical and business challenges. Section 2 presents the literature review. Section 3 describes the CCBF and OSM. Section 4 presents two in-depth organisational case studies with OSM and 3D visualisation demonstrated, which belong to part of OSM to measure cloud business performance. Section 5 presents several similar approaches and compares them with our CCBF, and also discusses their respective strengths and weaknesses. Section 6 describes conclusion and future work.
+2. Literature Review
+2.1 Software as a Service (SaaS)
+The term "Software as a Service" (SaaS) was first used by Saleforce.com in 1999 when they saw the vision of merging Web Services (WS) and Service Oriented Architecture (SOA). SaaS is a popular type of cloud service and provides added values on top of WS and SOA (Foster et al., 2008; Briscoe and Marinos, 2009; Buyya et al., 2009). In addition, there are Infrastructure as a Service and Platform as a Service for Cloud Computing (CC) and Web Services. They can be defined as follows.
+· Infrastructure as a Service (IaaS) is divided into Compute Clouds and Resource Clouds. Compute Clouds provide users access to computational resources such as CPUs, hypervisors and utilities. Resource Clouds contain managed and scalable resources as services to users ­ in other words, they provide enhanced virtualisation capabilities.
+· Platform as a Service (PaaS): provides computational resources via a platform upon which applications and services can be developed and hosted. PaaS typically makes use of dedicated APIs to control the behaviour of a server hosting engine that executes and replicates the execution according to user requests (e.g. access rate).
+· Software as a Service (SaaS), referred to as Service or Application Clouds, offer implementations of specific business functions and business processes that are provided with cloud capabilities. Therefore, they provide applications and/or services using a cloud infrastructure or platform, rather than providing cloud features themselves.
+SaaS is the research interests for WS and CC, where there are papers to describe how SaaS jointly is achieved for WS and CC. Firstly, Lu, Jackson and Berka (2010) demonstrate how their applications can be used as a WS and as a SaaS in the Cloud. They also demonstrate their framework and their
+2
+
+International Journal of Web Services Research, Vol.8, No.3, 2011.
+experiments to validate. Secondly, O'Reilly (2007) presents his vision for Web 2.0 and explains how WS and Web 2.0 are SaaS.
+In addition, several WS papers use BPEL as workflows for business process and demonstrate how it fits into Cloud Computing and how SaaS can be achieved (Anstett et al., 2009; Hobona et al., 2010). Hobona et al. (2010) present a workflow management system called SAW-GEO, which supports orchestration of WS working in Grid and Cloud environments. Apart from BPEL, Business Process Modelling Notation (BPMN) is another commonly used technique for Web Services. BPMN is a graphical representation for specifying business processes in business process modelling (BPM), and is a standard for BPM. The BPMN specification provides a mapping between the graphics of the notation to the underlying constructs of execution languages, particularly BPEL. This leads to some interests converting BPMN into BPEL (Biermann and Ermel, 2009) in SaaS. Both BPMN and BPEL are presented in terms of workflows, which are commonly used to demonstrate WS, SOA and service interoperability in Clouds.
+2.2 Technical challenges
+Patterson and Armbrust et al. (2009) explain current challenges for cloud computing and these mainly include: (i) Vendors' lock-in; (2) interoperability and (3) security. Vendors' lock-in restricts freedom and varieties in use cases. Interoperability requires in-depth understanding of APIs, and being able to rewrite, or create new APIs for interoperability (Denaro, Pezzè and Tosi, 2009). Before achieving interoperability, portability should ideally be demonstrated, and in particular from desktop to clouds, and eventually between clouds provided by different vendors (Patterson and Armbrust et al., 2009; Chang et al., 2010 d; Chang et al., 2011 a). Tsalgatidou et al. (2008) present their interoperability case by integrating P2P services with Web Services, and their example demonstrates interoperability between heterogeneous services. This fits well in the Clouds, in particular for high availability for user requirements. However, a likely challenge for such approach on Clouds is about P2P security, where Hwang et al. (2009) propose their virtualised defence and Reputation-based Trust Management (RTM) to describe that additional APIs and their RTM-based security infrastructure for maintaining P2P cloud security.
+Security is always a popular topic, and there are the following areas of specialisations suited for Clouds: identify management, access control, single sign-on and auditing (Chen et al., 2010; Martino and Bertino, 2009). In Chen et al. context, auditing means intrusion and detection mechanism, as well as policy-related security. Hwang et al (2009) proposal to cloud security relates to intrusion and detection, despite identity management should be enforced. Yee and Korba (2008) identify that personalising a security policy to a particular customer is needed. Therefore, Yee and Korba (2008) propose a flexible security personalisation approach that aims to allow an Internet or Web service provider and customer to negotiate to an agreed-upon personalised security policy, and they also present two application examples of security policy personalisation. Proposal from Paci et al. (2008) is for access control, where they explain and demonstrate their Access-Control Framework for WS-BPEL, so that WS-BPEL not only has high performance but also maintains a high level of security for Web Services and interoperability. Kangasharju et al. (2009) investigate mobile WS security and focus on XML security with binary XML.
+Cloud security has been evolving and new methods or more sophisticated techniques will be revised and made available. To address technical challenges, standards can be potentially a solution or a way to go forward (Pearson and Charlesworth, 2009). Currently cloud standardisation is an emerging yet evolving area. An excellent example is that the OASIS gathered Alfresco, CA, Capgemini, Cisco, Cognizant, Boeing, eBay, IBM, Microsoft, Novell, PingIdentity, Red Hat, SafeNet, SAP, Skyworth TTG, Symantec, Vanguard, VeriSign, and others to define profiles for identity deployment, provisioning and management in the Cloud.
+3
+
+International Journal of Web Services Research, Vol.8, No.3, 2011.
+2.3 Business challenges
+Despite security and privacy being areas that require regular improvement, there are also business challenges as critical as security (Weinhardt et al., 2009). There are initiatives explaining Service Level Agreements (SLA) can demonstrate cloud business models (Brandic et al., 2009; Buyya et al., 2009), however, costs per usage are dealing with operational levels and there is a lack of recommendations proposing or standardising the strategic levels, in which there are three problems associated with clouds in current research. Firstly, all cloud business models and framework proposed by several leading researchers are either qualitative (Briscoe and Marinos, 2009; Chou, 2009; Weinhardt et al., 2009; Schubert, Jeffery and Neidecker-Lutz, 2010) or quantitative (Brandic et al., 2009; Buyya et al., 2009; Patterson, Armbrust et al., 2009). Excluding SLA-based research, there are few whose frameworks or models can demonstrate linking both quantitative and qualitative aspects. Even there are, the amount of work is still at early stage. Secondly, there is no accurate method for analysing cloud business performance other than stock market. A drawback with stock market is subject to accuracy and reliability issues (Chang, Wills and De Doure, 2010 b; Chang et al., 2010 d; 2011 a). There are researchers focusing on business model classifications and justifications on cloud business can be successful (Chou, 2009; Weinhardt et al., 2009). But these business model classifications need more cases to support and more data modelling to validate for organisational sustainability. Ideally, a structured framework should be proposed to review accurate cloud business performance and organisational sustainability in systematic ways. Thirdly, communications between different types of clouds from different vendors are often not easy to be implemented. Often work-around requires writing additional layers of APIs, or an interface or portal to allow communications. This brings interesting research question such as portability, as portability of some applications from desktop to cloud is challenging (Beaty K et al., 2009; Patterson D, Armbrust M et al., 2009). Portability refers to moving enterprise applications and services, and not just files or VM over clouds.
+3. Motivation in the Cloud Computing Business Framework (CCBF)
+To address technical and business challenges particularly three business problems described earlier, the Cloud Computing Business Framework (CCBF) is proposed. The core concept of CCBF is inspired from Weinhardt et al.'s Cloud Business Model Framework (CBMF) where they have demonstrated how technical solutions and Business Models fit into their CBMF.
+Foster et al. (2008) explain that Grids and Clouds are in common for solutions and research questions that both Grids and Clouds are dealing with. However, Sobel et al. (2009) argue that Grid and Cloud are different in particular to the way Web 2.0 is involved from the beginning to current status, and also Web 2.0 is a subset of Clouds and is not necessarily so for Grids. In contrast, Weinhardt et al. (2009) define the difference in Grids and Clouds is in business models where Clouds provide new business opportunities. This is further supported that since 2007, there is an increasing number of organisations offering many different Cloud solutions and services.
+The CCBF is proposed to deal with four research problems: · Provide linkage and direct relations between quantitative and qualitative cloud business research methodologies. Classification of business models is the first step to provide useful constructions of linkage. · Offer a framework to review cloud business performance accurately. · Deal with communications between desktops and clouds, and between different clouds offered by different vendors, which focus on enterprise portability.
+4
+
+International Journal of Web Services Research, Vol.8, No.3, 2011.
+· Provide linkage and relationship between different cloud research methodologies, and between IaaS, PaaS, SaaS and Business Models.
+CCBF also focuses on conceptual and then architectural framework, and this allows a series of conceptual methodologies apply and fit into Cloud Architecture and Business Models. For this paper, the objective is to focus on the second business challenge, a framework to review and measure accurate cloud business performance.
+3.1 Research questions within CCBF
+A good framework should be able to accommodate multiple methods or solutions to work in different contexts and consolidate each other towards the goal of the framework (Sander WH et al., 2004; Jiang T J et al., 2006). In an ideal situation, a framework should address research questions and provide methodology proving supporting the validity. Referring to Section 2.3, there are three business challenges to deal with, which are our research focus. Linkage between quantitative and qualitative approach requires collaboration between top-down and bottom-up methodologies, and often this requires a period of time to validate, and is the last research question to be addressed. Based on the summary in Section 2.3, our research areas can be summed up as: (i) Classification; (ii) Organisational Sustainability; (iii) Portability and (iv) Linkage, and their descriptions are as follows:
+· Classification: This refers to the upper-most layer in the CCBF where the top-down strategic direction is provided to guide organisations into the right track of operating their cloud projects and businesses. Currently the use of Cloud Cube Model (CCM) has been used for classification of eight Cloud Business Models (Chang, et al., 2010 a; 2010 b). Summary of such outcomes can be used for classification for good practices, and is not focus in this paper.
+· Organisational Sustainability: This includes modelling to review and evaluate cloud business projects in the past and present, and also enables forecasting for cloud businesses in the future. Organisational Sustainability modelling is suitable for all IaaS, PaaS and SaaS. Details are then described from Section 3.1 onwards.
+· Portability: This refers to enterprise portability, which involves moving the entire application services from desktops to clouds and between different clouds. For financial services and organisations that are not yet into clouds, portability involves a lot of investment in terms of outsourcing, including rewriting APIs. Thus this is regarded as a business challenge (Chang et al., 2010 d; 2011 a). Portability deals with IaaS, PaaS and SaaS. Examples in Health, Finance and Education will be demonstrated, and is not the focus for this paper.
+· Linkage: This has two aspects. The first aspect includes the use of the Hexagon Model across IaaS, PaaS, SaaS and Business Model of the CCBF. The second aspect includes demonstration of a new concept, Business Integration as a Service (BIaaS), which allows different processes to work together without additional translation in a single and integrated platform. Linkage is not the focus of this paper.
+Both Organisational Sustainability and Portability apply to different sectors and domains using Cloud Computing, and all lessons learned are summed up for Classification. This journal focuses on Organisational Sustainability of the CCBF, the second research area.
+5
+
+International Journal of Web Services Research, Vol.8, No.3, 2011.
+
+Figure 1: Architecture for Cloud Computing Business Framework (CCBF)
+
+CCBF ­ accommodate frameworks within CCBF Framework. My research focuses on conceptual and architectural framework.
+
+Business Models
+Classification (top-down by CCM)
+
+Hexagon Model related to Business Models
+
+Dotted arrows indicate strategic top-down plans and bold-print arrows indicate how they fit into their layer on the top, and often require bottom-up validations. This allows dynamic interactions between different major layers.
+
+PaaS Storage/Backup, job submission.....
+
+SaaS
+
+Computation (modelling, simulation and experiments)
+
+Portability
+
+Organisational Sustainability
+
+Hexagon Model related to SaaS (Portability for Finance and Education)
+
+IaaS
+Portability
+Intel, AMD
+
+Portability
+
+Organisational Sustainability
+
+Banks RBS, Commonwe alth Bank, Australia
+
+GOV
+
+Software providers
+
+NHS UK
+
+ECS,
+
+ISP
+
+Southam
+
+pton
+
+VMware OMII / SSI
+
+Organisational Sustainability
+SME (Small and Medium Enterprises)
+
+Hexagon Model related to IaaS (Portability for Health and Education domains)
+
+Hexagon Model related to PaaS (Portability for Health and Education domains)
+
+SME and ASP
+
+Mobile: Apple, Vodafone etc
+
+The Hexagon Model inherits dynamic characteristics from Sun Tze's Art of War (STAW) and provides translations between cloud business and technical cloud solutions in the CCBF. Business Integration as a Service (BIaaS) is a new concept that can integrate different Cloud Services.
+
+6
+
+International Journal of Web Services Research, Vol.8, No.3, 2011
+3.2 Definition of Organisational Sustainability and its two objectives for the CCBF
+Organisational Sustainability is defined as a collection of methodologies, business models and best practices to enable organisations establishing long-term business operations and funding (Chang, Mills and Newhouse, 2007). For some business context, it refers to growth of user community, or profitability, or both. This paper focuses sustainability for cloud organisations or any services adopting cloud computing. There are other models such as pay-as-you-go, yet its drawback is that it deals with the operational level. A better approach is to define the problem in strategic ways with top-down approaches, and use the bottom-up approaches to validate as seen in Figure 1. Yellow boxes in Figure 1 are the focus for this paper, and this includes all levels of IaaS, PaaS and SaaS. Organisational Sustainability has two objectives for the CCBF to match:
+· It is a framework to model the organisational sustainability of IT services or projects provided by collaborating organisations;
+· It defines a new mode of visualisation which enables organisational sustainability of the provision of a service to be reviewed more easily.
+Two case studies presented in Section 4.1 and 4.2 all fall into SaaS, and more cases from PaaS and IaaS will be presented in future. Section 5 will discuss some aspects in the CCBF, and details for how other areas fit together will be explained in other papers.
+3.3 Organisational Sustainability Modelling
+Organisational Sustainability Modelling (OSM) is mentioned in Section 1 and is a method to validate the CCBF. OSM is based on the extended Capital Asset Pricing Model (CAPM), which is the analysis of return and risks for organisations or projects in summary. It has two major advantages. Firstly, it is based on a Nobel-prize winning model and has been used in industry since 1960s. Secondly, it is suitable for IT and software industry as it has less volatility compared to finance, and has fitted several case studies well (Chang, Wills and De Roure, 2010 b). However, the main drawback is that organisational metrics and/or detailed interviews are required. Some firms find it difficult to quantify risk or risk free rate. For cost-saving, it refers to the minimum costs to run a firm.
+Measurement of return and risk can be a difficult and huge task without prior focus. The proposed approach is to divide return and risk in three areas: Technical, Costs (Financial) and Users (or clients) before and after deploying cloud solutions or products or services. In some context, it can be defined as expected return and actual return. The data to be collected are dependent on organisational focus, which is flexible dependent on different characteristics for any type of technical or business cloud solutions.
+· Technical: This can be improvements in performance, or improvement in reliability, or any added values or technical gains supported by experiments. This type of data is easier to obtain as experiments can be performed by researcher or collaborators. Risks can be time reduction or percentage of break down or relevant technical risks.
+· Costs (Financial): This can be profits, or cost-saving gains, or any fund related. Risks can be loss, or sharp rise in electricity/project bills.
+· Users (or clients): This may mean increase in user confidence, or user community growth or user related area. Risks include decline in user confidence or numbers or community growth due to factors such as funding, or quality of software and so on.
+7
+
+International Journal of Web Services Research, Vol.8, No.3, 2011
+3.3.1 Choices for organisational sustainability modelling ­ Capital Asset Pricing Model (CAPM) for all types of organisations and Modern Portfolio Theory (MPT) for start-ups
+Publications on organisational sustainability focus on qualitative approaches such as business model classifications and its respective methods and strategies for reaching organisational sustainability (Chang, Mills and Newhouse, 2007). There are not many quantitative modelling approaches for this topic. We review mathematical models and selectively study Monte Carlo, ARIMA, Black Scholes and CAPM, the later of which is the most appropriate for quantitative sustainability (Chang, Wills, De Roure, 2010 b). There are two main reasons. Firstly, CAPM is suitable in predicting the firms' growth and organisational sustainability if data is defined and given. Secondly, there is more freedom to define the organisational focus, which can be translated as data, and then used for modelling. Some mathematical models are stringent with rules with conditions applied, which is not subjective in CAPM. Furthermore, CAPM is the most effective for linear regression modelling. In our experience with organisational sustainability, majority of the healthy, active academic projects gets into linear regression formats.
+Modern Portfolio Theory (MPT) is a theory of investment aiming to maximise return and minimise risk by carefully selecting different assets. MPT models an asset's return as a normally distributed random variable, defines risk as the standard deviation of return, and models a portfolio as a weighted combination of assets (Hull, 2009). Despite criticisms about MPT's suitability for finance, the concept of MPT is relevant to organisational sustainability, particularly for start-ups. This is because firstly, software organisation is less volatile than finance industry where more complex models are required. Secondly, if organisations follow the linear regression, MPT offers an easier way for calculation, in particular tracking organisational growth.
+3.3.2 Capital Asset Pricing Model (CAPM)
+The Capital Asset Pricing Model (CAPM) is a model to calculate investment risks and to determine what the expected return on investment is. In the context to cloud computing, it is a quantitative model for organisational sustainability. CAPM was introduced by Jack Treynor (1961, 1962), William Sharpe (1964), John Lintner (1965) and Jan Mossin (1966), based on Harry Markowitz' work on diversification and modern portfolio theory. CAPM divides risk into two groups. The first group is Systematic Risk (also known as beta), the market of which cannot be diversified away, including recessions and interest rates. The second group is unsystematic risk, the risk of which is specific to individual stocks and can be diversified and managed by investors (Hull, 2009). In CAPM, beta is the only relevant measure of a stock's risk and measures a stock's volatility. In some interpretations, the security market line (SML) is used to calculate the reward-to-risk ratio. When the expected rate of return for any security is deflated by its beta coefficient, the reward-to-risk ratio for any individual security in the market is equal to the market reward-to-risk ratio, thus:
+(r ­ rf )/ = rm - rf (1)
+(r ­ rf ) =  (rm - rf) and this is known as security market line (SML).
+Finally, to best represent CAPM, the formula is given as: r = rf + (  × (rm - rf)) (2)
+where r is the expected return of a capital asset rf is the risk free rate rm is the expected return on the market and  is the beta of the cash flows or security being valued.
+8
+
+International Journal of Web Services Research, Vol.8, No.3, 2011
+The term rm - rf is the market risk premium, which is usually considered implicitly rather than explicitly. Therefore, the term ×(rm - rf) is the risk premium on the cash flows (or security) being valued.
+Here is a CAPM example: If the risk-free rate is 2.5%, the beta (risk measure) of the firm is 2 and the expected market return over the period is 5%, the stock is expected to return = (2.5%+2(5%-2.5%)) = 7.5%.
+Prechter and Parker (2007) design their own measurement technique called the Finance/Economic Dichotomy originally based on the CAPM. They demonstrate that CAPM works for financial modelling and business performance review. Chang, Wills and De Roure (2010 b; 2011 b) demonstrate that CAPM can be used to measure business performance for cloud-oriented organisations, and explain how CAPM works in their case studies. However, the only drawback is that CAPM tends to compute in terms of linear graphs or regression. In some cases, business performance need not be in a straight line. To offset this, organisational data must be required before performing organisational sustainability modelling to minimise errors. This can be difficult tasks for some organisations due to their reluctance. Some models such as Monte Carlo Methods (MCM) and Black Scholes Model (BSM) do not require organisational data but those models are not suitable to measure cloud business performance (Chang, Wills and De Roure, 2010 c).
+3.3.3 The 3D organisational sustainability modelling and other systems
+The CAPM organisational sustainability modelling is represented by statistical computation. Despite more data can be analysed, a drawback with statistical computing is that more data are generated and often this requires those with statistical training to understand and further analyse the outcome. The intent for 3D visualisation comes in to simplify the data analysis process, and it is a norm to present data in visualisation format in some Web Services, Grid and Cloud research (Giunta et al., 2008; Pajorova and Hluchy, 2010). Organisational data computed by CAPM statistical computation will then convert into the 3D visualisation enabled by Mathematica. While referring back to the market standard for business performance, the stock market is widely accepted and presented business performance in 2D format. Despite stock market is an indication for business performance, it is not a fair system as stock market are subjective to speculations and a great extent of fluctuations in particular to volatile and uncertain economic periods (Prechter and Parker, 2007). On the other hand, Service Level Agreements (SLA) is often used to present cloud business performance. A drawback is that SLA tends to review cloud business at operational level in terms of usage per hour (Buyya et al., 2008, 2009; Brandic et al., 2009), which lacks of strategic directions for achieving cloud organisational sustainability. This means SLA approach enables to calculate a periodic income over time from usage scenarios, however, if the business models are not proposed and executed in the winning strategy, income over time can be low or below investors' expectations.
+To best present cloud business performance, a graphical and dynamic system independent of humanoriented speculations will be ideal, and this also best correlates the organisational focus, strategies and data related to each organisation's cloud computing business models. Our 3D visualisation within the OSM is a proposal for measuring the cloud business performance.
+4. Case Studies
+Case Studies are commonly used to support research frameworks, and provide added values for research challenges, including business models and organisational sustainability. Here are three examples. Firstly, Chang, Mills and Newhouse (2007) propose open source business models and sustainability, and classify into five different categories of successful models. Each category has a few case studies to validate and support. Secondly, Chang, Wills and De Roure (2010 b) have
+9
+
+International Journal of Web Services Research, Vol.8, No.3, 2011
+proposed the Hexagon Model and explain how case studies work for the model. In addition, they introduce the CAPM theory and statistical computation, and use the OMII-UK to demonstrate a good example for Organisational Sustainability Modelling (OSM). They also convert their statistics into 3D visualisation, allowing researchers to review cloud business performance with ease. The OMIIUK case study is used for the Hexagon Model to analyse the growth between 2007 and 2010. Thirdly, Chen et al. (2010) have published a JISC cloud computing report, and have explained case studies for several sections of their report to support their analysis and rationale. For this journal, two detailed case studies, SAP and Vodafone, are presented in Section 4.1 and 4.2.
+4.1 SAP Case Study
+SAP aims to focus on Small and Medium enterprises (SME) in cloud strategies with two cases presented here. The first case is Piaggio, an Italian motor firm using SAP-HR, and 5 SAP/R3 instances where the largest instance has 13,000 SAP roles and more than 140,000 user/role assignments. They use Identity and Access Management (IAM) particularly workflow in the virtualised environments to improve their security and service (Mastropietro, 2010). The second example is BearingPoint, which builds a system called iGRC to consolidate SAP's single sign-on such as SAP Business Object Access Control and SAP ERP. Their iGRC system components include key SAP products and allow data exchange between different SAP components. Their SAP IGRC Solution Architecture is presented in Figure 2 (Fischer, 2010).
+Figure 2: SAP IGRC Solution Architecture by BearingPoint (Fischer, 2010)
+Some of these data are obtained by interviewing managers using SAP, and some data are provided by anonymous collaborators, in particular firms and directors using SAP for their business strategies. Some of these data need them to measure over a period of time. This includes beta in CAPM, it is a risk measure and need to be provided by organisations. Referring to Section 3.3, data can be from any of Technical, or Costs or Users. For instance, if one organisation provides Technical Data, then this can be measured by experiments, or system log files. Beta can be interpreted that percentage of risk free, which can be downtime, or number of breakdowns and so on, dependent on each organisation's focus and definition. Cost risks include loss of profits, rises in expenses and so on. Users may mean loss of customers, or negative community growth and so on. Measurement is required for recording before and after using SAP for their cloud strategies. During the data collection, most of data is based on cost-saving, and therefore, it is easier to categorise them and calculate the average.
+Here is an example for how data can be calculated. Before introducing SAP cloud, cost saving is £100,000 per month for one firm. There is an initial cost of several thousands of pound after using SAP cloud. With improvement in work efficiency offered by SaaS, it allows organisations to save further costs via staff and resource expenses. The data needs at least 12 months for data collection in
+10
+
+International Journal of Web Services Research, Vol.8, No.3, 2011 every month. At the end, the cost-saving is an average of around £101,000 per month. Comparing before and after using SAP, cost saving has obtained about 1%. All the data is carefully calculated using statistical computing. The result is analysed and presented in Section 4.1.2. 4.1.1 The Hexagon Model The Hexagon Model is a model to present strengths and weaknesses of cloud businesses, and can be used at any time. It also inherits dynamic characteristics from Sun Tzu's Art of War (STAW), and can offer linkage between the qualitative and quantitative aspects of cloud business (Chang, Wills and De Roure, 2010 b; 2010 c). Any result not explained well enough by quantitative business modelling, can use the Hexagon Model to present the business cases visually. During interviews of managers using SAP, a few of them preferred to provide data anonymously for before and after using cloud service in the form of the Hexagon Model. If they did so, they would be asked the percentage of increment in their selected area in the Hexagon Model.
+Figure 3: The Hexagon Model of SAP for SME in January 2009 in light grey, and growth up to July 2010 is presented in black. Figure 3 refers to the collective outcome for SAP's Hexagon model in January 2009 shaded in light grey. The Hexagon Model is well-balanced for all six elements, and also supported by peer reviews in relations to their SME strategies. This Hexagon model is relevant to CAPM model, which computes an auto regression suggesting slow but steady growth. Slow growth in July 2010 is presented by the black region, and is mainly seen at (1) consumers; (2) popularity; and (3) GTJD. More analysis will be discussed between Section 4.1.2 and 4.1.4. 4.1.2 CAPM Statistics All the collected data is valid from January 2009 till July 2010. CAPM can be modelled by statistical languages, in which SAS is more suitable than other languages since it can compute more in-depth analysis (Chang, Wills, De Roure, 2010 b; 2011 b). The following coding algorithm predicts the Risk Premiums of an organisation, SAP versus the Market. The data is carefully calculated, examined and randomised. One year of in-depth data can best represent organisational sustainability from the initial phase to establishment. SAS program for the CAPM is coded, and the algorithm is shown as follows:
+11
+
+International Journal of Web Services Research, Vol.8, No.3, 2011
+
+data sap; input r_m r_f sap @@; r_sap = sap - r_f; r_mkt = r_m -r_f; label r_m='Market Rate of Return' r_f='Risk-Free Rate of Return' sap='Rate of Return for SAP' r_sap='Risk Premium for SAP' r_mkt='Risk Premium for Market';
+datalines;
+proc gplot data=sap; plot r_sap * r_mkt / haxis=axis1 hminor=4 cframe=ligr vaxis=axis2 vminor=4; symbol1 c=blue v=star; axis1 order=(-1.4 to 1.5 by 0.1); axis2 label=(angle=90 'SAP Corp. Risk Premium') order=(-1.5 to 1.7 by 0.2); title 'SAP Corporation CAPM'; title2'Plot of Risk Premiums'; title3'SAP Corporation versus the Market';
+run;
+
+SAP Corporation CAPM: The AUTOREG Procedure
+
+Dependent Variable
+
+r_sap
+
+Risk Premium for SAP Ordinary Least Squares Estimates
+
+SSE
+
+131.919653
+
+DFE
+
+118
+
+MSE
+
+1.11796 Root MSE
+
+1.05734
+
+SBC
+
+361.484388
+
+AIC
+
+355.909405
+
+Regress R-Square 0.0936 Total R-Square 0.0936
+
+Durbin-Watson
+
+1.6226 Pr < DW
+
+0.0179
+
+Pr > DW
+
+0.9821
+
+(Pr<DW is the p-value for testing positive autocorrelation. Pr>DW is the p-value for testing negative autocorrelation).
+
+Standard
+
+Approx
+
+Variable DF Estimate Error t Value Pr > |t| Variable Label
+
+Intercept 1 -0.4401 0.1041 -4.23 <.0001
+
+r_mkt 1 0.3322 0.0952 3.49 0.0007 Risk Premium for Market
+
+Source
+
+DF Square F Value Pr > F
+
+Numerator
+
+1 55.052554 49.24 <.0001
+
+Denominator 118 1.117963
+
+Note SSE: Sum of Squares Error; DFE: Degree of Freedom Error; MSE (Mean Square Error) = SSE / DFE
+
+Table 1: Auto regression summary for SAP
+
+All of SME feel that SAP helps achieving their cloud strategies. While performing mathematical calculations for these data, an interesting aspect is that approximately 60% of data suggest just rightabove zero for risk premium for both SAP and market, whereas 40% of data suggest just right-below zero risk premium for both SAP and market. Both types of data are all taken into considerations for statistical computation, where auto regression method is selected to produce the best fit. Table 1 is statistical result generated by SAS computation. Durbin-Watson is a method to test linear regression, where Pr<DW is the p-value for testing positive autocorrelation, and Pr>DW is the p-value for testing negative autocorrelation.
+
+12
+
+International Journal of Web Services Research, Vol.8, No.3, 2011
+4.1.3 SAP Actual and Predicted Values
+Apart from organisational sustainability modelling, forecasting is an important aspect to predict how a cloud business or strategy can perform based on the existing data provided. This is similar to financial market where forecasting is based on previous data, except the difference is that software market is less volatile than financial market with greater risk taking. Forecasting is part of Organisational Sustainability Modelling (OSM) to help organisations predicting with their likely business performance (Chang, Wills and De Roure, 2010 c; 2011 b) and works extremely well in parallel with similar methods. To present this idea further, the next step is to present both actual and predicted values for SAP, with its upper and lower limit.
+proc sort data=sapout; by r_mkt;
+run;
+A key variable `sapout' is defined and obtained, followed by defining four variables, r_sap, p (predicted), l (lower limit) and u (upper limit), whose values are recorded in an array, and later on used for forecasting.
+data regdata(keep=y_value pt_type r_mkt); set sapout; label pt_type='Observation Type'; array regvar{4} r_sap p l u; array varlabel{4} $12 _temporary_ ('Actual' 'Predicted' 'Lower Limits' 'Upper Limits'); do i=1 to 4; y_value=regvar{i}; pt_type=varlabel{i}; output; end;
+run;
+proc gplot data=regdata; plot y_value*r_mkt=pt_type / haxis=axis1 hminor=4 cframe=ligr vaxis=axis2 vminor=4; symbol1 c=black v=star; symbol2 c=blue i=join l=2; symbol3 c=green i=join l=1; symbol4 c=red i=join l=2; axis1 order=(-2.55 to 0.75 by .1); axis2 label=(angle=90 'SAP Corp. Risk Premium') order=(-3.0 to 1.75 by .25); title1 "SAP: Actual and Predicted Values"; title2 "with Upper and Lower Confidence Limits";
+run; quit;
+13
+
+International Journal of Web Services Research, Vol.8, No.3, 2011
+These two groups have less risk premium likely due to redundancies. Despite ROI is an interest, cause by redundancies is not the focus of this research.
+
+These two groups will be the focus of this paper in SAP analysis
+
+Figure 4: SAP Actual and Predicted values for Risk Premium Another procedure is written to plot actual and predicted values - see Figure 4 with Risk Premium for SAP versus Risk Premium for market. The plotted data are actual values based on our data, and the green line is the predicted value, and the red line as the upper limit and the blue dotted line as the lower limit. Risk premium is the minimum difference between the expected and actual values, and is used for this study. Although risk premium refers to the difference between expected return and free risk rate, risk free rate is not a reliable value for all participating firms and occasionally varies greatly between different organisations. The difference between their expected and actual values is more accurate since both values have been controlled and targeted during their process. Risk-free rate in this case refers to minimum expenses to keep operation running. Difference between expected and actual values also fits into our CCBF, which aims to identify business performance before and after using clouds.
+14
+
+International Journal of Web Services Research, Vol.8, No.3, 2011
+Figure 4 predicts the risk premium for both SAP and market. The y-axis represents the risk in percentage if SME uses SAP for their businesses. The x-axis represents the risk in percentage for the market's possible response. The estimate is based on the data provided and computed in Section 3, and this estimate predicts the SME and the market will still adopt low risk and low return policy. All risk involved are between -2.75% and 0.75%, and is considered fairly low. The green line is the most likely prediction, and is between -1.20% and -0.25%.
+There are also two groups of data analysis results in Figure 4. The upper half is those who have effectively used SAP as a measurement for cost-saving. The lower half group represents those who have involved redundancies right before mid-2010 for cost-saving. They have lower risk premium because redundancies might cost SME several months of salary. Both groups are valid, but redundancies for cost-saving are not a focus in our return of investment (ROI) research.
+4.1.4 The 3D Visualisation and modelling for SAP
+Organisational sustainability models are presented in terms of statistical analysis, and this requires those with statistical backgrounds. 3D Visualisation simplifies such requirements, so that those without statistical backgrounds can understand it. A drawback for using SAS and other statistical tools is that too much data and analysis is generated. Only useful data is required for our review. Thus, finding out an innovative way to simplify review is important. Mathematica allows data conversion and presents it in visual format. Data is then computed in Mathematica and the 3D visualisation models are presented in Figure 5 and 6 respectively, where Figure 6 is the 90 degree rotation of Figure 5. Referring to Figure 5, the x-axis shows the return for SAP, and the y-axis represents the risk premium for the market, and z-axis shows the risk-free rate of the market.
+
+Figure 5: 3D visualisation for SAP
+
+· x-axis: the return for SAP (-1 and 1%) · y-axis represents the risk premium for
+the market (-1 and 1%) · z-axis shows the risk-free rate of the
+market (0.7 to 0.715%)
+Groups (without redundancies) that use SAP for cost-saving, have a greater influence in this 3D model.
+
+15
+
+International Journal of Web Services Research, Vol.8, No.3, 2011
+Figure 6: 3D visualisation for SAP, with 90 degrees rotation.
+Both figures have one of the least volatile movements amongst the cases, which may either indicate that (i) SME use SAP as a cautious cloud tactic or/and (ii) SME prefer to use more predictable or familiar ways to maintain their cloud business sustainability. More work should be done to verify both hypotheses. This can be validated by qualitative research methods that deploy the Hexagon Model and interviews. The qualitative research outcome supports the growth in the following areas: (1) consumers; (2) popularity; and (3) Get-the-job-done (GTJD). Growth in consumers and popularity go hand in hand, particularly when more SME adopt SAP for their internal uses and their clients. This also assists in GTJD, where several firms use SAP cloud to reduce operational costs and consolidate their cloud business. This also shows that some SME use extremely cautious strategies to maintain cloud business sustainability.
+4.2 The Vodafone Case Study
+Vodafone is a telecommunication (telecom) giant that operates cloud computing business as a Service Provider, One-Stop Resources/Services and Entertainment and Social Networking, which correspond to our first, fifth and eighth business models by the Cloud Cube Model (Chang, Wills and De Roure, 2010 b). Entertainment and Social Networking is an area for major profits in 2010, where Vodafone aims to get £11.8 billions of profits since they are a major iPhone bundle seller with a surge in iPhone demands (City A.M, 2010). Their next strategy is to focus on lucrative iPad sale that is predicted to sell over 1 million units including wireless broadband and related services. Vodafone is thus a cloud service provider, and they fit well into cloud computing by providing mobile cloud and entertainment services via iPhone. Despite the fact that Apple can be considered as a mobile cloud provider (Chang, et al., 2010 a; 2010 b; 2010 c), it still needs infrastructure providers such as Vodafone, Orange, O2 and so on to deliver its services to millions of clients. Additional applications and APIs such as teleconferencing, remote access, GPS, VoIP and so on require telecom services to be available. Those who buy iPhones are mainly interested in SaaS services that both Apple and Vodafone offer (City A.M, 2010). Thus, we assert both Vodafone and Apple are considered as adoption of SaaS cloud sustainability, even though they still require hardware and infrastructure to support.
+Although surveys and interviews provide direct feedback and allow data to be obtained without concerns of leaking confidential data, both research methods can be a prolonged process since it requires building trust and collaboration with helpful participants. We are still in the process of getting more Vodafone managers and major customers to provide us with feedback. The one-year research data for this case study is purchased via reputable financial sources including the Wall
+16
+
+International Journal of Web Services Research, Vol.8, No.3, 2011
+Street Journal and the City A.M where they have included case studies and business data for Vodafone and numerous global organisations.
+4.2.1 Vodafone ­ two distinct cloud business strategies and their organisational sustainability modelling for the first model
+Vodafone adopts two completely different cloud business strategies where their first business model is focused on profit-making described in Section 4.2.1 and 4.2.2. The risks involved are relatively low comparing to expected returns (profits). Their second business is set on globalisation where they focus on India having spent significant money on 3G and mobile cloud infrastructure. Vodafone already paid £1.74 billions to Indian Government with further investments expected in near future (City A.M, 2010). The risks involved are high in short term compared to expected returns (profits), but in the long term the situation can be greatly improved if they adopt the right business models and strategies. Organisational sustainability model for the first business model is computed, and the coding algorithm is as follows:
+data vodafone; input r_m r_f vodafone @@; r_vodafone = vodafone - r_f; r_mkt = r_m -r_f; label r_m='Market Rate of Return'
+r_f='Risk-Free Rate of Return' vodafone='Rate of Return for Vodafone' r_vodafone='Risk Premium for Vodafone' r_mkt='Risk Premium for Market'; datalines;
+This part of code is to plot required data.
+proc gplot data=vodafone; plot r_vodafone * r_mkt / haxis=axis1 hminor=4 cframe=ligr vaxis=axis2 vminor=4;
+symbol1 c=blue v=star; axis1 order=(17 to 25 by 0.5); axis2 label=(angle=90 'Vodafone Corp. Risk Premium')
+order=(16 to 24 by 0.5); title 'Vodafone Corporation CAPM'; title2'Plot of Risk Premiums'; title3'Vodafone Corporation versus the Market'; run;
+The summary of statistical computation is presented in Table 2.
+17
+
+International Journal of Web Services Research, Vol.8, No.3, 2011
+
+Vodafone Corporation CAPM The AUTOREG Procedure
+
+Dependent Variable
+
+r_vodafone
+
+Risk Premium for Vodafone
+
+Ordinary Least Squares Estimates
+
+SSE
+
+32.8608675
+
+DFE
+
+109
+
+MSE
+
+0.30148
+
+Root MSE
+
+0.54907
+
+SBC
+
+189.308921
+
+AIC
+
+183.889861
+
+Regress R-Square 0.7626 Total R-Square 0.7626
+
+Durbin-Watson
+
+1.5260 Pr < DW
+
+0.0053
+
+Pr > DW
+
+0.9947
+
+Pr<DW is the p-value for testing positive autocorrelation. Pr>DW is the p-value for testing negative
+
+autocorrelation.
+
+Standard
+
+Approx
+
+Variable DF Estimate Error t Value Pr > |t| Variable Label
+
+Intercept 1 2.4578 0.9008 2.73 0.0074
+
+r_mkt 1 0.8175 0.0437 18.71 <.0001 Risk Premium for Market
+
+Mean
+
+Source
+
+DF Square F Value Pr > F
+
+Numerator
+
+1 5.259040 17.44 <.0001
+
+Denominator 109 0.301476
+
+Table 2: Auto regression summary for Vodafone with iPhone strategies
+
+Similar to Section 4.1.2, actual and predicted values for Vodafone are computed and presented as in Figure 7. Actual values are from the data and predicted values are the likely growth estimated by the data given. The coding algorithm is as follows:
+proc gplot data=regdata; plot y_value*r_mkt=pt_type / haxis=axis1 hminor=4 cframe=ligr vaxis=axis2 vminor=4; symbol1 c=black v=star; symbol2 c=blue i=join l=2; symbol3 c=green i=join l=1; symbol4 c=red i=join l=2; axis1 order=(17 to 25 by .5); axis2 label=(angle=90 'Vodafone Corp. Risk Premium') order=(16 to 24 by .5); title1 "Vodafone: Actual and Predicted Values with iPhone/iPad
+tactics"; title2 "with Upper and Lower Confidence Limits";
+run; quit;
+
+Referring to Figure 7, the green line is the predicted value, and the red line as the upper limit and the blue dotted line as the lower limit. It presents a high market returns for Vodafone with low risks involved, mainly because iPhone was proven an extremely successful sale and profit-maker in 2009. The estimate is between 16.5% and 23.0% of profits, and is more likely (green line) between 17.0% and 22.0%. Unlike SAP data, this is from a reliable source that we need not worry about defining which group of data to be focused on.
+
+18
+
+International Journal of Web Services Research, Vol.8, No.3, 2011
+Figure 7: Vodafone actual and predicted Risk Premium 4.2.2 3D Visualisation for Vodafone, iPhone model Data is computed in Mathematica and the 3D visualisation models are presented in Figure 8 and 9 respectively, where Figure 8 is the default 3D model that indicates a high return of between 21 % to 25% additional profits offered by iPhone bundle sell. Figure 9 provides a more detailed view related to its cloud business performance, which suggests it goes high and maintains a momentum upwards with few additional unexpected results as spikes. The x-axis presents Vodafone's return (22-26%), the y-axis presents risk premium of the market return (21-25%), and the z-axis presents risk-free rate in market (2.0-4.0%). However, a foreseeable risk is that there are more mobile network providers offering iPhone 4, Vodafone may lose competitions such as Network 3 or Orange/T-Mobile joint venture, thus they need evolve their cloud business models. This may include exploring new territories with selling Android-based mobile phones. Similarly, they need to change other cloud business strategies while competitions for smart phone markets and other mobile service providers soar in recent years. In other words, Vodafone organisational sustainability modelling (OSM) described in Section 4.2 is only valid for the year 2010. More work will be planned to obtain data and perform OSM.
+19
+
+International Journal of Web Services Research, Vol.8, No.3, 2011
+· x-axis: Vodafone's return (22-26%) · y-axis presents risk premium of the
+market return (21-25%) · z-axis presents risk-free rate in
+market (2.0-4.0%)
+Figure 8: 3D visualisation for Vodafone
+Figure 9: 3D visualisation for Vodafone, detailed view. 4.2.3 Organisational sustainability modelling and forecasting for Vodafone's India
+cloud strategy Investing in a foreign country's infrastructure tends to take years before revenue generation without exceptions for any global enterprises. Vodafone's investments in India set a long-term goal in revenues but expect for losses in short term. Forecasting can be computed in Mathematica based on data we have. In addition, we have to make certain assumptions that: (i) the India market will grow as what Vodafone plans to, and within 5% of uncertainty range; and (ii) support of Indian's government. Figure 10 presents our forecasting model for Vodafone within the next twelve months, where the return of investments is still in negative region but with a likely upward movement. However, more data should be provided to further prove its validity, and we will double check this after twelve months. In addition, authors would like to comment that frequently forecasting financial data do not agree with reality and in recent volatile market situation, majority of predictions fall short including mortgages, currencies, stock market and business performances. Our purpose is to demonstrate that this can be done in a more scientific way in volatile periods that focuses on cloud businesses.
+20
+
+International Journal of Web Services Research, Vol.8, No.3, 2011
+· x-axis: Vodafone's return (-2 to -5%) · y-axis presents risk premium of the
+market return (-1 to -3%) · z-axis presents risk-free rate in
+market (4.5-5.5%)
+Figure 10: Forecasting for Vodafone's India cloud business
+5. Discussions ­ comparing our Organisational Sustainability Modelling and other approaches
+Two case studies, SAP and Vodafone, have been used to demonstrate how accurate cloud business models can be presented in visual formats. Data collection for SAP uses qualitative methods, and most of the data is based on cost saving before and after using SAP SaaS. Some data is given in terms of percentage increase if not taken down as numerical numbers. The Hexagon Model is used to link the qualitative and quantitative aspects of cloud business performance, and can visually present the differences before and after using a cloud service. Vodafone is one of mobile service providers to provide iPhone mobile clouds. Data collected for SAP and data purchased for Vodafone are then used by CAPM statistics, which can compute regression and generate further data for analysis. It can compute the actual values of data, and then estimate the predicted values of data for risk and return. This forms the first part of OSM (OSM), the CAPM statistics. Both SAP and Vodafone cases have provided estimation close to reality, based on feedback from managers using SAP and City A.M analysis about Vodafone.
+However, a drawback with statistical computation is it generates much more data than necessary. It often requires those with statistics backgrounds to fully understand the implication of data. An additional step to simplify the cloud business performance analysis is thus necessary. The approach is by introducing 3D visualisation by Mathematica, which converts useful data from SAS to 3D visualisation. This allows useful and accurate cloud business performance to be presented and reviewed easily. This forms the second aspect of OSM, addressing the second business challenge. This is a more accurate way than measurement by stock market, which is often affected by speculations. The SAP data modelling suggests participating firms took cautious steps towards cost saving and managed them within 1% and -1% between January 2009 and July 2010. The estimated cost saving is between -2.75% and 0.75%. The Vodafone data modelling suggests their iPhone profit is between 21% and 25% of the net income, and the estimated net profit is between 16.5% and 23.0%.
+Both case studies can reveal how organisations respond to economic downturn. SME uses SAP for cost-saving and such a strategy is good to maintain low risk and low return move. The Hexagon Model in Figure 3 also supports this. Whereas iPhone 4 with Vodafone demonstrates unique innovation, making them as an outstanding mobile cloud SaaS service provider. Arguably
+21
+
+International Journal of Web Services Research, Vol.8, No.3, 2011
+this is a high risk and high return move, since Apple and Vodafone have spent significantly. If possible, follow-up work needs to consolidate this. On the other hand, both case studies best represent analysis of the data collected at the time when research was conducted. This type of analysis is time dependent because it represents how businesses and customers respond to economic downturn at different periods. However, each case study is different and cannot be compared directly due to different strategies used. There are plans to have other case studies presenting different aspects and focus of cloud business performance.
+5.1 Comparisons with the CCBF and other frameworks
+Before discussing added values offered by OSM and CCBF, other approaches to define and review business framework or business performance are reviewed. Zirpins and Emmerich (2008) define a reference model for virtual service production networks (VSPN), which contain Business Services (BS), Virtual Production Network (VPNs), and Virtual Business Services Production Networks (VBSPNs). VSPN use UML to define relationships between providers, clients, business processes and business services. It describes the interactions between providers and clients, between clients and business processes, and between different business processes. It fits well for Virtual Organisation (VO) but not Cloud Computing (CC), which offers Data Clouds or Cloud Storage for achieving resource sharing. An example is Dropbox where data can be archived, stored and shared in the public clouds, and can be shared between different clients and providers. Comparing OSM with VSPN, VSPN is a conceptual model but also a theoretical framework that has not yet be able to be applied to a larger crowd of audience. OSM is a major component in the CCBF, but it is also a quantitative framework measuring business performance related to Clouds, and any organisations and projects using Clouds, where some papers define it as a Return of Investment (ROI) measurement (Schubert, Jeffery and Neidecker-Lutz 2010). OSM has several more case studies with OSM and 3D visualisation to back up, and thus is a better way for measurement.
+Antonova and Nikolov (2009) state CC and Web 2.0 can consolidate Enterprise 2.0, which has a new business model and also demand such as Knowledge Management System (KMS), which is equivalent to Business to Employee business model in the domain of e-Learning proposed by Sloman (2001). Despite Antonova and Nikolov explain their KMS Architecture, and there is a lack of mechanism to measure business performance, or at least employee's improvements in individual performance or work efficiency. Schubert, Jeffery and Neidecker-Lutz (2010) explain the vision and future of CC in Europe, and also present its advantages for cost-effectiveness, green IT and new business models. They have top-down strategic overviews for CC, and have proposed a water-fall plan for CC technical and business development. Although their proposal is not exactly a waterfall model, this model is the closest, as they emphasise market maturity where it takes longer time to well-establish SaaS and consultancy business models. However, this is not true particularly for Salesforce.com, which began their SaaS services since 1999, and it did take little time for them to adopt SaaS as a CC business model. Organisations such as SAP, IBM, Google and Oracle have their new products dealing with SaaS, and there are SME dealing with SaaS and consultancy models. In addition, despite Schubert, Jeffery and Neidecker-Lutz (2010) explain return of investment as a key advantage for CC, they do not provide any way to measure and review cloud business performance unlike our framework.
+Etro (2009) describes a very detailed overview for CC economic impacts for European Union (EU). He devises his own model, dynamic stochastic general equilibrium (DSGE), to calculate CC economic values and its impacts for EU economy. He also presents data from SME and job creations in relations to CC in several EU countries. He has linked both qualitative and quantitative aspects of CC research; however, his work is at an early stage. In addition, his DSGE
+22
+
+International Journal of Web Services Research, Vol.8, No.3, 2011
+is not yet fully proven, whether it is in the domain of formal methods, or supported by more case studies. He also investigated this issue before economic crisis took its toll where unemployment rate had risen between 2009 and 2010 in some countries. Comparing our CCBF with his, DSGE is particular good to take on economic impacts on SME in EU, but DSGE is weaker in presenting how modelling, calculations and visualisation can be done to present all-round aspects for CC business models.
+Klems, Nimis and Tsai (2009) propose their cloud business model (CBM), which is divided into two stages. The first stage is to understand and apply the suitable business scenario, which include influential factors and balance in business case, business objective, organisation, compliance, strategy, demand, application and non-functional requirement. The second stage is to move onto quantitative analysis, which include (i) defining IT infrastructure requirement (for cloud and non-cloud); (ii) identity of comparable attributes; (iii) metrics will be derived mainly based on Gartner's Total Cost of Ownership (TCO); (iv) assessing attribute quantities and (v) cost calculation and comparison. Their idea is close to ours, except they do not have selected models for simulations and modelling yet. Currently their business model is a conceptual framework and will move onto quantitative modelling.
+Although Weinhardt et al. (2009) has a well-defined framework, there is a lack of methodology to measure cloud business performance, in particular in quantitative ways. This may be because they do not have such a plan yet. Chou (2009) describes seven business models for CC and SaaS, and identifies "Software", "Support" and "Service" as the key three elements for determining business performance. Each model has a different combination and different focus in terms of those three elements. Chou's approach is very qualitative-based supported by several case studies. However, his framework is conceptual and there is no any methodology to measure business performance in quantitative ways. Listing down numbers does not mean cloud business can be guaranteed for success and long-term sustainability. Moreover, users are not taken into consideration in this model. Luhn A and Jaekel (2009) propose Linear Value Chain and Ecosystem Models to present a working cloud business framework, and is an ideal framework to follow through. However, a drawback is if a process in the chain breaks, and there is no any alternative for remedies, and also there is a lack of description for how to measure cloud business performance quantitatively.
+Business Models with SLA approaches are revisited for this paragraph. Assuncao, Costanzo and Buyya (2010) present performance metrics to evaluate and demonstrate cost-effectiveness for clouds, and undergo experiments to validate. However, they also stress their SLA business models works for IaaS. Sun et al. (2009) propose a SLA Resource Management and explain its architecture, where they can demonstrate their business models work for IaaS. Buyya (2009) et al. explain their SLA framework applies across different domain such as IaaS, PaaS and SaaS. However, this takes assumption all users and providers go for pay-as-you-go payment model for public clouds but not entirely for private clouds. In projects where the lead author is taking the lead in technical and business development in private clouds, two additional models are encountered. The first is the contractor model, which different parts of projects can be outsourced to approved contractors at an agreed price. The second model is the leasing model, which is normally relevant after a service is used and in good faith by users. This allows unlimited number of usages after an agreed price or condition is met. The difference is contractor model often takes place during development stage and leasing model take place after development stage. Leasing model often takes place in user support stage, where the lease and contract can be ended or continued after the agreed period of time. We would like to defend this is different from typical concept for SLA that cost per usage is free and unlimited after an agreed price and period are met. In the lead author's case for cloud storage that he primarily involves himself in development, the cost for users is free with no contractor and leasing costs are involved except electricity bills. This
+23
+
+International Journal of Web Services Research, Vol.8, No.3, 2011
+relates to In-House Development, the third business model classified by Cloud Cube Model (CCM) proposed by Chang, Wills and De Roure (2010 a; 2010 b). CAPM measures return versus risks in summary, where some researchers find it challenging to quantise risks, as their first impression is about security. However, there are other types of risks related to CC and must be taken into considerations and implementation (Hignite et al., 2010) and in our OSM, returns and risks can be classified into technical, costs and users. Lobo and Arthur (2005) divide risk analysis activity into four areas:
+· Personnel ­ they use Failure mode, effects and critical analysis (FEECA) and Monte Carlo simulations;
+· Time ­ Criticality Analysis and Monte Carlo simulations; · Cost ­FMECA and Criticality Analysis; · Completeness ­ Monte Carlo simulation, Fault Tree Analysis (FTA) and Event Tree
+Analysis (ETA) (Raafat, 1989); Lobo and Arthur use multiple triangles to classify which strategies will be the most suitable for Personel, Time, Cost and Completeness. They also devise a "Completeness Criteria", which is divided into Risk Analysis", "Cost Estimation", "Schedule Estimation", "Price Aanlysis" and "Tradeoff Analysis", where they explain how different methodologies are suited for each of five essential components. They recommend one of the best ways to analyse risks is to use Monte Carlo simulation at first, followed by using COCOMO II, followed by using Program Evaluation and Review Technique (PERT), followed by Comparative Price Analysis, and finally applied Net Price Value. Their framework is very detailed and well-structured in analysing risks and understanding its impacts. In terms of CC, their definition for Personnel is not entirely suitable if organisations opt for outsourcing model or use less staff for IT work. Their framework is not suitable to analyse fast-paced area or volatile markets such as Finance Clouds, which are less available in the market. Here is one good example for selection of models. Monte Carlo Methods (MCM) are selected for pricing and MCM can be easily customised for risk analysis independently or together with Black Scholes Models (Chang et al., 2010 d; 2011 a). To sum up key characteristics for each proposed business models and frameworks, they are presented in Table 3. Only selective frameworks are compared and analysed.
+24
+
+International Journal of Web Services Research, Vol.8, No.3, 2011
+
+Types of CCBF (Chang et al., 2010 VBSPN (Zirpins DSGE (Etro, 2008) CBM (Klems, Nimis SLA-based (Assuncao, Miscellaneous
+
+framework d, 2011 a, 2011 b)
+
+and Emmerich
+
+and Tsai, 2009)
+
+Costanzo, Buyya, 2010; (Lobo and Arthur,
+
+2008)
+
+Buyya et al., 2009)
+
+2005)
+
+Qualitative Yes. There are proposed Yes. They have a Yes. But only in the Yes. They have great Might be possible, but Yes. They provide
+
+business
+
+model solid qualitative EU and make several descriptions about take certain assumption a series of best
+
+classification and the use and theoretical assumptions.
+
+this.
+
+on service providers practices
+
+for
+
+of hexagon model.
+
+framework.
+
+and usage scenarios.
+
+framework.
+
+Quantitative Yes. The use of modelling No, despite they Yes. He has solid Yes, but not yet Yes. They have Potentially yes, but
+
+and simulations to use UML to econometrics insights done.
+
+numerous ways to further work needs
+
+validate.
+
+support theoretical to explain this.
+
+measure cloud billing to be done.
+
+framework.
+
+models quantitatively.
+
+Linkage
+
+Yes. It demonstrates No
+
+Yes. But in an early Yes, but not yet No, at least not yet.
+
+No, before they can
+
+(qualitative- Business Integration as a
+
+stage. Weak in done.
+
+propose
+
+quantitative) Service (BIaaS).
+
+linkage.
+
+quantitative area.
+
+Cloud
+
+Yes. Use Organisational No. This is a Not yet, although he Yes. Use their Yes. They are one of No.
+
+Their
+
+Business
+
+Sustainability Modelling generic framework, is working towards it conceptual
+
+pioneers in pay-as-you- framework is not
+
+Performance with statistical computing and is likely to for the EU.
+
+framework.
+
+go and billing models. designed for cloud,
+
+and 3D visualisation. Can work in their own
+
+but for generic uses
+
+offer
+
+accurate environment only.
+
+and risk analysis.
+
+measurement.
+
+Service Level Yes. Deal with selective Potentially yes, but Potentially yes, but Yes. Similar to ours, Yes. They have a few Possible, but more
+
+IaaS, PaaS and SaaS.
+
+in their own setting only for the EU.
+
+but use a different papers about this.
+
+work needs to be
+
+only.
+
+way to present.
+
+done.
+
+Orientation of Conceptual
+
+and Conceptual only Mathematical
+
+Conceptual only
+
+Architectural
+
+Conceptual
+
+framework architectural.
+
+Conceptual
+
+Ways
+
+to Modelling, simulations, UML and complex Econometrics and Case studies and Simulations
+
+and Theoretical
+
+validate
+
+and experiments for business object financial modelling theoretical
+
+calculations.
+
+hypothesis and case
+
+quantitative. Hexagon modelling.
+
+based on the data he hypothesis.
+
+studies.
+
+Model, case studies, and
+
+collects.
+
+interviews for qualitative.
+
+What needs to In progress. More Framework update Framework update is Need to consider Should deal with more Framework update
+
+be improved validations
+
+and is required.
+
+required.
+
+more on quantitative strategic levels rather is not published for
+
+improvements will be
+
+aspects.
+
+than operational.
+
+nearly 5 years.
+
+presented.
+
+Table 3: Review and comparisons between selective frameworks for defining and measuring cloud business and return of investment (ROI).
+
+25
+
+International Journal of Web Services Research, Vol.8, No.3, 2010
+6. Conclusion and Future Work
+Cloud computing business models are a relatively new area, and finding the right business strategies and cloud business performance review can enhance organisational sustainability. This paper firstly discusses the similarities and differences between Grids/Web Services and Clouds, and describes three technical and business challenges respectively. The Cloud Computing Business Framework (CCBF) is proposed to address three business challenges. This paper deals with the second business challenge, how to review cloud business performance. The architecture for CCBF conceptual framework is explained, and organisational sustainability is a key area to deal with business performance.
+There are few quantitative approaches for organisational sustainability, and several models are reviewed. Capital Asset Pricing Model (CAPM) is chosen, and the coding algorithm is explained. This firstly uses statistical computing by SAS, and the linear regression corresponds to the expected result. Based on the previous data, CAPM also presents the likely estimates for the future performance. However, a drawback is it gets too many data to analyse. Thus, an innovative approach is to present in visual and easy-to-understand format. 3D Visualisation by Mathematica is used to present analysis, and return for organisation, risk premium for market and risk free rate are presented in 3D format. The case studies of SAP and Vodafone shows how organisational sustainability can be computed, as well as their 3D visualisation cases. SME uses SAP for cost-saving, and this is a low risk and low return strategy. Whereas Vodafone and Apple use high risk and high return strategy for their cloud business sustainability.
+Understanding cloud and organisational sustainability are essential for e-Research in a period of economic volatility, as problems faced by the cloud industry will be faced by e-Research. Lessons learned can provide us the edge for future work. More organisations are welcome to take part in this project. We have actively collaborated with a wide range of organisations, and have obtained metrics, or are in the process of obtaining metrics useful for our frameworks. Action research has been used where the lead author has been actively involved in designing, implementing and supporting those projects in an anonymous UK National Health Service (NHS) Trust to obtain useful metrics in the next phase of research. More results will be published at a suitable period. There are also plans for long-term discussions with the University of Southampton, Commonwealth Bank, Australia and IBM US for joint research collaboration.
+The Hexagon Model can be used to identify strengths and weaknesses of cloud business performance, and also offers linkage between qualitative and quantitative aspects of the Cloud Computing Business Framework (CCBF). Further work will be done to consolidate the linkage with more case studies. In addition, we present a solid and well-grounded literature review between different cloud computing business models, frameworks and definitions, and have addressed each of strength and weakness and have linked some of those literatures together in comparison to our frameworks in Section 5 and Table 3. This will further consolidate our current CCBF and Organisational Sustainability Modelling (OSM) as a winning strategy for achieving cloud organisational sustainability as well as providing a fair, truly reflected and value-added business performance framework.
+New ways must be explored, pioneered, presented, shared and improved. One of potential drawback with CAPM statistics is that more data is generated than necessary, despite only a few are useful for 3D visualisation. This may include the proposal and development of a new growth rate tracking model. Our OSM is just an example to demonstrate this. There are plans to jointly investigate other ROI methodologies and improvements in current methods with other active research groups. We
+26
+
+International Journal of Web Services Research, Vol.8, No.3, 2010
+hope to make further research contributions to Web Services, Cloud, Grid and e-Research communities.
+ACKNOWLEGMENT
+We greatly thank Neil Chue Hong, the Director of Software Sustainability Institute (SSI) UK, for providing his critical review and useful feedback. We thank David Fowler for proof reading.
+REFERENCES
+Anstett T, Leymann F, Mietzner R and Strauch, S: "Towards BPEL in the Cloud: Exploiting Different Delivery Models for the Execution of Business Processes", 2009 World Congress on Services, I, 6-10 July 2009, Los Angeles, CA, USA.
+Antonova A and Nikolov R, "Conceptual Framework of Innovative KMS Design within the Perspectives of Enterprise 2.0 and Cloud Computing", Proceedings of International Conference on Software, Services and Semantic Technologies, October 28-29, 2009, Sofia, Bulgaria, ISBN 978-954-9526-62-2.
+Assuncao M D d, Costanzo A d and Buyya R, "A cost-benefit analysis of using cloud computing to extend the capacity of clusters", Journal of Cluster Compute, 13: 335­347, April 2010.
+Beaty K, Kochut A and Shaikh H, "Desktop to Cloud Transformation Planning", "2009 IEEE International Symposium on Parallel and Distributed Processing", May 23-May 29 2009, Rome, Italy.
+Biermann E and Ermel C, "Transforming BPMN to BPEL with EMF Tiger", IEEE International Conference on Web Services, July 6-10, 2009, Los Angeles, USA.
+Brandic I, Music D, Leitner P and Dustdar S. "VieSLAF Framework: Enabling Adaptive and Versatile SLAManagement.", the 6th International Workshop on Grid Economics and Business Models 2009 (Gecon09), 2528 August 2009, Delft, The Netherlands.
+Briscoe G and Marinos A, "Digital ecosystems in the clouds: towards community cloud computing", the 3rd IEEE International Conference on Digital Ecosystems and Technologies, June 1-3, 2009, New York, USA, pp. 103-108.
+Buyya R, Yeo C S and Venugopal S, "Market-Oriented Cloud Computing: Vision, Hype, and Reality for Delivering IT Services as Computing Utilities", HPCC 2008 Cloud Computing, keynote paper.
+Buyya R, Yeo C S, Venugopal S, Broberg J and Brandic I, "Cloud computing and emerging IT platforms: Vision, hype, and reality for delivering computing as the 5th utility", Journal of Future Generation Computer Systems, Volume 25, Issue 6, June 2009, Pages 559-616.
+Chen X, Wills G B, Gilbert L, Bacigalupo, "Using Cloud for Research: A Technical Review", TesciRes Report for JISC, June 2010.
+Chang V, "A proposed Cloud Computing Business Framework", nine-month report, School of Electronics and Computer Science, University of Southampton, October 2010.
+Chang V, Mills, H and Newhouse, S "From Open Source to long-term sustainability: Review of Business Models and Case studies", UK e-Science All Hands Meeting, Nottingham, UK, September 2007.
+Chang V, Bacigalupo D., Wills G., Roure D D., "A Categorisation of Cloud Computing Business Models", poster paper, CCGrid 2010 IEEE conference, Melbourne, Australia, May 2010 (Chang et al., 2010 a).
+Chang V, Wills G, De Roure D, "A Review of Cloud Business Models and Sustainability", IEEE Cloud 2010, the third International Conference on Cloud Computing, 5-10 July 2010, Miami, Florida, USA (Chang, Wills and De Roure, 2010 b)
+27
+
+International Journal of Web Services Research, Vol.8, No.3, 2010
+Chang V, Wills G. and De Roure D (2010) Cloud Business Models and Sustainability: Impacts for businesses and e-Research. In: UK e-Science All Hands Meeting 2010, Software Sustainability Workshop, 13-16th September, 2010, Cardiff (Chang, Wills and De Roure, 2010 c)
+Chang V, Wills G, De Roure D and Chee C, "Investigating the Cloud Computing Business Framework Modelling and Benchmarking of Financial Assets and job submissions in Clouds", the UK e-Science All Hands Meeting 2010, Research Clouds: Hype or Reality Workshop, 13-16th September, 2010, Cardiff (Chang et al., 2010 d)
+Chang V, Li C S, De Roure D, Wills G, Walters R and Chee C (2011) The Financial Clouds Review. International Journal of Cloud Applications and Computing, 1 (2). pp. 41-63. ISSN 2156-1834, eISSN 21561826 (Chang et al., 2011 a).
+Chang V, De Roure D, Wills G, Walters R and Barry T (2011) Organisational Sustainability Modelling for Return on Investment: Case Studies presented by a National Health Service (NHS) Trust UK. Journal of Computing and Information Technology, 19 (2). ISSN Print ISSN 1330-1136 | Online ISSN 1846-3908 (Chang et al., 2011 b).
+Chou T, "Seven Clear Business Models", Active Book Press, 2009.
+City A.M (Newspaper), 2010, http://www.cityam.com
+Denaro G, Pezzè M and Tosi D, "Ensuring Interoperable Service-oriented Systems through Engineered SelfHealing", the 7th joint meeting of the European software engineering conference and the ACM SIGSOFT symposium on The foundations of software engineering, 26-28 August, 2009, Amsterdam, The Netherlands.
+Etro F, "The Economic Impact of Cloud Computing on Business Creation, Employment and Output in Europe", Journal of Review of Business and Economics, May 2009.
+Fischer M, "Compliant Access Management at BearingPoint with SAP BusinessObjects Access Control", Munich Cloud 2010, European Identity Conference, 4-7 May, 2010, Munich, Germany. Foster I, Zhao Y, Raicu I, Lu S Y, "Cloud Computing and Grid Computing 360-Degree Compared", IEEE Grid Computing Environments (GCE08), 12-16 Nov 2008, Austin, Texas, USA.
+Giunta G, Laccetti G and Montella R, "Five dimension environmental data resource brokering on computational grids and scientific clouds", 3rd IEEE Asia-Pacific Services Computing Conference, 9-12 Dec 2008, Yilan, Taiwan.
+Haynie M, "Enterprise cloud services: Deriving business value from Cloud Computing," Micro Focus, Tech. Rep., 2009.
+Hignite K, Katz R N and Yanosky R, "Shaping the Higher Education Cloud", An EDUCAUSE and NACUBO White Paper, May 2010.
+Hobona G, Fairbairn D and James P, "Orchestration of Grid-Enabled Geospatial Web Services in Geoscientific Workflows", IEEE Transactions on Automation Science and Engineering, page 407-411, Volume 7, No. 2, April 2010.
+Hosono S, Kuno A, Hasegawa M, Hara T, Shimomura Y and Arai T, "A Framework of Co-creating Business Values for IT Services", 2009 IEEE International Conference on Cloud Computing, September 21-25, 2009, Bangalore, India.
+Hull J C, "Options, Futures, and Other Derivatives", Seventh Edition, Pearson, Prentice Hall, 2009.
+28
+
+International Journal of Web Services Research, Vol.8, No.3, 2010
+Hwang K, Kulkarni S and Hu Y, "Cloud Security with Virtualized Defense and Reputation-based Trust Management", 2009 Eighth IEEE International Conference on Dependable, Autonomic and Secure Computing, 12-14 December 2009, Chengdu, China.
+Jiang TJ, Liu D, Liu KM, Yang WZ, Tan PT, Hsieh MJ, Chang TH, Hsu WL, "OpenVanilla ­ A Non-Intrusive Plug-In Framework of Text Services", ACM Journal, Computing Research Repository, 2006.
+Kangasharju J, Lindholm T and Tarkoma S, "XML Security with Binary XML for Mobile Web Services", International Journal of Web Services Research, page 1-19, Volume 5, number 3, July- September 2008.
+Klems M, Nimis J and Tai S, "Do Cloud Compute? A Framework for Estimating the Value of Cloud Computing", Journal of Designing E-Business Systems ­ Market, Services and Network, 2009, Volume 22, Part 4, 110-123.
+Lobo L O and Arthur J D: "An Objectives-Driven Process for Selecting Methods to Support Requirements Engineering Activities", 29th Annual IEEE / NASA Software Engineering Workshop (SEW-29 2005), 6-7 April 2005, Greenbelt, Maryland, USA.
+Lu, Jackson and Berka, "AzureBlast: A Case Study of Developing Science Applications on the Cloud", Science Cloud 2010, the first workshop on Scientific Cloud Computing, June 21, 2010, Chicago, USA.
+Luhn A and Jaekel M, "Cloud Computing ­ Business Models, Value Creation Dynamics and Advantages for Customers", Simens White Paper, 2009.
+Martino L D and Bertino E, "Security for Web Services: Standards and Research Issues", International Journal of Web Services Research, page 48-74, Volume 6, Number 4, October-December 2009.
+Mastropietro L, "Managed IAM Service Project at Piaggio", Munich Cloud 2010, European Identity Conference, 4-7 May, 2010, Munich, Germany. O'Reilly T, "What Is Web 2.0: Design Patterns and Business Models for the Next Generation of Software", Munich Personal RePEc Archive (MPRA) Paper No 4578, November 2007. Paci F, Bertino E and Crampton J, "An Access-Control Framework for WS-BPEL", International Journal of Web Services Research, page 20-43, Volume 5, number 3, July- September 2008. Pajorova E and Hluchy L, "3D visualization the results of complicated Grid and Cloud-based applications", the 14th International Conference on Intelligent Engineering Systems (INES), 5-7 May 2010, Las Palmas, Spain. Pearson S and Charlesworth A, "Accountability as a Way Forward for Privacy Protection in the Cloud", HP Laboratory, Technical Paper, 2009. Prechter R R Jr and Parker W D, "The Financial and Economic Dichotomy in Social Behavioral Dynamics: the Socionomic Perspective", the Journal of Behavioural Finance, page 84-108, Vol. 8, No. 2, 2007. Raafat H M N, "Risk Assessment and Machinery safety", Journal of Occupational Accidents, page 37-50, 1989.
+Sanders W H, Courtney T, Deavours D, Daly D, Derisavi S and Lam V, "Multi-Formalism and Multi-SolutionMethod Modelling Frameworks: The Mobius Approach". In Proceedings of the Symposium on Performance Evaluation, 2004.
+Schubert L, Jeffery K and Neidecker-Lutz B, "The Future for Cloud Computing: Opportunities for European Cloud Computing Beyond 2010", Expert Group report, public version 1.0, January 2010.
+Sloman M, "The e-learning Revolution: From Propositions to Action", CIPD, 2001, ISBN: 0852928734.
+Sobel W, Subramanyam S, Sucharitakul A, Nguyen J, Wong H, Klepchukov A, Patil S, Fox A, Patterson D, "Cloudstone: Multi-Platform, Multi-Language Benchmark and Measurement Tools for Web 2.0" In Proceeding of Cloud Computing and its Applications (CCA 2008), 22-23 October, 2008, Chicago, USA.
+29
+
+International Journal of Web Services Research, Vol.8, No.3, 2010
+Sun YL, Perrott R, Harmer T, Cunningham C, Wright P, Kennedy J, Edmonds A, Bayon V, Maza J, Berginc G, Hadalinz P, "SLA-Aware Resource Management", Service Level Agreements in Grids Workshop 2009, October 13, 2009, Banff, Canada. Tsalgatidou A, Athanasopoulos G and Pantazoglou M, "Interoperability Among Heterogeneous Services: The Case of Integration of P2P Services with Web Services", International Journal of Web Services Research, page 79-110, Volume 5, number 4, October-December 2008. Vouk M A, "Cloud Computing ­ Issues, Research and Implementations", Journal of Computing and Information Technology - CIT 16, page 235­246, Volume 4, 2008.
+Yee, G OM and Korba, L, "Security Personalization for Internet and Web Services", International Journal of Web Services Research, page 1-22, Volume 5, Number 1, January-March 2008. Weinhardt C, Anandasivam A, Blau B, Borissov N, Meinl T, Michalk W, Stober J, "Cloud Computing ­ A Classification, Business Models, and Research Directions", Journal of Business and Information Systems Engineering, 2009.
+Weinhardt C, Anandasivam A, Blau B and StoBer J, "Business Models in the Service World", IEEE Computer Society selected paper, March/April 2009, 1520-9202/09.
+Zirpins C and Emmerich W, "A reference model of virtual service production networks", International Journal on Service Oriented Computing and Applications, Vol 2, No. 2-3, page 145-166, Springer, 2008.
+ABOUT THE AUTHORS
+Victor Chang was an IT Manager/Head of IT in one of NHS Trusts, UK. He is currently working as an Assistant Professor and IT Manager at Business School, University of Greenwich, while doing his part-time research with the University of Southampton. CCBF is part of his research to help organisations in achieving good Cloud design, deployment and services. He has 17 publications in 20 months, and always offers 100% effort for his full-time work. With 13 years of IT experience, he is one of the most active practitioners and researchers in Cloud in England.
+David De Roure is a Professor of e-Research in the Oxford e-Research Centre and National Strategic Director for e-Social Science. Closely involved in the UK eScience programme, his projects draw on Web 2.0, Semantic Web, workflow and pervasive computing technologies and he focuses on the co-evolution of digital technologies and research methods in and between multiple disciplines. He runs the myExperiment.org social website and is a Web Science champion for the Web Science Trust. Dr Gary Wills is an Associate Professor in Computer Science at the University of Southampton. Gary works in a multidisciplinary environment. He is a Chartered Engineer, a member of the Institute of Engineering Technology and a Fellow of the Higher Educational Academy. He is also an adjunct professor at the Cape Peninsular University of Technology and a research professor at RLabs. Gary's research projects revolve around System Engineering and applications for industry, medicine and education. These systems are underpinned by SOA, adaptive systems, advanced knowledge technologies and Cloud Computing.
+Robert John Walters is an Assistant Professor in Computer Science at the University of Southampton. His research interests include middleware, distributed computing, hypermedia and graphical formal modelling language.
+30
+
+

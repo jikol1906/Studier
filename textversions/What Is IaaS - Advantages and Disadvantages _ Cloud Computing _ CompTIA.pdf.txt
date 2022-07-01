@@ -1,0 +1,279 @@
+5/17/22, 8:20 PM
+
+What Is IaaS - Advantages and Disadvantages | Cloud Computing | CompTIA
+
+CTaogrpso:raCtleouMdeCmobmerpshuitpi
+n(hgttp
+s(://h/coomnnee)ct.comptia.org) About Us
+(/about-us) H(/erlepSs
+t(oohurtetrpc(seh:s/t//thcplesol:pu/./dcso-tcmoorpmeti.paco.uomtrignp/ght)ica/.eonr-gu/s)/categories/115001121563)
+
+Contact Us
+(/contact-us)
+
+LCGoegerittni
+fS(ihcttaattprisot:en//sdmyW.coitmhptCial.oourgd)
+
+Store
+(https://store.comptia.org/)
+
+HomCeo(/m) 
+p/utCionngtent (/content) 
+ / What Is IaaS?
+
+What Is IaaS? Read more about cloud computing
+(https://www.comptia.org/resources/cloudDo you
+computing) really know
+whaGtetthceloud computing training clou(hdttisp?s:T/o/www.comptia.org/training/bymocsterotfifuicsa,tion/comptia-cloud) the cloud is
+a mEaagrincaal cloud computing placceerwtihfiecaretion our(hdtattpas://www.comptia.org/certifications/cloud) lives safely
+and
+securely.
+But obviously,
+it's a bit
+more
+complicated
+than that. Cloud service is important to organizations that house data about
+their customers and their inventory, and it can be overwhelming ­ not to mention, expensive.
+
+Maintaining on-premises IT infrastructure can be both costly and labor intensive. That's why customer demand for cloud infrastructure as a service (IaaS) is accelerating as organizations continue to pursue digital strategies. However, top talent
+with cloud computing skills and experience is still hard to find.
+
+Learning how to analyze, evaluate and design cloud service solutions requires a fundamental understanding of the different components that are commonly used.
+
+Common types of cloud computing services (/content/articles/cloud-types-solutions-and-vendors) include the following:
+
+Infrastructure as a service (IaaS) Software as a service (SaaS) (/content/articles/what-is-saas)
+
+https://www.comptia.org/content/articles/what-is-iaas
+
+1/8
+
+5/17/22, 8:20 PM
+
+What Is IaaS - Advantages and Disadvantages | Cloud Computing | CompTIA
+
+Platform as a service (PaaS) (/content/articles/what-is-paas)
+
+Tags : Cloud Computing I(n/rferassotururccetsu/rceloausda-csoemrvpicueticnagn) be a game changer, as it promises on-demand access to computing resources. Read on to learn about IaaS in cloud computing, the benefits it offers an organization, the
+
+challenges it may present and examples of IaaS.
+Get Started With Cloud
+
+Computing
+
+CONTINUE READING BELOW
+
+YOUReMadAYmAoLrSeOabBoEuItNcTloEuRdESTED IN... computing (https://www.comptia.org/content/articles/what-is-cloud(https://www.comptia.org/resources/cloudcomputing) computing)
+
+Get cloud computing training (https://www.comptia.org/training/byWch eratitfiicsaC tiolonu/cdoC mopm tiap-u cltoiundg)?
+
+The cloud is not one thing, but rather a term
+thEatadrenscaribcelos aucdomcopumtinpgumtiondgel consisting of
+
+8 Cloud Computing Advantages: Why People Are Flooding to the
+
+mcaneyrtpiafritcsa. Ftiinodnout more about what cloud
+
+Cloud
+
+computing really means.
+(https://www.comptia.org/certifications/cWlohuadt )are the advantages of cloud computing?
+
+Here are eight benefits of cloud computing that
+
+illustrate why you should make the move.
+
+READ MORE
+
+READ MORE
+
+(https://www.comptia.org/content/infographic/8-advantages-of-cloud-computing) (https://www.comptia.org/content/guides/cloud-networksetup-guide/)
+
+A Cloud Networking Quick-Start Guide: Around the Network in 8 Stops
+Learn the basics of how to set up a cloud network with CompTIA's quick-start guide.
+
+READ MORE
+
+https://www.comptia.org/content/articles/what-is-iaas
+
+2/8
+
+5/17/22, 8:20 PM
+
+What Is IaaS - Advantages and Disadvantages | Cloud Computing | CompTIA
+
+Read more about Cloud Computing (/resources/cloud-computing).
+
+Tags : Cloud Computing
+
+(/resources/cloud-computing)
+Infrastructure as a Service (IaaS) Defined
+
+TheGoeffticSiatlaIrataeSddeWfinitithioCnliosuads follows: Infrastructure as a service (IaaS) provides compute, memory, storCaogem, npeuttwinorgking and related software, such as operating systems and databases, as a cloud service to
+replace traditional on-premises data center infrastructure.
+
+SimRpeliafidedm,othreatamboeuatncsloIauadS is essentially virtual servers that the customer rents from another company thactohmaspautdinagta center. Essentially, IaaS promotes access versus ownership.
+(https://www.comptia.org/resources/cloudThiscosomluptuiotinngp)rovides the end user with flexibility when it comes to hosting custom-built apps or standard software while also providing a general data center for storage.
+Get cloud computing training Cus(thotmtpesr:s//cwanwwde.cpolomypItaiaa.Soirng/otnraeinoifntgh/rbeye- different service models defined by the National Institute of StancedratridfiscaTteiochnn/coolomgpyti(aN-IcSlTo)u:d)
+EaPrrnivaatceloCuldoucdo:mInpfuratisntgructure services are provisioned for exclusive use by a single organization. ceTrhtiefipcahtyisoincal infrastructure may be owned, managed and operated by the organization, a third (hptatprtsy:/o/wr swowm.ceocmomptbiain.oartgio/cne, ratnifdicaittimonays/ecxloisutdo)n or off premises.
+Public Cloud: Infrastructure services are provisioned for use by multiple organizations (also known as a multi-tenant model). The physical infrastructure may be owned, managed and operated by a business, academic or government organization, or some combination. It exists on the premises of the cloud provider. Hybrid Cloud: A company chooses to leverage both public cloud and private cloud for applications or overall architecture. The two cloud models remain unique entities but are bound together by standardized or proprietary technology that enables data and application portability.
+
+A Brief History of Cloud Computing
+Amazon Web Services (AWS) was the pioneer of cloud computing as we know it. According to Jeff Bezos, the mission of AWS was to provide the "application developers a set of dependable tools and a reliable infrastructure that they could build products on top of." Microsoft (Azure) Google (Google Cloud), IBM (IBM Smart Cloud) and Oracle (Oracle Cloud) quickly followed suit. Today the range of cloud computing services is quite broad. Learn more about cloud computing types, solutions and vendors. (/content/articles/cloud-types-solutions-and-vendors)
+
+Advantages of IaaS
+
+IaaS is advantageous to companies in scenarios where scalability and quick provisioning are key. In other
+
+words, organizations experiencing rapid growth but lacking the capital to invest in hardware are great
+
+candidates for IaaS models. IaaS can also be beneficial to companies with steady application workloads
+
+https://www.comptia.org/content/articles/what-is-iaas
+
+3/8
+
+5/17/22, 8:20 PM
+
+What Is IaaS - Advantages and Disadvantages | Cloud Computing | CompTIA
+
+that simply want to offload some of the routine operations and maintenance involved in managing
+
+iTnafgras s:tCrulocutudreC.omputing
+
+(/resources/cloud-computing) Other advantages may include the following:
+
+GPeatySfotarrWtehdatWYoiuthUCselo: Fuedes are computed via usage-based metrics CRoemdupcuetiCnagpital Expenditures: IaaS is typically a monthly operational expense
+Dynamically Scale: Rapidly add capacity in peak times and scale down as needed
+Increase Security: IaaS providers invest heavily in security technology and expertise ReFuadtumreo-rPeroaobfo:uAtcccleosusdto state-of-the-art data center, hardware and operating systems coSmelpf-uSteinrvgice Provisioning: Access via simple internet connection (hRtetpasll:o//cwatwewIT.cRoemspotuiarc.oersg: /FrreeseouuprcIeTs/sctaloffufdo-r higher value projects coRmedpuuctienDg)owntime: IaaS enables instant recovery from outages
+Boost Speed: Developers can begin projects once IaaS machines are provisioned GEent acbloleudIncnoomvpautitoinng: Atrdadinninegw capabilities and leverage APIs (hLtetpves:l/t/hwewPwla.cyoinmgpFtiieal.do:rgS/MtrBasincianng/cboym- pete with much larger firms certification/comptia-cloud)
+
+ChEaarnlaleclonudgcoemspuotinfg IaaS certification The(rhettaprse:/m/wanwywb.ceonmefpittsiat.oorugs/incegrItaifaicSaitnioanns/ocrlgoaundi)zation, but there are also challenges. Some of these hurdles can be overcome with advanced preparation, but others present risks that a customer should
+weigh in on before deployment.
+
+Challenges may include the following:
+
+Unexpected Costs: Monthly fees can add up, or peak usage may be more than expected Process Changes: IaaS may require changes to processes and workflows Runaway Inventory: Instances may be deployed, but not taken down Security Risks: While IaaS providers secure the infrastructure, businesses are responsible for anything they host Lack of Support: Live help is sometimes hard to come by Complex Integration: Challenges with interaction with existing systems Security Risks: New vulnerabilities may emerge around the loss of direct control Limited Customization: Public cloud users may have limited control and ability to customize Vendor Lock-In: Moving from one IaaS provider to another can be challenging Broadband Dependency: Only as good as the reliability of the internet connection Providers Not Created Equally: Vendor vetting (https://www.comptia.org/blog/all-ahead-cloudspeed-how-to-choose-a-cloud-vendor) and selection can be challenging Managing Availability: Even the largest service providers experience downtime Confusing SLAs: Service level agreements (SLAs) can be difficult to understand Regulatory Uncertainty: Evolving federal and state laws can impact some industries' use of IaaS, especially across country borders Vendor Consolidation: Providers may be acquired or go out of business
+
+https://www.comptia.org/content/articles/what-is-iaas
+
+4/8
+
+5/17/22, 8:20 PM
+
+What Is IaaS - Advantages and Disadvantages | Cloud Computing | CompTIA
+
+Third-Party Expertise: Lack of mature service providers, guidance or ecosystem support
+
+Tags : Cloud Computing
+
+(/resources/cloud-computing)
+Examples of IaaS
+
+ClouGdebtuSstinaerstsedis bWooitmhinCglo. Iundfact, Gartner (https://www.gartner.com/doc/reprints?id=12G2COo5mFCp&uctti=n1g50519) projects revenue in the cloud IaaS market to increase to $81.5 billion by 2022, up
+from $41.4 billion in 2019. Businesses are using IaaS in a variety of ways:
+
+ReSoadftwmaorreedaebvoeulot pcmlouendt coSmofptwutairnegtesting (hHttopsst:i/n/gwwwewb.sciotemsptia.org/resources/cloudcoSmupppuotirntign)g web apps
+High performance computing (HPC) GBeitgcdloautad acnoamlypsuisting training
+(https://www.comptia.org/training/byOneceerxtaifmicaptlieoonf/csocamlipntgiau-pcloaundd)back on IaaS can be seen in retail. Many retailers expect traffic to increase in November and December, around the holidays. Having the ability to quickly add capacity during this
+peaEkatrinmaecilsoiumdpcoormtapnut.tiTnhge elastic nature of IaaS allows companies to ramp up when needed.
+certification Ano(hthtteprse:/x/awmwpwle.coofmlepvteiara.ogringg/ccelrotuifdicaintiforansst/rculcotuudr)e is storing security video files. Since video files consume a large amount of data, a management application is needed to store these files with easy access. IaaS cloud storage is an ideal solution for managing these files.
+
+Companies in every stage of the business lifecycle are using IaaS solutions. From global enterprises to startups, the flexibility, scalability and cost savings are hard to beat.
+
+Popular IaaS providers include Microsoft Azure, Amazon Web Services, Rackspace and Google Compute Engine.
+
+Microsoft Azure (https://azure.microsoft.com/en-us/) is a cloud computing service created by Microsoft for building, testing, deploying and managing applications and services through Microsoft-managed data centers. Amazon Web Services (https://aws.amazon.com/ec2/) is a secure cloud services platform, offering compute power, database storage, content delivery and other functionality to help businesses scale and grow. Rackspace (https://www.rackspace.com/) is a managed cloud computing company that aims to make it easy to manage private and public cloud deployments. The company is the largest managed cloud provider, offering expertise across cloud platforms such as AWS, Microsoft Azure and OpenStack. Google Compute Engine (https://cloud.google.com/compute) is Google's IaaS virtual machine offering. It allows customers to use powerful virtual machines in the cloud as server resources instead of acquiring and managing server hardware.
+
+https://www.comptia.org/content/articles/what-is-iaas
+
+5/8
+
+5/17/22, 8:20 PM
+
+What Is IaaS - Advantages and Disadvantages | Cloud Computing | CompTIA
+
+WTagsh: Calotud'sCotmhpuetingDifference Between SaaS vs. PaaS vs. IaaS? (/resources/cloud-computing)
+InfrGasetrtuScttuarreteads aWSeitrhvicCelo(IauadS) is one of the three most common cloud computing services. IaaS is a payas-yCooum-gopusetrivnigce that often includes services, storage, networking and virtualization. But how does IaaS
+compare to its fellow service models?
+
+PlatRfoeramd masoaresearbvoicuet c(PloauadS) (/content/articles/what-is-paas) consists of hardware and software tools built on tcoopmopfuatinnIgaaS platform. It reduces the need for system administration (htt(phst:t/p/sw:/w/www.cwom.copmtiap.otirag.o/brglo/gre/syoouurrc-nees/xctl-omuodv-e-systems-administrator) and allows end users to
+focus on appcodmevpeulotipnmg)ent instead of infrastructure management.
+MeGanewt chlioleu,dsocoftmwpauretiansgatrsaeinrvinicge (SaaS) (/content/articles/what-is-saas) is ready-to-use software that's ava(ilhatbtples:v/i/awawtwhi.rcdompaprttiya.oovregr/ttrhaeiniinntge/rbnye-t. Most modern SaaS applications are built on IaaS or PaaS platcfeorrtmifisc.ation/comptia-cloud)
+
+Earn a cloud computing certification (https://www.comptia.org/certifications/cloud)
+
+It's not surprising that newer cloud models are entering the space that work alongside IaaS. Containers and serverless architecture are two such service models giving companies new options for how to run their applications. At this point, simple
+IaaS solutions continue to be the most mature option, but trend spotters are keeping their eye on containers and serverless architecture as new and emerging technology.
+
+https://www.comptia.org/content/articles/what-is-iaas
+
+6/8
+
+5/17/22, 8:20 PM
+
+What Is IaaS - Advantages and Disadvantages | Cloud Computing | CompTIA
+
+While the range of services offered by IaaS providers is massive and always evolving, the needs of the
+
+bTaugssin:eCslsosuhdoCuoldmaplwutaiynsgbe evaluated and prioritized before selecting a cloud service provider. Companies
+
+n(/eredsoquurcaelisfi/ecdloIuTdp-crosmwphuotinhga)ve the ability
+to analyze, evaluate and design cloud computing solutions that
+
+fit their current and future needs.
+
+WhGetehterSytaourt'reedloWokiitnhg Ctolowuodrk in cloud computing or simply want to increase your knowledge on the subCjeocmt, bpeustuinregto check out our other cloud computing resources.
+(https://www.comptia.org/resources/cloud-computing)
+Read more about cloud computing (https://www.comptia.org/resources/cloudcomputing)
+
+Get cloud computing training (https://www.comptia.org/training/bycertification/comptia-cloud)
+
+Earn a cloud computing AbcoeurttifUicsa(t/iaobnout-us) Ne(hwtstrposo:/m/w(/wneww.csoromopmti)a.org/certifications/cloud) Contact Us (/contact-us) Blog (/blog)
+
+(https://www.facebook.com/comptia)
+
+(https://www.twitter.com/comptia)
+
+
+
+
+(https://www.linkedin.com/company/comptia)
+
+(https://www.youtube.com/comptia)
+
+
+
+
+(https://www.instagram.com/comptiaofficial/)
+
+CERTIFICATION CompTIA IT Certifications (/certifications) Store (https://store.comptia.org/) Account Login (https://www.certmetrics.com/comptia/login.aspx) CompTIA Tech Career Academy (https://www.comptiatech.org/)
+
+ASSOCIATION CompTIA ­ The IT Industry Association (/membership)
+
+PHILANTHROPY Creating IT Futures Foundation (https://www.creatingitfutures.org/)
+
+https://www.comptia.org/content/articles/what-is-iaas
+
+7/8
+
+5/17/22, 8:20 PM
+
+What Is IaaS - Advantages and Disadvantages | Cloud Computing | CompTIA
+
+GOVERNMENT RELATIONS TaCgosm:pCTloIAuPduCbolimc Speucttionrg(https://www.comptia.org/advocacy) (/resources/cloud-computing)
+
+PARTNERS
+CoGmeptTISAtaArutehodriWzeditPharCtnloeruPdrogram (https://partners.comptia.org/) Computing
+
+Copyright © CompTIA, Inc. All Rights Reserved 
+Sitemap (/sitemap) 
+Legal (/legal) Read more about cloud computing (https://www.comptia.org/resources/cloudcomputing)
+Get cloud computing training (https://www.comptia.org/training/bycertification/comptia-cloud)
+Earn a cloud computing certification (https://www.comptia.org/certifications/cloud)
+
+https://www.comptia.org/content/articles/what-is-iaas
+
+8/8
+
+
