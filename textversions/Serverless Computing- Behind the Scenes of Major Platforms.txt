@@ -1,0 +1,324 @@
+Serverless Computing: Behind the Scenes of Major Platforms
+
+Daniel Kelly School of Computer Science
+National University of Ireland, Galway (NUIG),
+Galway, Ireland. Email: d.kelly69@nuigalway.ie
+
+Frank G Glavin School of Computer Science
+National University of Ireland, Galway (NUIG),
+Galway, Ireland. Email: frank.glavin@nuigalway.ie
+
+Enda Barrett School of Computer Science
+National University of Ireland, Galway (NUIG),
+Galway, Ireland. Email: enda.barrett@nuigalway.ie
+
+arXiv:2012.05600v1 [cs.DC] 10 Dec 2020
+
+Abstract--Serverless computing offers an event driven payas-you-go framework for application development. A key selling point is the concept of no back-end server management, allowing developers to focus on application functionality. This is achieved through severe abstraction of the underlying architecture the functions run on. We examine the underlying architecture and report on the performance of serverless functions and how they are effected by certain factors such as memory allocation and interference caused by load induced by other users on the platform. Specifically, we focus on the serverless offerings of the four largest platforms; AWS Lambda, Google Cloud Functions, Microsoft Azure Functions and IBM Cloud Functions. In this paper, we observe and contrast between these platforms in their approach to the common issue of "cold starts", we devise a means to unveil the underlying architecture serverless functions execute on and we investigate the effects of interference from load on the platform over the time span of one month.
+
+Keywords-Serverless Function-as-a-Service; Benchmarking;
+
+Computing; Cloud Computing;
+
+Performance
+
+Measurement;
+
+I. INTRODUCTION
+Serverless computing is an application deployment architecture that aims to provide pay-as-you go event driven functionality. Applications are developed as per each desired process and the event that invokes it. Serverless function platforms provide the infrastructure to deploy code for execution across their cloud and define the event processing logic that prompts the functions to run using the model: event, trigger, and action. Serverless computing promotes the idea that application development is abstracted from the underlying infrastructure and that there is no need for a dedicated team to manage software in-house, sparking the term "NoOps" (no operations). Serverless computing abstracts back-end management from users, allowing only minimal access to some basic parameters such as function memory allocation and function runtime timeout. Functions execute on the platform's traditional Infrastructure as a Service (IaaS) virtual machine offerings, however the provision of such virtual machines (VM) is managed by the platform in response to function invocation and not by the developer. Unlike IaaS, you do not pay for the uptime and
+
+resources consumed by this "execution" VM but rather for the run time of each function, hence the name Function as a Service (FaaS). Due to this abstraction enacted by the platform providers, it is not necessarily known what kind of infrastructure functions may be executed on. This paper aims to look behind the scenes of serverless functions and offer an up-to-date insight on the topology of the four largest platforms; AWS Lambda (AWS), Google Cloud Functions (Google), Microsoft Azure Functions (Azure) and IBM Cloud Functions (IBM), as well as outline performance metrics and potential effects on performance.
+We designed a testing system to expose the underlying infrastructure that serverless functions run on. We gather the CPU specifications and usage statistics in order to provide this overview of the resources provisioned. To this end, a means of identifying VMs was established to create meaningful profiles of VM configurations. From this, we gained an insight into their topology and observed the major differences between the platforms. Users cannot directly request the specification of these execution VMs, only the memory allocation each function has access to and, as such, document how this configuration can effect the specification of the VM deployed. We further investigate how this memory allocation affects function performance by recording various timing statistics and benchmarking metrics associated with function execution such as: function runtime, "cold start" time (initialization lag), CPU utilization and disk I/O throughput. Lastly, given that all the functions for a given platform are executed from the same cloud space (split into regions), the effect of potential interference from load on the platform was investigated by running our test system over the course of one month in order to detect any anomalies in runtime performance.
+II. RELATED WORK
+There are countless blogs posted by serverless application developers that give a brief overview of the performance of serverless functions. [1], [2], [3], [4], [5]. The focus of these is often on the issue of "cold starts" and programming language choice for function development. Given how quickly these articles are produced, the results often seem at odds
+
+with each other as time goes on. For example, Voijta [5] concluded that memory allocation of a function does not affect cold start time, whereas Cui [2] concluded that it did one year later. In academia, a number of researchers have attempted to assess the performance of various serverless platforms. Hendrickson et al. [6] created an open-source serverless platform using the Lambda Programming Model (develop functions that respond to events), which achieved lower latency at low loads and was better at bursts of traffic compared to AWS Elastic Beanstalk1. The authors also proposed a benchmarking tool (LambdaBench) for the Lambda Programming Model. McGrath et al. [7] analysed the performance of AWS Lambda, Google Cloud Functions, Microsoft Azure, and Apache OpenWhisk against their own prototype serverless platform. They made observations on the scaling and cold start latency of the platforms, finding AWS and Google to be best-in-class at the time, however the testing setup may not have been optimal for recording cold start times i.e. not allowing for enough time to pass where a cold start would be encountered. Llyod et al. [8] expand on the cold start issue by defining them as: provider cold (first request to the cloud provider), VM cold (first request to a VM within that cloud), and container cold (first request to a container within that VM), as well as voicing the need for a standard means of benchmarking serverless functions inspired by the suggestions of Aderaldo et al. [9] on microservices. Mohanty et al. [10] investigate the popular performance metrics used by other researchers with their study focusing on open source frameworks such as OpenFaas, Kubeless and Fission. There were no comparisons to the commercial offerings in this work. Hellerstein et al. [11] provide a "devil's advocate" opinion on serverless architecture, listing limitations such as: limited function lifetime, I/O bottlenecks, no specialised hardware, how FaaS stymies distributed computing because there is no network addressability of serverless functions, two functions can work together "serverlessly" only by passing data through slow and expensive storage and how FaaS discourages open source service innovation since most popular open source software cannot not run at the same scale as current commercial serverless offerings. Wang et al. [12] performed an analysis of the topology of the serverless platforms as well as their performance. This work has inspired some of the methodology of the experiments conducted in this paper.
+Despite the related work completed in the field, we have identified gaps in the knowledge that our work aims to fill. Namely, we investigate potential interference effects on performance caused by load on the cloud platform by other users over the course of one month. This has resulted in the generation of a data set containing over 500,000 function calls between the four platforms that we have
+1https://aws.amazon.com/elasticbeanstalk/
+
+published along with our benchmarking tools2. This work is performed on the current state of AWS Lambda, Google Cloud Functions, Microsoft Azure Functions and IBM Cloud Functions in 2020. Development is rapid and updated insight into their performance are required as previous findings become outdated.
+III. METHODOLOGY
+The typical case for invocation of serverless functions is through the use of REpresentational State Transfer (REST) APIs. For our tests, an observer virtual machine was deployed on each platform's traditional cloud computing offering. They were deployed on the same availability zone as the serverless functions in order to best nullify network latency. This observer's role was to invoke the functions via their API, record the request and response times and finally push the results to an external MongoDB database. The observer script was written in Python and used the requests package to trigger each function via its URL. The observer script was executed in two scenarios:
+1) Two sequential function invocations for the definitive measurement of a cold and warm function start.
+2) Fifty concurrent function invocations to prompt scaling and put increased workload on the function platform.
+These scenarios were run every hour for one month. The serverless functions execute a number of routines that perform measurements on the specifications of the function's runtime environment. Such measurements include: function runtime, VM uptime, total available memory on VM, disk I/O throughput, CPU information and unique identifiers for both function and VM instances. Much of these results were read from the Linux proc filesystem (procfs) where available.
+The results of these routines were collated into a JSON response that was sent back to the observer where it could append extra information such as: memory allocation of the function, total runtime of the function (request to response) and the start lag time (cold start time Section V-A), before storing the results to the database. This process is illustrated above in Figure 1 for AWS Lambda, a near identical setup is used for the other platforms except using their equivalent cloud offerings.
+IV. PLATFORM ARCHITECTURE
+In order to understand the architecture of the four platforms, we consulted the official documentation for each platform in addition to running our aforementioned tests. Table I shows the measurements that we recorded using the function for gathering information on the platform architecture.
+A. Overview
+AWS, Azure and IBM: The proc file system exposes information about the execution VM that the functions run on
+2https://github.com/psykodan/Serverless-Computing-Data-Set
+
+Table I RECORDED ATTRIBUTES OF EXECUTION VM
+
+VM ID Function ID Previous Function IDs
+CPU Speed CPU Times CPU Model
+Uptime Total Memory
+Memory
+
+Identification A unique identifier for each execution VM. The method of measurement varies for each platform. A unique identifier for each function instance. A collection of Function IDs that have executed on a particular VM.
+System Information The speed in MHz of the CPU. The amount of time in milliseconds a host has spent in user, system and idle time. What CPU is used on the host. The timestamp the VM booted. Total memory configured to the VM The function memory allocation.
+
+Figure 1. AWS Experimental Setup
+and not just the function container. From our measurements, we found that the average VMs configured were:
+-AWS - Intel Xeon E5-2670 v2 processor @ 2.5 GHz with memory that varied based on the memory allocation of the functions executed on it such that is was slightly greater than the function's memory allocation
+Azure - Intel Xeon E5-2673 v4 @ 2.3 GHz with 2GB of memory
+IBM - Intel Xeon E5-2683 v4 @ 2.1 GHz with 16GB of memory
+Google Cloud Functions: Functions run in isolation on Googles proprietary hypervisor. This obscures the data we would have gathered from the proc file system to show mostly nothing. From our test, however, we could conclude that the average VM was configured with a Intel Xeon Skylake processor @ 2 GHz with 2GB of memory.
+In contrast to AWS, Google and Azure simply allocate all their execution VMs with the maximum memory requirement for the largest function configuration of 2048MB and IBM allocate a larger memory allocation perhaps to handle more function containers per VM.
+
+B. Unique VM Identifier
+Uniquely identifying the VM used to execute the function allows us to gain a picture of the infrastructure each platform is using and can help to answer questions about scaling, function isolation, disk access etc. Work carried out by Wang et al. [12] determined that for AWS Lambda functions, the VM can be identified via the /proc/self/cgroup file, where an entry contains a unique identifier "sandboxroot-" followed by some random characters. For Azure, they proposed the use of an environment variable called "WEBSITE INSTANCE ID". However at the time of our experiments no such variable could be found. So for both Azure and IBM, the /proc/machineid file was used to identify VMs. A means to uniquely identify a Google Cloud Function's execution VMs was not established. Due to the isolation Google's proprietary hypervisor imposes on the functions, access to the information normally stored in the proc file system is abstracted to show nothing, therefore an entry that identify a machine could not be found. A heuristic to identify a VM by assuming they all have unique boot times by Lloyd et al. [8] was also disproved by Wang et al. [12], deeming it unreliable. In order to gather meaningful data for comparison to the other platforms, we propose a method of identifying function containers by writing some Unique Identifier (UID) to a file into the /tmp folder. It was found that this file could be read by other functions executing in the same container. This was used, in conjunction with the boot time information as a sanity check, to ensure that the UID is indeed allocated to one container.
+C. VM Topology
+The topology was examined from our data set of 563,276 function invocations. This exposed 156856 VMs on AWS, 1392 VMs on Azure, 114 VMs on IBM and 21271 unique function containers on Google. It was stated by Wang et al. [12], and confirmed ourselves through correspondence with Google employees, that Google Cloud Functions execute on their proprietary hypervisor that abstracts as much info about the execution VM as possible. However, we were successful in identifying function containers and could infer
+
+Table II AWS LAMBDA FUNCTION MEMORY TO VM TOTAL MEMORY
+
+Function Memory (MB) 128 256 512 1024 *1024 2048
+
+VM Total Memory (MB) 192.484 331.740 633.804 1190.860 1717.196 3230.668
+
+the CPU model information from the measurements we took. Two fields that were not hidden in the /proc/cpuinfo file were the CPU model id and the speed. CPU models were determined using the model number entry in the /proc/cpuinfo file, which gives a decimal number that can be converted to hexadecimal and then cross referenced against the CPUID Signature table found in the Intel Architectures Software Developer's Manual, Volume 4 Chapter 2 [13].The CPU models found on each platform are collated in Table III. All CPUs were a member of the Intel Xeon product line with IBM boasting the latest versions of such, comprising of mainly version 3 and 4 models. AWS has a more homogeneous CPU configuration than the other platforms, opting for 99.93% of them being Intel Xeon E52670 v2.
+-We also measured the total memory configured to the VM. In AWS, we observed that this value varied depending on the memory allocation of the function itself. A mostly consistent mapping was observed, as shown in Table II, except for two outliers in the 1024MB functions, which ran on a VM with 1717196kB of memory*. The other platforms had a constant memory configuration with Azure and Google allocating 2GB and IBM allocating 16GB.
+V. FUNCTION PERFORMANCE
+The extent to which a developer can customize the configuration of a serverless function is quite limited. For AWS you can alter the memory allocation by increments of 64kB from 128MB to 3096MB and choose the timeout from a range of 1 second to 5 minutes. IBM has memory allocation in increments of 32kB from 128MB to 2048MB and a timeout of 1 second to 10 minutes. Google allows you to choose from a predefined set of five memory allocations: 128MB, 256MB, 512MB, 1024MB and 2048MB. Finally, Azure does not allow the developer to configure their memory allocation opting instead for auto-scaling memory. For our investigation of function performance, we used a series of measurements, as detailed in Table IV, on functions with memory allocations 128MB, 256MB, 512MB, 1024MB and 2048MB for AWS, Google and IBM. For Azure, the same tests were run without the granularity of five memory allocations i.e. only one function that was allowed to autoscale accordingly.
+
+Table III CPU IDENTIFICATION
+
+Platform AWS Google
+IBM
+Azure
+
+Model ID Speed (decimal) (MHz)
+
+Model Name
+
+62
+
+2500
+
+Xeon E5-2670 v2
+
+62
+
+3000
+
+Xeon E5-2690 v2
+
+45
+
+2600
+
+Xeon E5-2670
+
+45
+
+3300
+
+Xeon E5-1660
+
+62
+
+2500
+
+Xeon E5-2670 v2
+
+63
+
+2300
+
+Xeon E5-2680 v3
+
+79
+
+2200
+
+Xeon E5-2650 v4
+
+85
+
+2000
+
+Xeon (Skylake)*
+
+85
+
+2200
+
+Xeon (Skylake)*
+
+85
+
+2300
+
+Xeon Gold6140
+
+79
+
+2100
+
+Xeon E5-2683 v4
+
+79
+
+2600
+
+Xeon E5-2690 v4
+
+79
+
+2200
+
+Xeon E5-2650 v4
+
+63
+
+2600
+
+Xeon E5-2690 v3
+
+85
+
+2100
+
+Xeon Gold6130
+
+63
+
+2000
+
+Xeon E5-2683 v3
+
+79
+
+2300
+
+Xeon E5-2673 v4
+
+63
+
+2400
+
+Xeon E5-2673 v3
+
+85
+
+2600 Xeon Platinum8171M
+
+* Specific model could not be determined
+
+Prevalence (%)
+99.93 0.07
+24.12 0.02 0.14 4.79 11.25 53.11 6.54
+19 42.68 18.83 2.6 9.79 7.05 0.04
+68.68 22.07 9.24
+
+A. Cold Start Latency
+One of the greatest problems facing serverless computing is the infamous cold start. Cold starts have been the subject of research papers and blogs [3], [14], [4], [1], [15], [16] and continue to be a major source of doubt for those considering a serverless based application. They are the notable delay incurred when invoking a function for the first time. This is caused by the need for the platform to spin up a container that has all the required resources for a function to run. We measured the time taken from the function request to the time a function's main method began executing. We gathered these times for functions that were the first to execute on a new function container. This was determined by a file written to the /tmp directory that contained a log of all the IDs from functions that had previously executed in that container. The /tmp directory is ephemeral storage that lasts the lifespan of its function container. If the log was empty, it was a new container. We sampled across a time span of one month, running the tests every hour. This resulted in over 170,000 function invocations on AWS, Google and IBM and over 36,000 on Azure (a fifth of the number of invocations since no separate tests for each memory allocation) for our analysis. Results are shown in Figure 2.
+AWS: Of 175,477 function invocations executed on AWS 156,847 were cold starts. This would suggest that AWS may not prioritise the reuse of old containers. Of the five memory allocations chosen for the test function, the 128MB had the slowest average cold start time at 346.73 ms. A point of interest is the near identical average values for the 256, 512,
+
+Table IV MEASUREMENTS OF FUNCTION PERFORMANCE
+
+Total Runtime Function Runtime
+Start Lag CPU Utilization
+Disk I/O Number of VMs
+
+Measured from time API invokes the function to the time a response is received. The time taken for a function to execute its tasks not including initialization time of the function. Function initialization time. Measured from request time to main method start time. The number of primes a function can compute in 1000 ms. The I/O throughput of a function. The number of execution VMs created to handle scaling.
+
+1024 and 2048MB functions at 221ms ±3ms. It may be possible that AWS gives more precedence to these latter memory allocations.
+Google: Of the 175,357 function invocations executed on Google 21,253 were cold starts. There is high container reuse on Google Cloud Functions, some containers were hosting over a thousand function executions. A more expected stepping in results for each memory allocation's average cold start time was observed. These values were considerably higher than AWS with averages for 128, 256, 512, 1024 and 2048MB being 14465.52ms, 5722.33ms, 4681.37ms, 3689.48ms and 2865.49ms respectively.
+IBM: Of 176,266 function invocations executed on IBM 37,820 were cold starts. Similar container reuse to Google is observed although with much shorter cold starts: 2990.55ms, 1076.60ms, 1310.43ms, 1319.05ms and 915.49ms for the respective memory allocations. The results do not show a consistent trend which is discussed in Section V-D.
+Azure: Of 36,176 function invocations executed on Azure 1392 were cold starts. The average cold start was 1997.63ms. The low number of cold starts is likely to do with there being only one function being invoked rather than five thus allowing for greater container reuse.
+From these results, we can see the different tactics employed by the different platforms. AWS opts for less container reuse (shorter lifespan) which results in more cold starts, although the cold start times were considerably shorter than the others. Google and IBM reused containers much more thus minimizing cold starts. This is especially useful for Google whose cold starts were considerably higher.
+
+B. CPU Utilization
+
+Given a 1000ms time limit, check as many numbers as
+
+possible for whether it is prime. The method we use to
+
+check for prime numbers is trial division. For some number
+
+n across a set
+
+
+
+1<a n
+
+(1)
+
+n is prime if
+
+gcd n, a  1
+
+(2)
+
+function isP rime(n) start  2 limit  n while start  limit do if n < 1 (mod start) then
+
+Figure 2. Cross Platform Cold Start (request time to function start)
+return F alse else
+start  start + 1 end if end while return T rue end function
+This is a laborious way to calculate primes with the sole intention of using up CPU resources. The results are based on the volume of numbers checked for primality one-by-one (Figure 3).
+AWS: The volume of numbers the function could check for primality increased as the memory allocation increased. AWS specifies that the CPU power is distributed using time slicing, with larger memory allocations receiving longer time slices. The method of time slicing yields consistent access to the CPU as demonstrated by our results i.e. the number of numbers checked had a low range of variation.
+Google: Average values were similar to that of AWS. However, each memory allocation had quite a wide range of values. This is likely due to the larger variety of CPUs used by the execution VMs resulting in less consistent results.
+IBM: Average values were similar across all memory allocations with less spread of values in the higher alloca-
+
+Figure 3. Cross Platform no. numbers checked for primality
+
+Figure 4. Cross Platform Disk I/O Throughput
+
+tions. These values are comparable to the 1024MB functions in AWS and Google. There is considerable spread in the lower memory allocations. However we believe this is due to interference on the platform (discussed in Section V-D).
+Azure: Again, a similar volume of primes were computed to the other platforms
+The similarity in the results suggest that the differences in topology (Table III) are not necessarily a factor governing a function's CPU utilization. The greater factor is likely that of the method each platform employs for CPU resource allocation. Time-slicing is the most suitable method of allocating resources as one can then use a more homogeneous back-end for function execution, reducing complexity. The algorithm for time-slicing will be the deciding factor in a function's CPU utilization.
+C. Disk I/O Throughput
+Serverless functions are more commonly associated with reading and writing to a proprietary storage solution: AWS Lamba  Amazon Simple Storage Service (S3) and Google Cloud Functions  Google Filestore. However, both offerings also allow for the reading and writing of temporary files to disk on the execution VM. Our disk throughput tests utilize the Linux "dd" command to read and write blocks of size 512KB 1000 times and outputs disk throughput in MB/s (Figure 4).
+AWS: Throughput increased as memory allocation increased sharply after 128MB. However, it tapered towards the larger memory allocations, never getting above 3MB/s. Given the more homogeneous topology of the execution VMs observed, we can infer that that this is the limit that is approached as the function is allocated more CPU time slices with a greater memory allocation.
+
+Google: A more varied range was recorded with an increasing throughput for greater memory allocations. This is likely related to the much greater number of CPU configurations (Table III). Another recording of note is how much greater the values are to those from AWS. It is stated in Google Cloud Functions' documentation that these temporary files are actually stored in memory rather than on disk3 which may be resulting in the greater throughput.
+IBM: Average values were consistent and approximately 0.6MB/s mark for each memory allocation. This, along with the previous test further suggests that IBM Functions are not affected by memory allocation.
+Azure: The throughput recorded for Azure was the lowest of all the platforms, averaging under 0.5MB/s.
+The disk throughput is important for more complex functions that depend on temporary memory access. As functions are billed on execution time, lower throughput may result in increased run time.
+D. Interference Effect on Performance
+Serverless platforms employ a similar strategy on how functions are executed. A function runs within a function container on an execution VM within a predefined region of the serverless platorm's cloud. The execution VMs are isolated from other individual users [12]. However, different users' VMs can exist in the same region potentially leading to interference effects. Other events such as wide scale updates, system outages etc. may also interfere with function execution. We ran our tests over the course of one month to investigate the potential effect of any interference that causes
+3https://cloud.google.com/appengine/docs/standard/python3/using-tempfiles
+
+anomalies or predicable fluctuations in performance. We examined the effect on function run time, CPU utilization and disk I/O throughput. The results are a smoothed graph of data points taken from each hourly run of our test functions using gnuplot's "acspline"4 for run time (Figure 5), CPU utilization (Figure 6) and disk I/O throughput (Figure 7).
+AWS: Running in region "eu-west-1", we observed minimal variance in values for CPU utilization. However, a sinusoidal pattern is visible in the results of the effect on run time and disk I/O throughput. The pattern becomes clearer in the higher memory allocations. We believe this is due to higher memory allocations having greater access to the CPU (via time slicing) and, as such, will execute in a more consistent manner, therefore amplifying the visual effect of interference when it occurs. The pattern has peaks at 12:00pm and troughs at 12:00am each day, which correlates to higher use during the day than the night. This may be evidence to support the potential effect of regular load on the system.
+Google: Running in region "us-central1-a", more erratic values were observed. However, consistent peaks and troughs are visible, similar to AWS. Unlike AWS, Google Cloud did not have a consistent topology for its execution VMs (Section IV-C), this may be the cause of the varied array of results. AWS Lambda functions predominantly ran on the same CPU configurations, meaning their results were more consistent, allowing us to see clearer interference patterns.
+IBM: Running in region "Dallas", clear signs of strain on the platform were observed with large dips in performance occurring at the beginning and near the end of our month of testing. There were a number of issues affecting IBM's cloud during this time according to their status history page5, which may be the culprit. Another possibility is that IBM's serverless platform is not capable of consistent performance like its competitors leading to anomalies like the ones captured by our tests.
+Azure: Running in region "Central US", results similar to Google were observed being erratic in amplitude but periodic in time peaks and troughs in its performance.
+Our month long analysis demonstrates that there is interference on each platform and we propose potential sources for such interference. As serverless functions are billed per 100ms, we can see that the fluctuations observed from our tests would have an effect on the final cost. As well as cost there is also considerations to be made for more critical functions requiring consistent performance.
+VI. CONCLUSION AND FUTURE WORK
+We performed an in-depth analysis of the four biggest commercial serverless platforms' underlying topology and the effects on performance for differing memory allocations.
+4http://gnuplot.sourceforge.net/docs 4.2/node125.html 5https://cloud.ibm.com/status?selected=history
+
+Figure 5. Function run times over one month *Smoothed hourly values
+Figure 6. Function CPU Utilization (prime computation) over one month *Smoothed hourly values
+We found that AWS has a different approach to function container reuse that we theorise to be a design choice to address scaling and cold start issues. We determined that memory allocation largely effects the performance of serverless functions on these platforms and must be a serious consideration when developing applications. Finally, we performed a month long observation on function performance, creating a
+
+Figure 7. Function Disk I/O Throughput over one month *Smoothed hourly values
+large data set of function benchmarks and uncovering potential interference effects due to increased load on the platform during the day and strain caused by maintenance on the platform. We believe that the contributions of this paper can help unveil the often mysterious inner workings of serverless platforms, which seem to have based their business model on keeping the developer, not just as far away from the backend as possible, but in the dark about it. We have produced a produced data set that contains a lot of data on the running of serverless function on the four largest platforms. It will benefit to any future work on application benchmarking, optimization via machine learning or cybersecurity.
+It is becoming the norm to evaluate serverless functions using similar methods as displayed in this paper [12], [2], [14] as well as real world work loads. Proposals for a standardised benchmarking system are certainly not differing from this trend [17]. A vendor agnostic, multi-language, benchmarking tool is a necessary step to encourage a greater uptake of serverless as the architecture of choice for application development. As is stands, a developer must use intuition for memory allocation rather than an empirical evaluation. Potentially greater control can be given to the developer for the configuration of functions. Certain aspects of the serverless architecture such as total isolation of functions could potentially be tweaked for fringe case applications making it a more robust architecture.
+REFERENCES
+[1] Cui Yan, "How long does AWS Lambda keep your idle functions around before
+
+a cold start?" 2017. [Online]. Available: https://read.acloud.guru/how-long-does-aws-lambda-keepyour-idle-functions-around-before-a-cold-start-bf715d3b810
+[2] ----, "How does language, memory and package size affect cold starts of AWS Lambda?" 2017. [Online]. Available: https://read.acloud.guru/does-coding-languagememory-or-package-size-affect-cold-starts-of-aws-lambdaa15e26d12c76
+[3] Shilkov Mikhail, "Comparison of Cold Starts in Serverless Functions across AWS, Azure, and GCP," 2019. [Online]. Available: https://mikhail.io/serverless/coldstarts/big3/
+[4] Byrro Renato, "Can We Solve Serverless Cold Starts?" 2019. [Online]. Available: https://dashbird.io/blog/can-wesolve-serverless-cold-starts/
+[5] Voijta Robert, "AWS journey -- API Gateway & Lambda & VPC performance," 2016. [Online]. Available: https://www.zrzka.dev/2016/10/30/aws-journeyapi-gateway-lambda-vpc-performance.html
+[6] S. Hendrickson, S. Sturdevant, T. Harter, V. Venkataramani, A. C. Arpaci-Dusseau, and R. H. Arpaci-Dusseau, "Serverless computation with openlambda," in 8th {USENIX} Workshop on Hot Topics in Cloud Computing (HotCloud 16), 2016.
+[7] G. McGrath and P. R. Brenner, "Serverless computing: Design, implementation, and performance," in 2017 IEEE 37th International Conference on Distributed Computing Systems Workshops (ICDCSW). IEEE, 2017, pp. 405­410.
+[8] W. Lloyd, S. Ramesh, S. Chinthalapati, L. Ly, and S. Pallickara, "Serverless computing: An investigation of factors influencing microservice performance," in 2018 IEEE International Conference on Cloud Engineering (IC2E). IEEE, 2018, pp. 159­169.
+[9] C. M. Aderaldo, N. C. Mendonc¸a, C. Pahl, and P. Jamshidi, "Benchmark requirements for microservices architecture research," in Proceedings of the 1st International Workshop on Establishing the Community-Wide Infrastructure for Architecture-Based Software Engineering. IEEE Press, 2017, pp. 8­13.
+[10] S. K. Mohanty, G. Premsankar, and M. Di Francesco, "An Evaluation of Open Source Serverless Computing Frameworks." in CloudCom, 2018, pp. 115­120.
+[11] J. M. Hellerstein, J. Faleiro, J. E. Gonzalez, J. SchleierSmith, V. Sreekanti, A. Tumanov, and C. Wu, "Serverless computing: One step forward, two steps back," arXiv preprint arXiv:1812.03651, 2018.
+[12] L. Wang, M. Li, Y. Zhang, T. Ristenpart, and M. Swift, "Peeking behind the curtains of serverless platforms," in 2018 {USENIX} Annual Technical Conference ({USENIX}{ATC} 18), 2018, pp. 133­146.
+[13] "Intel® 64 and IA-32 ArchitecturesSoftware Developer's Manual," 2019. [Online]. Available: https://software.intel.com/sites/default/files/managed/39/ c5/325462-sdm-vol-1-2abcd-3abcd.pdf
+
+[14] Shilkov Mikhail, "Serverless: Cold Start War," 2018. [Online]. Available: https://mikhail.io/2018/08/serverlesscold-start-war/
+[15] P.-M. Lin and A. Glikson, "Mitigating Cold Starts in Serverless Platforms: A Pool-Based Approach," arXiv preprint arXiv:1903.12221, 2019.
+[16] I. Baldini, P. Castro, K. Chang, P. Cheng, S. Fink, V. Ishakian, N. Mitchell, V. Muthusamy, R. Rabbah, and A. Slominski, "Serverless computing: Current trends and open problems," in Research Advances in Cloud Computing. Springer, 2017, pp. 1­20.
+[17] J. Kim and K. Lee, "FunctionBench: A Suite of Workloads for Serverless Cloud Function Service," in 2019 IEEE 12th International Conference on Cloud Computing (CLOUD), 2019, pp. 502­504.
+
+
