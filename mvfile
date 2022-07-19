@@ -3,5 +3,5 @@
 lastfile=$(ls -t ~/Downloads | head -n 1)
 mv ~/Downloads/"$lastfile" .
 pdftotext $lastfile
-mv *.txt textversions
+mv *.pdf pdfs/
 
