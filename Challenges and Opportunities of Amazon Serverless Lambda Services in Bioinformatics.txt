@@ -1,0 +1,267 @@
+8th International Workshop on Parallel and Cloud-based Bioinformatics ACM-BCB '19, September 7­10, 2019, Niagara Falls, NY, USA. and Biomedicine (ParBio)
+
+Challenges and Opportunities of Amazon Serverless Lambda Services in Bioinformatics
+
+Rodrigo Crespo-Cepeda
+Facultad de Informatica, Universidad Complutense de Madrid
+Madrid, Spain
+
+Giuseppe Agapito
+Data Analytics Research Center, University Magna Graecia of Catanzaro Catanzaro, Italy
+
+Jose Luis Vazquez-Poletti
+Facultad de Informatica, Universidad Complutense de Madrid
+Madrid, Spain
+
+Mario Cannataro
+Data Analytics Research Center, University Magna Graecia of Catanzaro Catanzaro, Italy
+
+ABSTRACT
+Currently, several factors are moving biomedical research towards a (big) data-centred science. This yields new challenges for computer science solutions when dealing with bioinformatics applications. Among others, efficient storage, preprocessing, integration and analysis of omics and clinical data, result in a bottleneck on the analysis pipeline. This may be faced using cloud technology. This paper discusses the challenges and opportunities of deploying bioinformatics applications using the Amazon Serverless Lambda services. First experiments show that serverless computing is useful for this particular bioinformatics high-throughput application, because it simplifies resource management.
+CCS CONCEPTS
+· Information systems  Data mining; Association rules; · Applied computing  Bioinformatics; · Computer systems organization  Cloud computing.
+KEYWORDS
+Bioinformatics, Amazon Lamba, Serverless Computing
+ACM Reference Format: Rodrigo Crespo-Cepeda, Giuseppe Agapito, Jose Luis Vazquez-Poletti, and Mario Cannataro. 2019. Challenges and Opportunities of Amazon Serverless Lambda Services in Bioinformatics. In 10th ACM International Conference on Bioinformatics, Computational Biology and Health Informatics (ACM-BCB '19), September 7­10, 2019, Niagara Falls, NY, USA. ACM, New York, NY, USA, 6 pages. https://doi.org/10.1145/3307339.3343462
+1 INTRODUCTION
+Recently, several factors are moving biomedical research towards a (big) data-centred science: (i) the volume of data in bioinformatics is increasing exponentially, especially in healthcare and medicine; (ii) new bioinformatics data is created at increasing velocity due to the
+Permission to make digital or hard copies of all or part of this work for personal or classroom use is granted without fee provided that copies are not made or distributed for profit or commercial advantage and that copies bear this notice and the full citation on the first page. Copyrights for components of this work owned by others than ACM must be honored. Abstracting with credit is permitted. To copy otherwise, or republish, to post on servers or to redistribute to lists, requires prior specific permission and/or a fee. Request permissions from permissions@acm.org. ACM-BCB '19, September 7­10, 2019, Niagara Falls, NY, USA © 2019 Association for Computing Machinery. ACM ISBN 978-1-4503-6666-3/19/09. . . $15.00 https://doi.org/10.1145/3307339.3343462
+
+advances in experimental platforms and the increase in the use of IoT (Internet of Things) health monitoring sensors; (iii) increasing variety and (iv) variability of data (omics, clinical, administration, sensors and social data are inherently heterogeneous) that may lead to wrong modelling, integration and interpretation, and finally (v) increasing value of data in bioinformatics due to the costs of the infrastructure used to produce and analyze data, as well as, the value of extracted biomedical knowledge. The emerging of this Big Data trend in Bioinformatics poses new challenges for computer science solutions, regarding the efficient storage, preprocessing, integration and analysis of omics (e.g. genomics, proteomics, and interactomics) and clinical (e.g. laboratory data, bioimages, pharmacology data, social network data, etc.) data, resulting in a bottleneck on the analysis pipeline. To face those challenges, main trends are: (i) use of high-performance computing in every step of the analysis pipeline, including parallel processing of raw experimental data, parallel analysis of data, and efficient data visualization; (ii) use of novel data models that combine structured (e.g. relational data) and unstructured (e.g. text, multimedia, biosignals, bioimages) data, with special focus on graph databases; (iii) development of novel data analyzing methods that integrate traditional statistical and data mining analysis; (iv) use of techniques for managing the privacy of patients; (v) deployment of data analysis pipelines and main biological databases on the Cloud. Currently, there are multiple choices to deploy services on cloud infrastructures, e.g. deployment on private clouds (suitable for large organizations that own their own machines), deployment on standard public clouds such as Amazon Web Services, Google Cloud, or Microsoft Azure (where pricing is often based on pre-purchased resources, e.g. storage servers, and may be expensive for small organizations), or deployment using the so-called serverless computing model (where pricing depends on the actual quantity of consumed resources, and may be suitable also for small organizations).
+This paper discusses challenges and opportunities of deploying bioinformatics applications on serverless services, with special focus on the Amazon Serverless Lambda services. As a case of study we consider a high-demanding bioinformatics application that mines SNP (Single Nucleotide Polymorphism) genotyping data with the aim to extract Association Rules able to correlate the presence of SNPs in a class of patients, with their responsiveness to drugs, in classical case-control pharmacogenomics experiments [2]. The application is a modified version of DMET-Miner [1] without
+
+663
+
+8th International Workshop on Parallel and Cloud-based Bioinformatics ACM-BCB '19, September 7­10, 2019, Niagara Falls, NY, USA. and Biomedicine (ParBio)
+
+user interface, to allow an easy deployment on cloud and serverless environments. The advantages of using Amazon Serverless Lambda services with respect to standard Amazon Web Services are described through several experiments. The rest of the paper is organized as follows. Section 2 recalls requirements of high-throughput bioinformatics applications, Section 3 presents a serverless architecture for bioinformatics applications and discusses performance results, finally Section 4 concludes the paper and outlines future work.
+2 BIOINFORMATICS APPLICATION DOMAIN AND TECHNICAL ASPECTS
+In the last years, High Throughput (HT) methods have become one of the most valuable methodologies in genomic research. Moreover, the number of applications where HT methodologies are employed is increasing faster than the development of suitable data analysis models and tools, raising the necessity to provide researchers with easy to use software tools.
+2.1 Analysis of SNP Genotyping Data
+The advent of HT methods opens new possibilities for the analysis of genomes, proteomes, and transcriptomes. The strength of HT methods has the ability to investigate a biological phenomenon from a broader perspective, i.e., investigate multiple genetic variants involved in the adverse drug's reaction in a case-control pharmacogenomics study. As a result, a single HT experiment can produce a deluge amount of data per single test. Thus, the assessment of these data allows new and interesting insights in many aspects such as the discovery of new noncoding RNA families, structural variants, or to identify novel genetic variants to associate with an outcome (phenotype or disease to name a few). Single Nucleotide Polymorphisms (SNPs) are genetic variants, known as a single base substitution that frequently occurs (1 SNP about 300-500 base pairs). The human bases are four and are Adenine, Cytosine, Guanine, and Thymine (A, C, G, and T) in short. For most SNPs the association with a disease and the responsible for the phenotype are unknown. The identification of the SNPs occurring in both coding and noncoding regions of genes can enhance the understanding of the functional consequences at the base of the development of common and complex diseases. The most employed HT methodologies to study SNPs are the microarrays. A typical microarray is a plate of glass, silicon or plastic, which has on its surface several spots containing the immobilized allele-specific oligonucleotide known as probes. DNA fragments labeled with fluorescent dyes are put into the probes and, if they are complementary with the sequence, the probe contents will hybridize producing mRNA. The microarray's vendors provide proprietary software tools able to convert the mRNA in each probe to the corresponding SNP. The outcomes of a microarray study are arranged as a table, where the rows represent the probes or genes (related to the employed platform), and the columns represent the subjects enrolled in the study. Thus, in the table, a generic cell i, j contains the detected SNP referring to the i - th row (probe) and j - th column (subject). Table 1 conveys a generic SNP microarray output.
+
+Table 1: A generic SNP microarray data set. S and P respectively refer to sample and probe identifiers.
+
+Probes
+
+Samples S1 S2 S3 · · · Sn
+
+P1
+
+G/A A/G A/G · · · T/T
+
+P2
+
+G/A A/G A/G · · · T/C
+
+.
+
+.
+
+.
+
+.
+
+.
+
+.
+
+.
+
+.
+
+.
+
+.
+
+.
+
+.
+
+.
+
+.
+
+···
+
+.
+
+Pm
+
+G/A A/G A/G · · · T/C
+
+2.2 CloudDmetMiner
+Microarrays are used in several fields of life sciences, i.e., genomics, proteomics, and pharmacology, hence, the necessity of efficiency and easiness to use software tools arise. Association Rules Mining (ARM) algorithms are employed in several different domains, i.e., market basket analysis, web access logging as well as in life sciences. ARM can help to discriminate potential relations among multiple SNPs at the time responsible, for example, to the progression of a disease or for the adverse drug reaction into the population under investigation. For this reason, we developed CloudDmetMiner a software tool written in Java for the automatic extraction of association rules that correlate the presence of a series of SNPs with the clinical condition of patients. CloudDmetMiner is the cloud version of the of DMET-Miner algorithm [1]. CloudDmetMiner provides ad-hoc interface outlets, enabling the use in the Amazon Serverless Lambda cloud environment. Thus, CloudDmetMiner can automatically take advantage of the computational power provided by the AWS Lamba cloud environment. As a result, CloudDmetMiner allows users to calculate association rules from DMET SNP datasets, through a standard web browser.
+3 SERVERLESS ARCHITECTURE FOR CLOUDDMETMINER
+During the last few years, a new paradigm of cloud computing has emerged to ease the execution of code and abstract the management of the infrastructure, allowing to focus on applications without the inconvenience of having to plan resource consumption and scalability [3].
+3.1 Serverless computing
+Serverless computing is a cloud computing model in which the user is only required to provide the source code of their applications' functions, not needing to manage the infrastructure since it is the cloud provider the one responsible for such task [15]. In this way, all the resource scaling and configuration operations are maintained by the cloud provider and the user simply has to pay for the consumption of his applications [5]. Function-as-a-Service (FaaS) is the name given to the part of serverless computing that enables the use of functions without managing infrastructure[3].
+Serverless computing is especially useful for environments with high-throughput applications, which are complex when it comes to optimally provision resources [13]. This is due to the necessity of automatic resource management to cope with dynamic load peaks.
+
+664
+
+8th International Workshop on Parallel and Cloud-based Bioinformatics ACM-BCB '19, September 7­10, 2019, Niagara Falls, NY, USA. and Biomedicine (ParBio)
+
+There are many cloud services and infrastructure providers that have their own serverless computing services[7], like Amazon, IBM, Microsoft, and Google, and also several open-source alternatives as OpenLambda1 and OpenWhisk2.
+Amazon Web Services (AWS) is one of the leading providers of cloud services and infrastructure, and it is pioneer in providing serverless computing services, with its Function-as-a-Service called Lambda 3. Lambda has been used for this work, because it allows to execute code directly without the need to administer infrastructure machines [16] and it also allows to trigger event-based functions. The execution time of the functions in Lambda is the sum of the code execution time plus an extra time that Lambda needs to initialize the code to be executed [6]. An advantage offered by Lambda is that the containers where a function has already been executed remain in a warm state for a period of time. In case the same function is executed again (even if it has been launched with other parameters), the warm machine will be reused to run the new function and will result in an execution time reduction [11]. Every time a function is launched for execution (see Fig. 1), the container that is going to execute the function needs to be created, configured and requires to copy the code and download multiple files that are going to be used in the function. This cold state container initialization process results in time consumption which is going to cause some delay on the system, specially when several functions are launched to be executed and each one of them needs to initialize. When a container has already terminated the function it was created for, it remains up for about 15 minutes until it is destroyed. This is the warm state of the container. If a function is launched and there is a container in a warm state, it is going to be reused for the new function, saving the initialization time and reducing the overall time consumption [15].
+Other providers offer serverless solutions similar to AWS Lambda. These services are also based on a pay-per-use basis, and they allow to run code directly without having to manage infrastructure. IBM Cloud Functions4, is based on OpenWhisk, an open-source solution. IBM Cloud functions has been used for a high variety of cloud based serverless solutions in multiple areas, as the creation of complex chatbots [17] and for securely managing health metrics data [4]. Azure Functions5 and Google Cloud Functions6 offer another variety of tools similar to those of AWS Lambda and IBM Cloud Functions.
+In contrast, the open-source solutions as OpenLambda and OpenWhisk, allow to deploy a Function-as-a-Service environment like AWS Lambda in your own infrastructure. Specifically, OpenLambda is an open-source implementation based on AWS Lambda. The main goal of OpenLambda is to enable researchers to evaluate serverless computing designs and implementations using the model of AWS Lambda[8].
+In the consulted literature, there are several studies on the benefits of using serverless computing in high-throughput applications and scientific workflow[12], specifically in the
+1 https://open- lambda.org/ 2 https://openwhisk.apache.org/ 3 https://aws.amazon.com/lambda 4 https://www.ibm.com/cloud/functions 5 https://azure.microsoft.com/services/functions 6 https://cloud.google.com/functions
+
+research area of bioinformatics. Serverless computing can be used to analyze biomedical data, easing the creation of scalable cloud applications without the usual complex configuration and management of infrastructure. For example, the serverless computing model has been used to compare protein sequences with the Smith-Waterman algorithm [14], which normally needs to use a complex cluster-based infrastructure to perform correctly [10]. The work of Hung et al. [9] proves that serverless computing improves dramatically the execution times of high-throughput bioinformatics applications as RNA sequencing data analysis at a low cost.
+3.2 Proposed architecture
+The proposed architecture (see Fig. 2) has been specially designed for the execution of CloudDmetMiner with the aim of easing the process of running tests as much as possible. For the described system, two Amazon AWS services have been used: S37, an object storage service in the cloud, and Lambda, the serverless Functionas-a-Service of Amazon AWS. Two types of data files are needed in order to run an execution, a SNP dataset and a task file. The task file contains the information of the jobs that will be executed on the SNP dataset, indicating the target SNP dataset and a list of parameter that must be used in the CloudDmetMiner script to analyze the chosen dataset. There are three directories in the Amazon S3 bucket: Samples, where the SNP dataset sample files are uploaded; Input, where the task files are uploaded; and Output, where the result files are uploaded. These files are uploaded to Amazon S3 in order to allow Amazon Lambda to work with them.
+Each time a task file is uploaded into the input folder, a Input Handler function is executed in Lambda. This function reads the task file and launches a Worker function asynchronously for each set of parameters in the file. The Worker functions are Lambda functions that internally execute the CloudDmetMiner script with the parameters provided by the Input Handler in each case. The Workers must first download the SNP dataset and the CloudDmetMiner script files that are hosted on S3. In case the machine is in a warm state, these files are not downloaded again and the execution time is reduced. After this, the CloudDmetMiner script is executed and the obtained results are uploaded as files to an Output folder in the S3 bucket. This folder contains the information of all the tests and operations performed on the SNP datasets and the tasks that have been executed.
+3.3 Experiments
+We carried out some preliminary tests in order to verify the architecture's performance and to validate the benefit of using serverless computing for this kind of applications. For this, we have used 3 SNP datasets of different sizes: 3 matrices of 1936x1000, 1936x1500 and 1936x2000 data, respectively. On each of these datasets, we have performed analysis with 81 different combinations of input parameters to test the performance of CloudDmetMiner with different workloads. From the total of 243 combinations, 224 were successfully executed (80 out of 81 from the first dataset and 72 out of 81 from each of the others). As we observed, at least 71 matching combinations of parameters were successfully executed in every
+7 https://aws.amazon.com/s3
+
+665
+
+8th International Workshop on Parallel and Cloud-based Bioinformatics ACM-BCB '19, September 7­10, 2019, Niagara Falls, NY, USA. and Biomedicine (ParBio)
+
+download the .task
+
+required files
+
+no (cold container) download samples
+
+start
+
+file that triggered
+
+exist in local
+
+and executable
+
+the function from S3
+
+directory?
+
+from S3
+
+yes (warm container)
+
+end
+
+upload output files to S3
+
+run executable
+
+Figure 1: Flowchart of the lifecycle of our Lambda function.
+
+Dmetminer Serverless
+
+SNP Dataset Task file
+
+Input Handlers
+
+Workers
+
+Result file
+
+Samples Input
+
+Output
+
+S3
+
+S3
+
+Lambda
+
+Figure 2: Architecture for serverless computing
+
+dataset. The obtained execution times for the 71 successful combinations in Fig. 3 are reported. The X-axis represents the matching combinations of parameters, and the Y-axis shows the total execution time for each of these groups of parameters (expressed in minutes).
+10 out of the 224 successfully executed combinations of parameters ran in a warm state machine (see Section 3.1). With these tests, we observed that the AWS Lambda Function-as-a-Service is able to run the CloudDmetMiner function with ease and that serverless computing is an optimal model to run high-throughput applications -without having to deal with complex resource management-.
+We have been able to easily create, in a short amount of time, a system that does parallel processing of SNP datasets efficiently with the CloudDmetminer script because the serverless AWS Lambda service allows to run code directly without having to configure or
+
+manage infrastructure. The workers took, as observed in Fig. 4 a total execution time of 2 minutes and 8 seconds to process the 3 datasets with 71 combinations of parameters for each one. However, if we executed these workers sequentially the times, calculated based on the times obtained for each of the workers individually, would be: 37 minutes and 33 seconds for the 1000 samples dataset, 43 minutes and 42 seconds for the 1500 samples dataset and 1 hour and 5 seconds for the 2000 samples dataset. The sequential total time would be 2 hours, 21 minutes and 20 seconds.
+4 CONCLUSIONS AND FUTURE WORK
+The new Big Data trends in Bioinformatics are a big challenge for computer science solutions. In this paper, we presented an architecture based on serverless cloud computing to perform the execution of CloudDmetMiner, a Bioinformatics high-throughput application
+
+666
+
+8th International Workshop on Parallel and Cloud-based Bioinformatics ACM-BCB '19, September 7­10, 2019, Niagara Falls, NY, USA. and Biomedicine (ParBio)
+
+02:30
+
+1000
+
+1500
+
+2000
+
+02:00
+
+01:30
+
+Y (execution time)
+
+01:00
+
+00:30
+
+00:00
+
+X (combinations of input parameters)
+
+Figure 3: Execution time results
+
+created as a cloud version of the DMET-Miner algorithm. The use of the serverless cloud computing model in AWS Lambda has helped us to ease the execution of code without having to plan resource provisioning and management. With the proposed architecture we have ran some successful preliminary tests. However, in the future, we plan to elaborate more complete tests with more complex datasets in order to validate the use of serverless computing for this type of applications and test edge cases. The authors of this paper are working on a comparison between the execution of CloudDmetMiner in a serverless architecture versus using a more traditional cloud model where infrastructure planning is needed. Also, we are working on a wider scope of the tests to check if the warm state of the machines can be a benefit for reducing execution times and costs.
+ACKNOWLEDGEMENTS
+This work has been partially funded by the following research project funded by the Calabrian Region: "Smart Electronic Invoices Accounting-SELINA CUP:J 28C17000160006", and the IN-TIME project funded by the European Commission under Grant 823934.
+REFERENCES
+[1] Giuseppe Agapito, Pietro H. Guzzi, and Mario Cannataro. 2015. DMET-Miner: Efficient discovery of association rules from pharmacogenomic data. Journal of Biomedical Informatics 56 (2015), 273 ­ 283. https://doi.org/10.1016/j.jbi.2015.06. 005
+[2] Giuseppe Agapito, Marianna Milano, Mario Cannataro, and Pietro H. Guzzi. 2015. Methodologies and experimental platforms for generating and analysing microarray and mass spectrometry-based omics data to support P4 medicine. Briefings in Bioinformatics 17, 4 (09 2015), 553­561. https://doi.org/10.1093/bib/ bbv076 arXiv:http://oup.prod.sis.lan/bib/article-pdf/17/4/553/6686612/bbv076.pdf
+
+[3] Ioana Baldini, Paul Castro, Kerry Chang, Perry Cheng, Stephen Fink, Vatche Ishakian, Nick Mitchell, Vinod Muthusamy, Rodric Rabbah, Aleksander Slominski, et al. 2017. Serverless computing: Current trends and open problems. In Research Advances in Cloud Computing. Springer, 1­20.
+[4] R Bocu and C Costache. 2018. A homomorphic encryption-based system for securely managing personal health metrics data. IBM Journal of Research and Development 62, 1 (2018), 1­1.
+[5] Adam Eivy. 2017. Be Wary of the Economics of" Serverless" Cloud Computing. IEEE Cloud Computing 4, 2 (2017), 6­12.
+[6] Sadjad Fouladi, Riad S Wahby, Brennan Shacklett, Karthikeyan Balasubramaniam, William Zeng, Rahul Bhalerao, Anirudh Sivaraman, George Porter, and Keith Winstein. 2017. Encoding, Fast and Slow: Low-Latency Video Processing Using Thousands of Tiny Threads.. In NSDI. 363­376.
+[7] Geoffrey C Fox, Vatche Ishakian, Vinod Muthusamy, and Aleksander Slominski. 2017. Status of serverless computing and function-as-a-service (faas) in industry and research. arXiv preprint arXiv:1708.08028 (2017).
+[8] Scott Hendrickson, Stephen Sturdevant, Tyler Harter, Venkateshwaran Venkataramani, Andrea C Arpaci-Dusseau, and Remzi H Arpaci-Dusseau. 2016. Serverless computation with openlambda. In 8th {USENIX} Workshop on Hot Topics in Cloud Computing (HotCloud 16).
+[9] Ling-Hong Hung, Dimitar Kumanov, Xingzhi Niu, Wes Lloyd, and Ka Yee Yeung. 2019. Rapid RNA sequencing data analysis using serverless computing. bioRxiv (2019), 576199.
+[10] Dimitar Kumanov, Ling-Hong Hung, Wes Lloyd, and Ka Yee Yeung. 2018. Serverless computing provides on-demand high performance computing for biomedical research. arXiv preprint arXiv:1807.11659 (2018).
+[11] Wes Lloyd, Shruti Ramesh, Swetha Chinthalapati, Lan Ly, and Shrideep Pallickara. 2018. Serverless computing: An investigation of factors influencing microservice performance. In Cloud Engineering (IC2E), 2018 IEEE International Conference on. IEEE, 159­169.
+[12] Maciej Malawski, Adam Gajek, Adam Zima, Bartosz Balis, and Kamil Figiela. 2017. Serverless execution of scientific workflows: Experiments with hyperflow, aws lambda and google cloud functions. Future Generation Computer Systems (2017).
+[13] Rajesh Raman, Miron Livny, and Marvin Solomon. 1998. Matchmaking: Distributed resource management for high throughput computing. In hpdc. IEEE, 140.
+[14] Temple F Smith, Michael S Waterman, et al. 1981. Identification of common molecular subsequences. Journal of molecular biology 147, 1 (1981), 195­197.
+
+667
+
+8th International Workshop on Parallel and Cloud-based Bioinformatics ACM-BCB '19, September 7­10, 2019, Niagara Falls, NY, USA. and Biomedicine (ParBio)
+
+Y
+
+Parallel
+
+1000 1500 2000
+
+Sequential
+
+0:00:00
+
+0:28:48
+
+0:57:36
+
+1:26:24 X (execution time)
+
+1:55:12
+
+2:24:00
+
+2:52:48
+
+Figure 4: Parallel vs Sequential processing comparison
+
+[15] José Luis Vázquez-Poletti and Ignacio Martín Llorente. 2018. Serverless Computing: From Planet Mars to the Cloud. Computing in Science & Engineering 20, 6 (2018), 73­79.
+[16] Mario Villamizar, Oscar Garces, Lina Ochoa, Harold Castro, Lorena Salamanca, Mauricio Verano, Rubby Casallas, Santiago Gil, Carlos Valencia, Angee Zambrano, et al. 2016. Infrastructure cost comparison of running web applications in the
+
+cloud using AWS lambda and monolithic and microservice architectures. In Cluster, Cloud and Grid Computing (CCGrid), 2016 16th IEEE/ACM International Symposium on. IEEE, 179­182. [17] Mengting Yan, Paul Castro, Perry Cheng, and Vatche Ishakian. 2016. Building a chatbot with serverless computing. In Proceedings of the 1st International Workshop on Mashups of Things and APIs. ACM, 5.
+
+668
+
+
