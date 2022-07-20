@@ -1,7 +1,0 @@
-#!/bin/zsh
-
-lastfile=$(ls -t ~/Downloads | head -n 1)
-mv "~/Downloads/${lastfile}" .
-pdftotext $lastfile
-mv *.pdf pdfs/
-
