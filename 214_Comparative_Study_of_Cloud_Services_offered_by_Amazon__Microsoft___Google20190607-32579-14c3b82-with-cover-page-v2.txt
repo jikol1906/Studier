@@ -1,0 +1,307 @@
+Accelerat ing t he world's research.
+
+Comparative Study of Cloud Services Offered by Amazon, Microso and Google
+International Journal of Trend in Scientific Research and Development - IJTSRD Pranay Dutta | Prashant Dutta
+
+Cite this paper
+Get the citation in MLA, APA, or Chicago styles
+
+Downloaded from Academia.edu 
+
+Related papers
+
+Download a PDF Pack of t he best relat ed papers 
+
+Cloud Comput ing: Review on Recent Research Progress and Issues WARSE T he World Academy of Research in Science and Engineering
+
+International Journal of Trend in Scientific Research and Development (IJTSRD)
+Volume: 3 | Issue: 3 | Mar-Apr 2019 Available Online: www.ijtsrd.com e-ISSN: 2456 - 6470
+Comparative Study of Cloud Services Offered by Amazon, Microsoft & Google
+Pranay Dutta1, Prashant Dutta2 1Technical Lead, Xoriant, Pune, Maharashtra, India 2Programmer, Madhya Pradesh Poorv Kshetra Vidyut Vitran Company Ltd., Jabalpur, Madhya Pradesh, India
+
+How to cite this paper: Pranay Dutta |
+
+Prashant Dutta "Comparative Study of
+
+Cloud Services Offered by Amazon,
+
+Microsoft & Google" Published in
+
+International Journal of Trend in
+
+Scientific Research and Development
+
+(ijtsrd), ISSN: 2456-
+
+6470, Volume-3 |
+
+Issue-3, April 2019,
+
+pp.981-985, URL:
+
+https://www.ijtsrd.c
+
+om/papers/ijtsrd23
+
+170.pdf
+
+IJTSRD23170
+
+Copyright © 2019 by author(s) and International Journal of Trend in Scientific Research and Development Journal. This is an Open Access article distributed under the terms of the Creative Commons Attribution License (CC BY 4.0) (http://creativecommons.org/licenses/ by/4.0)
+
+ABSTRACT With the accelerated development in processing and storage technologies and the boom of the Internet, IT Hardware have become inexpensive, more potent and highly available than ever before. This has triggered the commencement of a new computing model called cloud computing, in which IT-Resources are catered as general utilities that can be hired and released by users through the Internet in an on-demand fashion. According to Gartner Survey Report, The marketplace for public-cloud is predicted to reach from `$260 billion' in 2017 to around `$411 billion in 2020'. As more and more IT systems are externalized, it is getting more imminent for us to choose the right cloud service provider for long term success. However, the challenge is to choose the best cloud service provider from the vast number of options like AWS, Azure and GCP to the smaller CSP's. As per Market share the Top 3 Global leaders are AWS, Azure and GCP1. In this paper, we will try to make analysis of between the three market leaders in cloud services namely Amazon, Microsoft & Google. We will also compare and contrast what AWS, Azure, and GCP offer in terms of storage, compute, management tools etc.
+KEYWORDS: Cloud service Provider (CSP), Amazon Web Service (AWS), Microsoft Azure, Google Cloud Platform (GCP)
+
+I.
+
+INTRODUCTION
+
+Before an organization finds the best Cloud Service Provider,
+
+it should freeze its exact requirement. Sometimes
+
+organizations need Software as a Service and end up hiring
+
+Infrastructure as a Service. Hence an Organization should
+
+know its exact requirements with context to IaaS, SaaS &
+
+PaaS.
+
+IaaS - In an IaaS model2, a CSP hosts the hardware components originally present in an on-premises data center, including servers, storage and networking hardware, as well as the virtualization or hypervisor layer. The IaaS provider also provides a range of services to convoy those infrastructure components. These can include detailedbilling, monitoring, log-access, security, load-balancing and clustering, as well as storage-resiliency, such as backup, replication and recovery. IaaS customers access resources and services through a (WAN), such as the internet, and can use the cloud provider's services to install the remaining elements of an application stack.
+
+SaaS - SaaS eliminates the need for organizations to install and run applications on their own servers or in their own data-centers3. This eliminates the expense of hardware procurement, provisioning and maintenance, as well as software-licensing, installation and support. Rather than procuring software to install, or additional hardware to
+
+support it, customers subscribe to a SaaS offering. Generally, they pay for this service on a monthly/hourly basis using a `pay-as-you-go' model. Transitioning costs to a periodic operating expense allows many big-business to exercise better and more foreseeable budgeting. Users can also terminate SaaS offerings at any time to stop those periodic costs.
+PaaS - PaaS does not normally replace a business's entire ITInfra. Instead, a business trusts on PaaS providers for keyservices, such as application hosting or Java development. A PaaS provider forms and supplies a strong and optimized environment on which users can install applications and data-sets. Users can emphasis on making and running applications rather than constructing and maintaining the underlying infrastructure and services. Many PaaS products are geared toward software-development. These platforms offer compute and storage infra, as well as text editing, version-management, compiling and testing services that help software-engineers create new software more quickly and efficiently. A PaaS product can also enable development teams to join forces and work together, regardless of their physical-work-location.
+Finding a cloud service provider (CSP) has become an intricate judgement. Nowadays it's not a question of which
+
+@ IJTSRD | Unique Paper ID - IJTSRD23170 | Volume - 3 | Issue - 3 | Mar-Apr 2019
+
+Page: 981
+
+International Journal of Trend in Scientific Research and Development (IJTSRD) @ www.ijtsrd.com eISSN: 2456-6470
+option we should work with, but rather, how to achieve the right performance and dispense risk across multiple vendors--while optimizing the cost.
+In view of the above discussions, it can be envisaged that every organization should finalize CSP based on its Capabilities in IaaS, SaaS & PaaS. If any Organization is looking for Iaas then it should look for those CSP's which are having an edge on Iaas.
+
+II.
+
+Major Cloud Computing Service-Providers
+
+There are several cloud-computing service-providers
+
+available in industry. Few leading companies are listed
+
+below as per Gartner's Magic Quadrant4:-
+
+1. Amazon Web Services - Launched in 2006
+
+2. Microsoft Azure - Launched in 2010
+
+3. Google Cloud Platform - Launched in 2008
+
+4. Alibaba Cloud - Launched in 2009
+
+5. Oracle Cloud- Launched in 2012
+
+6. IBM Cloud- Launched in 2011
+
+III. Comparison of Compute Services : AWS vs AZURE vs GCP
+
+Figure-1: Gartner's Magic Quadrant
+
+Table - 1 IV. Comparison of Storage Services: AWS vs AZURE vs GCP
+
+Table -2 @ IJTSRD | Unique Paper ID - IJTSRD23170 | Volume - 3 | Issue - 3 | Mar-Apr 2019
+
+Page: 982
+
+International Journal of Trend in Scientific Research and Development (IJTSRD) @ www.ijtsrd.com eISSN: 2456-6470
+
+V.
+
+Key Cloud Tools
+
+Table - 3 VI. Comparison of Database Services : AWS vs AZURE vs GCP
+
+Table - 4 VII. Comparison of Networking Services : AWS vs AZURE vs GCP
+Table - 5 VIII. Comparison of Management Services : AWS vs AZURE vs GCP
+
+Table - 6 @ IJTSRD | Unique Paper ID - IJTSRD23170 | Volume - 3 | Issue - 3 | Mar-Apr 2019
+
+Page: 983
+
+International Journal of Trend in Scientific Research and Development (IJTSRD) @ www.ijtsrd.com eISSN: 2456-6470 IX. Comparison of Security Services : AWS vs AZURE vs GCP
+
+Table - 7
+
+X.
+
+Market Share and Usages
+
+Amazon Web Services holds 33 percent of the cloud infrastructure market, according to data published by Synergy Research
+
+Group. Microsoft's stake of the market hopped to 13 percent from 10 percent a year before. Google improved to six percent
+
+from five percent. AWS market-share chopped by a percentage point5
+
+XI. Pricing Models : AWS vs AZURE vs GCP6
+
+Figure- 2
+
+Table - 8 @ IJTSRD | Unique Paper ID - IJTSRD23170 | Volume - 3 | Issue - 3 | Mar-Apr 2019
+
+Page: 984
+
+International Journal of Trend in Scientific Research and Development (IJTSRD) @ www.ijtsrd.com eISSN: 2456-6470
+
+XII. Key Benefits of AWS, AZURE & GCP
+
+S. NO
+
+AWS
+
+Dominates cloud domain with
+
+1 features such as configuration,
+
+monitoring, security, auto-scaling etc.
+
+2 Better Offering
+
+3 More Experience, enterprise friendly services
+4 More open source tools integration 5 Global Reach
+
+AZURE More reliable when comes to integrating with Microsoft tools Better Development and testing tools Also provide Hybrid cloud
+Table - 9
+
+GCP
+Expertise in DevOps
+Flexible discounts & contracts Specifically designed for cloud-based businesses
+
+XIII. Drawbacks of AWS, AZURE & GCP
+
+S. NO
+
+AWS
+
+AZURE
+
+1 The price structure Azure is lacking in the area of DevOps is a bit intricate
+
+AWS doesn't have a Azure's support for other operating-
+
+2 specific "hybrid
+
+systems is very limited, only
+
+cloud" solution
+
+supporting a limited varieties of Linux.
+
+Table - 10
+
+GCP GCP does not offer as many services as AWS or Azure. GCP is the newest out of the three providers, that means it's the least mature in terms of variety of offerings
+
+XIV. Conclusion Although AWS leads in public cloud market share, but it would be incorrect to claim it provides the top solutions. Microsoft Azure and Google Cloud Platform sure have their added advantages if you're looking for easy business solutions or foolproof security. The idea is - there's no universal best when it comes to Cloud Service Provider, it all derives down to what best suits your requirements.
+
+XV. Recommendations In order to distribute Risk, the Organizations should go for Multi-Vendor CSPs. The SaaS should be delegated to the CSP having better SaaS features, similarly the PaaS should be delegated to the CSP having better PaaS features and The IaaS should be delegated to the CSP having better IaaS features. The Major role in this aspect will be of the Managed Service Provider (MSP) who will ensure to provide multiple CSPs.
+
+XVI. References [1] Current and planned usage of public cloud platform
+services running applications worldwide in 2018, https://www.statista.com/statistics/511467/worldwi de-survey-public-coud-services-running-application/
+
+[2] Infrastructure
+
+as
+
+a
+
+Service,
+
+https://searchcloudcomputing.techtarget.com/definiti
+
+on/Infrastructure-as-a-Service-IaaS
+
+[3] Software-as-a-Service, https://searchcloudcomputing.techtarget.com/definiti on/Software-as-a-Service
+
+[4] Gartner's
+
+Magic
+
+Quadrant,
+
+https://www.bmc.com/blogs/gartner-magic-
+
+quadrant-cloud-iaas/
+
+[5] Market
+
+Share
+
+Trend,
+
+https://www.cnbc.com/2018/04/27/microsoft-gains-
+
+cloud-market-share-in-q1-but-aws-still-
+
+dominates.html
+
+[6] Pricing
+
+Models
+
+https://cloudacademy.com/blog/public-cloud-war-
+
+aws-vs-azure-vs-google/
+
+[7] WIKIPEDIA, Cloud computing. Wikipedia, http://en.wikipedia.org/wiki/Cloud_computing,
+
+[8] WIKIPEDIA, Amazon elastic compute cloud. Wikipedia, http://en.wikipedia.org/wiki/Amazon_Elastic_Comput e_Cloud
+
+[9] AMAZON,
+
+Instances
+
+types.
+
+http://aws.amazon.com/ec2/#instance
+
+Amazon,
+
+[10] Microsoft
+
+Azure
+
+Billing,
+
+https://portal.azure.com/#blade/Microsoft_Azure_Bill
+
+ing/ModernBillingMenuBlade/BillingAccounts
+
+[11] GCP
+
+Console,
+
+https://console.cloud.google.com/compute/
+
+[12] Yu Gu, Dongsheng Wang , and Chuanyi Liu, DR-Cloud: Multi-Cloud Based Disaster Recovery Service, ISSN 007 - 02141 02/10 llp p 1 3-2 3 Volume 19, Number 1
+
+[13] Dinesh Agarwal; Dept. of Comput. Sci., Georgia State Univ., Atlanta, GA, USA; Sushil K. Prasad, AzureBench: Benchmarking the Storage Services of the Azure Cloud Platform, published in: Parallel and Distributed Processing Symposium Workshops & PhD Forum (IPDPSW), 2012 IEEE 26th International.
+
+[14] Suyog Bankar, Cloud Computing Using Amazon Web Services (AWS): Published in | Volume - 2 | Issue - 4 | May-Jun 2018- 6470 | www.ijtsrd.com | Journal of Trend in Scientific and Development (IJTSRD)
+
+[15] S. Srinivas, Microsoft Azure v/s Amazon AWS Cloud Services: An Appropriative Study, International Journal of Engineering Science Invention ISSN (Online): 2319 - 6734, ISSN (Print): 2319 - 6726 www.ijesi.org ||Volume 6 Issue 12|| December 2017 || PP. 16-2
+
+[16] Azure
+
+Price
+
+Calculator,
+
+https://azure.microsoft.com/en-in/pricing/calculator/
+
+@ IJTSRD | Unique Paper ID - IJTSRD23170 | Volume - 3 | Issue - 3 | Mar-Apr 2019
+
+Page: 985
+
+
